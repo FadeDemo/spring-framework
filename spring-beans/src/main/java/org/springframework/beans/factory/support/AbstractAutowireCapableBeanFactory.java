@@ -104,15 +104,8 @@ import org.springframework.util.StringUtils;
  * {@link BeanDefinitionRegistry} interfaces, which represent the API and SPI
  * view of such a factory, respectively.
  *
- * @author Rod Johnson
- * @author Juergen Hoeller
- * @author Rob Harrop
- * @author Mark Fisher
- * @author Costin Leau
- * @author Chris Beams
- * @author Sam Brannen
- * @author Phillip Webb
- * @since 13.02.2004
+ * 综合 {@link AbstractBeanFactory} 和 {@link AutowireCapableBeanFactory}
+ *
  * @see RootBeanDefinition
  * @see DefaultListableBeanFactory
  * @see BeanDefinitionRegistry

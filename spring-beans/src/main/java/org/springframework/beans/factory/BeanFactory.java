@@ -95,10 +95,8 @@ import org.springframework.lang.Nullable;
  * <li>a custom {@code destroy-method} definition
  * </ol>
  *
- * @author Rod Johnson
- * @author Juergen Hoeller
- * @author Chris Beams
- * @since 13 April 2001
+ * 定义获取bean及bean的各种属性
+ *
  * @see BeanNameAware#setBeanName
  * @see BeanClassLoaderAware#setBeanClassLoader
  * @see BeanFactoryAware#setBeanFactory
