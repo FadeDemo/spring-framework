@@ -1,19 +1,3 @@
-/*
- * Copyright 2002-2020 the original author or authors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package org.springframework.util.xml;
 
 import java.io.BufferedReader;
@@ -94,14 +78,19 @@ public class XmlValidationModeDetector {
 			boolean isDtdValidated = false;
 			String content;
 			while ((content = reader.readLine()) != null) {
+				// 去除注释
 				content = consumeCommentTokens(content);
+
+				// 是注释或者空行则略过
 				if (this.inComment || !StringUtils.hasText(content)) {
 					continue;
 				}
+				// 有没有DOCTYPE，有则是DTD校验
 				if (hasDoctype(content)) {
 					isDtdValidated = true;
 					break;
 				}
+				// 没有DOCTYPE，读取到<，肯定是XSD
 				if (hasOpeningTag(content)) {
 					// End of meaningful data...
 					break;
