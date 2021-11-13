@@ -408,6 +408,7 @@ public abstract class StringUtils {
 
 	/**
 	 * Replace all occurrences of a substring within a string with another string.
+	 * 替换字符串中的模式
 	 * @param inString {@code String} to examine
 	 * @param oldPattern {@code String} to replace
 	 * @param newPattern {@code String} to insert
@@ -660,6 +661,12 @@ public abstract class StringUtils {
 	 * <p><strong>NOTE</strong> that {@code cleanPath} should not be depended
 	 * upon in a security context. Other mechanisms should be used to prevent
 	 * path-traversal issues.
+	 *
+	 * 简化路径
+	 * 例如：
+	 * a/. -> a
+	 * a/b/.. -> a
+	 *
 	 * @param path the original path
 	 * @return the normalized path
 	 */
@@ -667,7 +674,7 @@ public abstract class StringUtils {
 		if (!hasLength(path)) {
 			return path;
 		}
-
+		// 加入路径是Windows格式的，将其转化为Unix格式的
 		String normalizedPath = replace(path, WINDOWS_FOLDER_SEPARATOR, FOLDER_SEPARATOR);
 		String pathToUse = normalizedPath;
 
@@ -698,6 +705,7 @@ public abstract class StringUtils {
 
 		String[] pathArray = delimitedListToStringArray(pathToUse, FOLDER_SEPARATOR);
 		// we never require more elements than pathArray and in the common case the same number
+		// 创建一个双端队列
 		Deque<String> pathElements = new ArrayDeque<>(pathArray.length);
 		int tops = 0;
 
@@ -1204,6 +1212,7 @@ public abstract class StringUtils {
 	 * but it will still be considered as a single delimiter string, rather
 	 * than as bunch of potential delimiter characters, in contrast to
 	 * {@link #tokenizeToStringArray}.
+	 * 将字符串以指定的分隔符划分为数组
 	 * @param str the input {@code String} (potentially {@code null} or empty)
 	 * @param delimiter the delimiter between elements (this is a single delimiter,
 	 * rather than a bunch individual delimiter characters)

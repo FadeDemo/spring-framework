@@ -181,6 +181,10 @@ public abstract class ClassUtils {
 	 * reference as well).
 	 * @return the default ClassLoader (only {@code null} if even the system
 	 * ClassLoader isn't accessible)
+	 *
+	 * 获取默认的类加载器
+	 * 优先级为（依次递减）：线程上下文类加载器 -> 当前类的类加载器 -> bootstrap ClassLoader
+	 *
 	 * @see Thread#getContextClassLoader()
 	 * @see ClassLoader#getSystemClassLoader()
 	 */

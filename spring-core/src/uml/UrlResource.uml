@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.springframework.core.io.UrlResource</OriginalElement>
+  <nodes>
+    <node x="384.7075471698114" y="580.0">org.springframework.core.io.DescriptiveResource</node>
+    <node x="386.75" y="206.0">org.springframework.core.io.AbstractFileResolvingResource</node>
+    <node x="675.75" y="290.0">org.springframework.core.io.ContextResource</node>
+    <node x="227.75" y="290.0">org.springframework.core.io.UrlResource</node>
+    <node x="780.25" y="82.0">org.springframework.core.io.InputStreamSource</node>
+    <node x="456.9025157232704" y="82.0">org.springframework.core.io.ClassPathResource</node>
+    <node x="15.75" y="290.0">org.springframework.core.io.FileSystemResource</node>
+    <node x="306.9025157232704" y="0.0">org.springframework.core.io.ByteArrayResource</node>
+    <node x="21.70754716981145" y="498.0">org.springframework.core.io.AbstractResource</node>
+    <node x="529.25" y="404.0">org.springframework.core.io.Resource</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.springframework.core.io.UrlResource" target="org.springframework.core.io.AbstractFileResolvingResource" relationship="GENERALIZATION">
+      <point x="-34.5" y="-15.0" />
+      <point x="262.25" y="268.0" />
+      <point x="152.65251572327043" y="268.0" />
+      <point x="152.65251572327043" y="258.0" />
+      <point x="453.75" y="258.0" />
+      <point x="-67.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.InputStreamSource" target="org.springframework.core.io.Resource" relationship="DEPENDENCY">
+      <point x="-47.0" y="15.0" />
+      <point x="827.25" y="154.0" />
+      <point x="869.25" y="154.0" />
+      <point x="869.25" y="184.0" />
+      <point x="858.25" y="184.0" />
+      <point x="858.25" y="352.0" />
+      <point x="587.75" y="352.0" />
+      <point x="0.0" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.Resource" target="org.springframework.core.io.ByteArrayResource" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="587.75" y="352.0" />
+      <point x="376.25" y="352.0" />
+      <point x="376.25" y="61.0" />
+      <point x="590.1525157232704" y="61.0" />
+      <point x="590.1525157232704" y="51.0" />
+      <point x="445.6525157232704" y="51.0" />
+      <point x="46.25" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.ByteArrayResource" target="org.springframework.core.io.Resource" relationship="DEPENDENCY">
+      <point x="46.25" y="15.0" />
+      <point x="445.6525157232704" y="51.0" />
+      <point x="590.1525157232704" y="51.0" />
+      <point x="590.1525157232704" y="61.0" />
+      <point x="376.25" y="61.0" />
+      <point x="376.25" y="352.0" />
+      <point x="587.75" y="352.0" />
+      <point x="0.0" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.AbstractFileResolvingResource" target="org.springframework.core.io.Resource" relationship="DEPENDENCY">
+      <point x="67.0" y="15.0" />
+      <point x="0.0" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.AbstractFileResolvingResource" target="org.springframework.core.io.ClassPathResource" relationship="DEPENDENCY">
+      <point x="67.0" y="-15.0" />
+      <point x="587.75" y="184.0" />
+      <point x="515.1525157232704" y="184.0" />
+      <point x="515.1525157232704" y="154.0" />
+      <point x="553.9025157232704" y="154.0" />
+      <point x="553.9025157232704" y="134.0" />
+      <point x="594.9025157232704" y="134.0" />
+      <point x="46.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.UrlResource" target="org.springframework.core.io.AbstractResource" relationship="DEPENDENCY">
+      <point x="0.0" y="15.0" />
+      <point x="296.75" y="382.0" />
+      <point x="185.1886792452829" y="382.0" />
+      <point x="185.1886792452829" y="456.0" />
+      <point x="578.2783018867923" y="456.0" />
+      <point x="578.2783018867923" y="476.0" />
+      <point x="168.37421383647808" y="476.0" />
+      <point x="58.66666666666663" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.AbstractResource" target="org.springframework.core.io.Resource" relationship="REALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="109.70754716981145" y="466.0" />
+      <point x="558.5" y="466.0" />
+      <point x="-29.25" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.ClassPathResource" target="org.springframework.core.io.Resource" relationship="DEPENDENCY">
+      <point x="46.0" y="15.0" />
+      <point x="594.9025157232704" y="134.0" />
+      <point x="553.9025157232704" y="134.0" />
+      <point x="553.9025157232704" y="144.0" />
+      <point x="665.25" y="144.0" />
+      <point x="665.25" y="352.0" />
+      <point x="587.75" y="352.0" />
+      <point x="0.0" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.Resource" target="org.springframework.core.io.ClassPathResource" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="587.75" y="352.0" />
+      <point x="665.25" y="352.0" />
+      <point x="665.25" y="144.0" />
+      <point x="553.9025157232704" y="144.0" />
+      <point x="553.9025157232704" y="134.0" />
+      <point x="594.9025157232704" y="134.0" />
+      <point x="46.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.ContextResource" target="org.springframework.core.io.Resource" relationship="INTERFACE_GENERALIZATION">
+      <point x="43.0" y="15.0" />
+      <point x="804.75" y="342.0" />
+      <point x="869.0" y="342.0" />
+      <point x="869.0" y="382.0" />
+      <point x="626.75" y="382.0" />
+      <point x="39.0" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.DescriptiveResource" target="org.springframework.core.io.AbstractResource" relationship="GENERALIZATION">
+      <point x="-49.0" y="-15.0" />
+      <point x="433.7075471698114" y="554.0" />
+      <point x="109.70754716981145" y="554.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.Resource" target="org.springframework.core.io.ContextResource" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="587.75" y="352.0" />
+      <point x="718.75" y="352.0" />
+      <point x="-43.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.Resource" target="org.springframework.core.io.InputStreamSource" relationship="INTERFACE_GENERALIZATION">
+      <point x="39.0" y="-15.0" />
+      <point x="626.75" y="382.0" />
+      <point x="869.0" y="382.0" />
+      <point x="869.25" y="174.0" />
+      <point x="921.25" y="174.0" />
+      <point x="47.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.FileSystemResource" target="org.springframework.core.io.AbstractResource" relationship="GENERALIZATION">
+      <point x="-64.0" y="15.0" />
+      <point x="47.75" y="382.0" />
+      <point x="61.96383647798751" y="382.0" />
+      <point x="61.96383647798751" y="466.0" />
+      <point x="30.213836477987513" y="466.0" />
+      <point x="30.213836477987513" y="476.0" />
+      <point x="51.04088050314482" y="476.0" />
+      <point x="-58.66666666666663" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.Resource" target="org.springframework.core.io.FileSystemResource" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="587.75" y="352.0" />
+      <point x="175.75" y="352.0" />
+      <point x="64.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.AbstractResource" target="org.springframework.core.io.InputStreamSource" relationship="DEPENDENCY">
+      <point x="58.66666666666666" y="-15.0" />
+      <point x="168.37421383647808" y="476.0" />
+      <point x="578.2783018867923" y="476.0" />
+      <point x="578.2783018867923" y="456.0" />
+      <point x="880.25" y="456.0" />
+      <point x="880.25" y="184.0" />
+      <point x="869.25" y="184.0" />
+      <point x="869.25" y="154.0" />
+      <point x="827.25" y="154.0" />
+      <point x="-47.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.ByteArrayResource" target="org.springframework.core.io.InputStreamSource" relationship="DEPENDENCY">
+      <point x="46.25" y="15.0" />
+      <point x="445.6525157232704" y="51.0" />
+      <point x="590.1525157232704" y="51.0" />
+      <point x="590.1525157232704" y="61.0" />
+      <point x="874.25" y="61.0" />
+      <point x="0.0" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.InputStreamSource" target="org.springframework.core.io.ByteArrayResource" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="874.25" y="61.0" />
+      <point x="590.1525157232704" y="61.0" />
+      <point x="590.1525157232704" y="51.0" />
+      <point x="445.6525157232704" y="51.0" />
+      <point x="46.25" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.FileSystemResource" target="org.springframework.core.io.Resource" relationship="REALIZATION">
+      <point x="0.0" y="15.0" />
+      <point x="111.75" y="372.0" />
+      <point x="548.75" y="372.0" />
+      <point x="-39.0" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.ByteArrayResource" target="org.springframework.core.io.AbstractResource" relationship="GENERALIZATION">
+      <point x="-46.25" y="15.0" />
+      <point x="353.1525157232704" y="61.0" />
+      <point x="0.0" y="61.0" />
+      <point x="0.0" y="466.0" />
+      <point x="30.213836477987513" y="466.0" />
+      <point x="30.213836477987513" y="476.0" />
+      <point x="51.04088050314482" y="476.0" />
+      <point x="-58.66666666666663" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.UrlResource" target="org.springframework.core.io.Resource" relationship="DEPENDENCY">
+      <point x="0.0" y="15.0" />
+      <point x="296.75" y="362.0" />
+      <point x="587.75" y="362.0" />
+      <point x="0.0" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.Resource" target="org.springframework.core.io.UrlResource" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="587.75" y="362.0" />
+      <point x="296.75" y="362.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.DescriptiveResource" target="org.springframework.core.io.Resource" relationship="DEPENDENCY">
+      <point x="49.0" y="-15.0" />
+      <point x="531.7075471698114" y="554.0" />
+      <point x="895.1949685534589" y="554.0" />
+      <point x="895.1949685534589" y="476.0" />
+      <point x="617.0" y="476.0" />
+      <point x="29.25" y="15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.ClassPathResource" target="org.springframework.core.io.AbstractFileResolvingResource" relationship="GENERALIZATION">
+      <point x="-46.0" y="15.0" />
+      <point x="502.9025157232704" y="184.0" />
+      <point x="453.75" y="184.0" />
+      <point x="-67.0" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.AbstractFileResolvingResource" target="org.springframework.core.io.UrlResource" relationship="DEPENDENCY">
+      <point x="67.0" y="15.0" />
+      <point x="587.75" y="268.0" />
+      <point x="331.25" y="268.0" />
+      <point x="34.5" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.AbstractFileResolvingResource" target="org.springframework.core.io.AbstractResource" relationship="GENERALIZATION">
+      <point x="-67.0" y="15.0" />
+      <point x="453.75" y="258.0" />
+      <point x="152.65251572327043" y="258.0" />
+      <point x="152.65251572327043" y="268.0" />
+      <point x="5.25" y="268.0" />
+      <point x="5.25" y="466.0" />
+      <point x="30.213836477987513" y="466.0" />
+      <point x="30.213836477987513" y="476.0" />
+      <point x="51.04088050314482" y="476.0" />
+      <point x="-58.66666666666663" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.core.io.AbstractFileResolvingResource" target="org.springframework.core.io.InputStreamSource" relationship="DEPENDENCY">
+      <point x="67.0" y="-15.0" />
+      <point x="587.75" y="184.0" />
+      <point x="515.1525157232704" y="184.0" />
+      <point x="515.1525157232704" y="164.0" />
+      <point x="869.25" y="164.0" />
+      <point x="869.25" y="154.0" />
+      <point x="827.25" y="154.0" />
+      <point x="-47.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.6156028368794326" showDependencies="true" x="484.5" y="342.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
