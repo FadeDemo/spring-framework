@@ -33,8 +33,8 @@ import org.springframework.lang.Nullable;
  * this interface. It only serves as suggestion for bean definition
  * readers that want to follow standard naming conventions.
  *
- * @author Juergen Hoeller
- * @since 1.1
+ * 定义读取资源文件并转换为 {@link org.springframework.beans.factory.config.BeanDefinition} 的方法
+ *
  * @see org.springframework.core.io.Resource
  */
 public interface BeanDefinitionReader {

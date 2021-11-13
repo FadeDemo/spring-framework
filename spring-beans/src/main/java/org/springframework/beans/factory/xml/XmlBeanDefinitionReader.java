@@ -65,10 +65,12 @@ import org.springframework.util.xml.XmlValidationModeDetector;
  * talking to the latter's implementation of the
  * {@link org.springframework.beans.factory.support.BeanDefinitionRegistry} interface.
  *
- * @author Juergen Hoeller
- * @author Rob Harrop
- * @author Chris Beams
- * @since 26.11.2003
+ * 读取资源文件、解析及注册
+ * XML配置文件读取的大致流程：
+ * 资源文件--({@link ResourceLoader})-->Resource--({@link DocumentLoader})
+ * -->Document--{@link DefaultBeanDefinitionDocumentReader}、{@link BeanDefinitionParserDelegate}
+ * -->BeanDefinition、Element
+ *
  * @see #setDocumentReaderClass
  * @see BeanDefinitionDocumentReader
  * @see DefaultBeanDefinitionDocumentReader

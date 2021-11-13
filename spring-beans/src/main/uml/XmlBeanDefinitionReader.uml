@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.springframework.beans.factory.xml.XmlBeanDefinitionReader</OriginalElement>
+  <nodes>
+    <node x="311.7090643274855" y="250.0">org.springframework.beans.factory.xml.DocumentLoader</node>
+    <node x="264.47807017543863" y="0.0">org.springframework.core.io.ResourceLoader</node>
+    <node x="336.91666666666663" y="344.0">org.springframework.beans.factory.xml.XmlBeanDefinitionReader</node>
+    <node x="228.5" y="82.0">org.springframework.beans.factory.support.BeanDefinitionReader</node>
+    <node x="10.5" y="82.0">org.springframework.core.env.EnvironmentCapable</node>
+    <node x="505.7090643274855" y="250.0">org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader</node>
+    <node x="523.6447368421053" y="166.0">org.springframework.beans.factory.xml.BeanDefinitionParserDelegate</node>
+    <node x="377.41666666666663" y="426.0">org.springframework.beans.factory.xml.BeanDefinitionDocumentReader</node>
+    <node x="211.9576023391814" y="166.0">org.springframework.beans.factory.support.AbstractBeanDefinitionReader</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.springframework.beans.factory.support.AbstractBeanDefinitionReader" target="org.springframework.core.env.EnvironmentCapable" relationship="REALIZATION">
+      <point x="-88.0" y="-15.0" />
+      <point x="255.9576023391814" y="144.0" />
+      <point x="205.45906432748552" y="144.0" />
+      <point x="205.45906432748552" y="134.0" />
+      <point x="109.5" y="134.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.support.AbstractBeanDefinitionReader" target="org.springframework.beans.factory.support.BeanDefinitionReader" relationship="REALIZATION">
+      <point x="-88.0" y="-15.0" />
+      <point x="255.9576023391814" y="144.0" />
+      <point x="205.45906432748552" y="144.0" />
+      <point x="205.45906432748552" y="134.0" />
+      <point x="331.5" y="134.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.xml.XmlBeanDefinitionReader" target="org.springframework.beans.factory.xml.DocumentLoader" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="453.41666666666663" y="322.0" />
+      <point x="456.25146198830413" y="322.0" />
+      <point x="456.25146198830413" y="312.0" />
+      <point x="355.2090643274855" y="312.0" />
+      <point x="-43.5" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader" target="org.springframework.beans.factory.xml.BeanDefinitionParserDelegate" relationship="CREATE">
+      <point x="110.0" y="-15.0" />
+      <point x="780.7090643274855" y="228.0" />
+      <point x="742.811403508772" y="228.0" />
+      <point x="87.66666666666669" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader" target="org.springframework.beans.factory.xml.BeanDefinitionParserDelegate" relationship="TO_ONE">
+      <point x="0.0" y="-15.0" />
+      <point x="670.7090643274855" y="228.0" />
+      <point x="655.1447368421053" y="228.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader" target="org.springframework.beans.factory.xml.BeanDefinitionDocumentReader" relationship="REALIZATION">
+      <point x="110.0" y="15.0" />
+      <point x="780.7090643274855" y="322.0" />
+      <point x="636.7309941520468" y="322.0" />
+      <point x="636.7309941520468" y="400.0" />
+      <point x="586.6666666666666" y="400.0" />
+      <point x="69.75" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.support.AbstractBeanDefinitionReader" target="org.springframework.core.io.ResourceLoader" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="343.9576023391814" y="134.0" />
+      <point x="445.0" y="134.0" />
+      <point x="445.0" y="61.0" />
+      <point x="321.22807017543863" y="61.0" />
+      <point x="321.22807017543863" y="51.0" />
+      <point x="305.97807017543863" y="51.0" />
+      <point x="-41.5" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.xml.XmlBeanDefinitionReader" target="org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader" relationship="TO_ONE">
+      <point x="77.66666666666669" y="-15.0" />
+      <point x="531.0833333333334" y="322.0" />
+      <point x="497.25" y="322.0" />
+      <point x="497.25" y="302.0" />
+      <point x="670.7090643274855" y="302.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.xml.BeanDefinitionDocumentReader" target="org.springframework.beans.factory.xml.XmlBeanDefinitionReader" relationship="DEPENDENCY">
+      <point x="-69.75" y="-15.0" />
+      <point x="447.16666666666663" y="400.0" />
+      <point x="453.41666666666663" y="400.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.xml.XmlBeanDefinitionReader" target="org.springframework.beans.factory.xml.BeanDefinitionDocumentReader" relationship="DEPENDENCY">
+      <point x="0.0" y="15.0" />
+      <point x="453.41666666666663" y="400.0" />
+      <point x="447.16666666666663" y="400.0" />
+      <point x="-69.75" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.support.BeanDefinitionReader" target="org.springframework.core.io.ResourceLoader" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="331.5" y="61.0" />
+      <point x="321.22807017543863" y="61.0" />
+      <point x="321.22807017543863" y="51.0" />
+      <point x="305.97807017543863" y="51.0" />
+      <point x="-41.5" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.xml.BeanDefinitionParserDelegate" target="org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader" relationship="DEPENDENCY">
+      <point x="-87.66666666666669" y="15.0" />
+      <point x="567.4780701754387" y="218.0" />
+      <point x="577.4576023391814" y="218.0" />
+      <point x="577.4576023391814" y="228.0" />
+      <point x="560.7090643274855" y="228.0" />
+      <point x="-110.0" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.support.AbstractBeanDefinitionReader" target="org.springframework.core.io.ResourceLoader" relationship="TO_ONE">
+      <point x="88.0" y="-15.0" />
+      <point x="431.9576023391814" y="144.0" />
+      <point x="456.0" y="144.0" />
+      <point x="456.0" y="51.0" />
+      <point x="388.97807017543863" y="51.0" />
+      <point x="41.5" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.xml.XmlBeanDefinitionReader" target="org.springframework.core.io.ResourceLoader" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="453.41666666666663" y="322.0" />
+      <point x="456.25146198830413" y="322.0" />
+      <point x="456.25146198830413" y="312.0" />
+      <point x="0.0" y="312.0" />
+      <point x="0.0" y="61.0" />
+      <point x="321.22807017543863" y="61.0" />
+      <point x="321.22807017543863" y="51.0" />
+      <point x="305.97807017543863" y="51.0" />
+      <point x="-41.5" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader" target="org.springframework.beans.factory.support.AbstractBeanDefinitionReader" relationship="DEPENDENCY">
+      <point x="-110.0" y="-15.0" />
+      <point x="560.7090643274855" y="228.0" />
+      <point x="577.4576023391814" y="228.0" />
+      <point x="577.4576023391814" y="218.0" />
+      <point x="409.9576023391814" y="218.0" />
+      <point x="66.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.xml.XmlBeanDefinitionReader" target="org.springframework.beans.factory.xml.DocumentLoader" relationship="TO_ONE">
+      <point x="77.66666666666669" y="-15.0" />
+      <point x="531.0833333333334" y="322.0" />
+      <point x="497.25" y="322.0" />
+      <point x="497.25" y="302.0" />
+      <point x="442.2090643274855" y="302.0" />
+      <point x="43.5" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.xml.XmlBeanDefinitionReader" target="org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="453.41666666666663" y="322.0" />
+      <point x="456.25146198830413" y="322.0" />
+      <point x="456.25146198830413" y="312.0" />
+      <point x="560.7090643274855" y="312.0" />
+      <point x="-110.0" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader" target="org.springframework.beans.factory.xml.XmlBeanDefinitionReader" relationship="DEPENDENCY">
+      <point x="-110.0" y="15.0" />
+      <point x="560.7090643274855" y="312.0" />
+      <point x="456.25146198830413" y="312.0" />
+      <point x="456.25146198830413" y="322.0" />
+      <point x="453.41666666666663" y="322.0" />
+      <point x="0.0" y="-15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.xml.XmlBeanDefinitionReader" target="org.springframework.beans.factory.support.AbstractBeanDefinitionReader" relationship="GENERALIZATION">
+      <point x="-77.66666666666669" y="-15.0" />
+      <point x="375.75" y="322.0" />
+      <point x="301.2090643274855" y="322.0" />
+      <point x="301.2090643274855" y="228.0" />
+      <point x="277.9576023391814" y="228.0" />
+      <point x="-66.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.9147196261682243" showDependencies="true" x="418.0" y="228.0" />
+  <SelectedNodes>
+    <node>org.springframework.beans.factory.xml.BeanDefinitionParserDelegate</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
