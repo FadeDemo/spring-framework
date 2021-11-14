@@ -83,9 +83,17 @@ public class DelegatingEntityResolver implements EntityResolver {
 			throws SAXException, IOException {
 
 		if (systemId != null) {
+			/**
+			 * 如果是DTD校验
+			 * 使用 {@link BeansDtdResolver}
+			 * */
 			if (systemId.endsWith(DTD_SUFFIX)) {
 				return this.dtdResolver.resolveEntity(publicId, systemId);
 			}
+			/**
+			 * 如果是XSD校验
+			 * 使用 {@link PluggableSchemaResolver}
+			 * */
 			else if (systemId.endsWith(XSD_SUFFIX)) {
 				return this.schemaResolver.resolveEntity(publicId, systemId);
 			}

@@ -1,19 +1,3 @@
-/*
- * Copyright 2002-2019 the original author or authors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package org.springframework.beans.factory.xml;
 
 import java.io.FileNotFoundException;
@@ -37,9 +21,8 @@ import org.springframework.lang.Nullable;
  * no matter whether specified as some local URL that includes "spring-beans"
  * in the DTD name or as "https://www.springframework.org/dtd/spring-beans-2.0.dtd".
  *
- * @author Juergen Hoeller
- * @author Colin Sampaleanu
- * @since 04.06.2003
+ *
+ *
  * @see ResourceEntityResolver
  */
 public class BeansDtdResolver implements EntityResolver {
@@ -58,7 +41,9 @@ public class BeansDtdResolver implements EntityResolver {
 			logger.trace("Trying to resolve XML entity with public ID [" + publicId +
 					"] and system ID [" + systemId + "]");
 		}
-
+		// 以xx.dtd去类路径下查找
+		// 例如 https://www.springframework.org/dtd/spring-beans-2.0.dtd
+		// 则会以spring-beans-2.0.dtd去类路径下查找
 		if (systemId != null && systemId.endsWith(DTD_EXTENSION)) {
 			int lastPathSeparator = systemId.lastIndexOf('/');
 			int dtdNameStart = systemId.indexOf(DTD_NAME, lastPathSeparator);

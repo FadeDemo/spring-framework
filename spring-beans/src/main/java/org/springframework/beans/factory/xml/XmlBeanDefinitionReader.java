@@ -263,6 +263,14 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	/**
 	 * Return the EntityResolver to use, building a default resolver
 	 * if none specified.
+	 *
+	 * 获取 {@link EntityResolver}
+	 * {@link EntityResolver} 提供自定义处理外部实体的方法
+	 * 可用于提供一个寻找校验模式文件的方法
+	 * 如果是XSD {@link EntityResolver#resolveEntity(String, String)} publicId是null
+	 * systemId是Schema文件的位置
+	 * 如果DTD {@link EntityResolver#resolveEntity(String, String)} publicId是非空值
+	 * systemId是Schema文件的位置
 	 */
 	protected EntityResolver getEntityResolver() {
 		if (this.entityResolver == null) {
@@ -528,8 +536,13 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	 */
 	public int registerBeanDefinitions(Document doc, Resource resource) throws BeanDefinitionStoreException {
 		BeanDefinitionDocumentReader documentReader = createBeanDefinitionDocumentReader();
+		/**
+		 * 记录当前已加载的 {@link org.springframework.beans.factory.config.BeanDefinition } 个数
+		 * */
 		int countBefore = getRegistry().getBeanDefinitionCount();
+		// 加载及注册bean
 		documentReader.registerBeanDefinitions(doc, createReaderContext(resource));
+		// 返回本次加载的 {@link org.springframework.beans.factory.config.BeanDefinition } 个数
 		return getRegistry().getBeanDefinitionCount() - countBefore;
 	}
 
