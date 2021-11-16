@@ -7,4 +7,19 @@
 		<meta key="testStr" value="aaaaaaa"/>
 	</bean>
 
+	<bean id="getBeanTest" class="org.fade.demo.springframework.beans.parse.lookupmethod.GetBeanTest">
+<!--		<lookup-method name="getBean" bean="teacher" />-->
+		<lookup-method name="getBean" bean="student" />
+	</bean>
+
+	<bean id="teacher" class="org.fade.demo.springframework.beans.parse.lookupmethod.Teacher" />
+
+	<bean id="student" class="org.fade.demo.springframework.beans.parse.lookupmethod.Student" />
+
+	<bean id="testChangeMethod" class="org.fade.demo.springframework.beans.parse.replacedmethod.TestChangeMethod">
+		<replaced-method name="changeMe" replacer="replacer" />
+	</bean>
+
+	<bean id="replacer" class="org.fade.demo.springframework.beans.parse.replacedmethod.TestMethodReplacer" />
+
 </beans>

@@ -754,10 +754,16 @@ public class BeanDefinitionParserDelegate {
 		NodeList nl = beanEle.getChildNodes();
 		for (int i = 0; i < nl.getLength(); i++) {
 			Node node = nl.item(i);
+			// 当且仅当是Spring beans命名空间的子元素且为lookup-method时
 			if (isCandidateElement(node) && nodeNameEquals(node, LOOKUP_METHOD_ELEMENT)) {
 				Element ele = (Element) node;
+				// 构造器注入的方法名
 				String methodName = ele.getAttribute(NAME_ATTRIBUTE);
+				// 构造器注入返回的bean
 				String beanRef = ele.getAttribute(BEAN_ELEMENT);
+				/**
+				 * {@link LookupOverride} 用于承载数据
+				 * */
 				LookupOverride override = new LookupOverride(methodName, beanRef);
 				override.setSource(extractSource(ele));
 				overrides.addOverride(override);
@@ -772,10 +778,16 @@ public class BeanDefinitionParserDelegate {
 		NodeList nl = beanEle.getChildNodes();
 		for (int i = 0; i < nl.getLength(); i++) {
 			Node node = nl.item(i);
+			// 当且仅当是Spring beans命名空间的子元素且为replaced-method时
 			if (isCandidateElement(node) && nodeNameEquals(node, REPLACED_METHOD_ELEMENT)) {
 				Element replacedMethodEle = (Element) node;
+				// 要替换的方法名
 				String name = replacedMethodEle.getAttribute(NAME_ATTRIBUTE);
+				// 提取replacer属性
 				String callback = replacedMethodEle.getAttribute(REPLACER_ATTRIBUTE);
+				/**
+				 * {@link ReplaceOverride} 用于承载数据
+				 * */
 				ReplaceOverride replaceOverride = new ReplaceOverride(name, callback);
 				// Look for arg-type match elements.
 				List<Element> argTypeEles = DomUtils.getChildElementsByTagName(replacedMethodEle, ARG_TYPE_ELEMENT);
