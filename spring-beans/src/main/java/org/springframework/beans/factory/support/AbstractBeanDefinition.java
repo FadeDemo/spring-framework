@@ -141,65 +141,152 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 	@Nullable
 	private volatile Object beanClass;
 
+	/**
+	 * bean的作用范围，对应bean元素的scope属性
+	 * */
 	@Nullable
 	private String scope = SCOPE_DEFAULT;
 
+	/**
+	 * 是否是抽象，对应bean元素的scope属性
+	 * */
 	private boolean abstractFlag = false;
 
+	/**
+	 * 是否懒加载，对应bean元素的lazy-init
+	 * */
 	@Nullable
 	private Boolean lazyInit;
 
+	/**
+	 * 自动注入模式，对应bean元素的autowire属性
+	 * */
 	private int autowireMode = AUTOWIRE_NO;
 
+	/**
+	 * 依赖检查，已废弃
+	 * */
 	private int dependencyCheck = DEPENDENCY_CHECK_NONE;
 
+	/**
+	 * 用来表示一个bean的实例化依赖与另一个bean的实例化，对应bean元素的depend-on属性
+	 * */
 	@Nullable
 	private String[] dependsOn;
 
+	/**
+	 * 是否作为自动装配的候选者，对应bean元素的autowire-candidate属性
+	 * 如果配置为false，当自动装配对象时，该bean将不在考虑范围内
+	 * 但是该bean本身还是可以使用自动装配的
+	 * */
 	private boolean autowireCandidate = true;
 
+	/**
+	 * 自动装配出现多个候选者时，配置该属性为true的bean将被优先考虑
+	 * 对应bean元素的primary属性
+	 * */
 	private boolean primary = false;
 
+	/**
+	 * 用于记录Qualifier，对应子元素qualifier
+	 * */
 	private final Map<String, AutowireCandidateQualifier> qualifiers = new LinkedHashMap<>();
 
 	@Nullable
 	private Supplier<?> instanceSupplier;
 
+	/**
+	 * 是否允许访问非公开的构造器和方法
+	 * */
 	private boolean nonPublicAccessAllowed = true;
 
+	/**
+	 * 是否以一种宽松的模式解析构造函数
+	 * 如果为false
+	 * interface ITest {}
+	 * class ITestImpl implements ITest {}
+	 * class Main {
+	 *     Main(ITest i){}
+	 *     Main(ITestImpl i){}
+	 * }
+	 * 将会抛出异常
+	 * 此时Spring将无法识别将要调用哪个构造函数
+	 * */
 	private boolean lenientConstructorResolution = true;
 
+	/**
+	 * 对应bean元素的factory-bean属性
+	 * */
 	@Nullable
 	private String factoryBeanName;
 
+	/**
+	 * 对应bean元素的factory-method属性
+	 * */
 	@Nullable
 	private String factoryMethodName;
 
+	/**
+	 * 构造器注入保存的数据
+	 * */
 	@Nullable
 	private ConstructorArgumentValues constructorArgumentValues;
 
+	/**
+	 * 普通属性集合
+	 * */
 	@Nullable
 	private MutablePropertyValues propertyValues;
 
+	/**
+	 * lookup-method和replaced-method元素保存数据的地方
+	 * */
 	private MethodOverrides methodOverrides = new MethodOverrides();
 
+	/**
+	 * 初始化方法，对应bean元素的init-method属性
+	 * */
 	@Nullable
 	private String initMethodName;
 
+	/**
+	 * 销毁方法，对应bean元素的destroy-method属性
+	 * */
 	@Nullable
 	private String destroyMethodName;
 
+	/**
+	 * 是否执行初始化方法
+	 * */
 	private boolean enforceInitMethod = true;
 
+	/**
+	 * 是否执行销毁方法
+	 * */
 	private boolean enforceDestroyMethod = true;
 
+	/**
+	 * 是否是用户定义的而不是应用程序本身定义的，创建AOP时为true
+	 * */
 	private boolean synthetic = false;
 
+	/**
+	 * 定义这个bean的应用
+	 * APPLICATION：用户
+	 * INFRASTRUCTURE：完全内部使用，与用户无关
+	 * SUPPORT：某些复杂配置的一部分
+	 * */
 	private int role = BeanDefinition.ROLE_APPLICATION;
 
+	/**
+	 * bean的描述信息
+	 * */
 	@Nullable
 	private String description;
 
+	/**
+	 * bean定义的资源
+	 * */
 	@Nullable
 	private Resource resource;
 
