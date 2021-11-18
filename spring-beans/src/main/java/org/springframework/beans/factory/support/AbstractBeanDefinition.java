@@ -275,6 +275,7 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 	 * APPLICATION：用户
 	 * INFRASTRUCTURE：完全内部使用，与用户无关
 	 * SUPPORT：某些复杂配置的一部分
+	 * {@link #ROLE_APPLICATION} < {@link #ROLE_SUPPORT} < {@link #ROLE_INFRASTRUCTURE}
 	 * */
 	private int role = BeanDefinition.ROLE_APPLICATION;
 
