@@ -17,9 +17,12 @@
 	<bean id="student" class="org.fade.demo.springframework.beans.parse.lookupmethod.Student" />
 
 	<bean id="testChangeMethod" class="org.fade.demo.springframework.beans.parse.replacedmethod.TestChangeMethod">
-		<replaced-method name="changeMe" replacer="replacer" />
+<!--		<replaced-method name="changeMe" replacer="replacer" />-->
+		<replaced-method name="changeMe" replacer="replacerAlias" />
 	</bean>
 
 	<bean id="replacer" class="org.fade.demo.springframework.beans.parse.replacedmethod.TestMethodReplacer" />
+
+	<alias name="replacer" alias="replacerAlias" />
 
 </beans>

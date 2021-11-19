@@ -30,4 +30,12 @@ public class ParseTest {
 		test.changeMe();
 	}
 
+	@Test
+	@SuppressWarnings("all")
+	public void testReplacedMethodWithImport() {
+		BeanFactory factory = new XmlBeanFactory(new ClassPathResource("org/fade/demo/springframework/beans/parse/importTest.xml"));
+		TestChangeMethod test = factory.getBean("testChangeMethod", TestChangeMethod.class);
+		test.changeMe();
+	}
+
 }

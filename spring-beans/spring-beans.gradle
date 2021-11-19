@@ -14,6 +14,10 @@ dependencies {
 	testImplementation("jakarta.annotation:jakarta.annotation-api")
 	testFixturesApi("org.junit.jupiter:junit-jupiter-api")
 	testFixturesImplementation("org.assertj:assertj-core")
+	compileOnly 'org.projectlombok:lombok:1.18.22'
+	annotationProcessor 'org.projectlombok:lombok:1.18.22'
+	testCompileOnly 'org.projectlombok:lombok:1.18.22'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
 }
 
 // This module does joint compilation for Java and Groovy code with the compileGroovy task.
