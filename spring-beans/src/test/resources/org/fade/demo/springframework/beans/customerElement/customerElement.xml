@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:fade="http://demo.fade.org/schema/user"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	   					   http://demo.fade.org/schema/user http://demo.fade.org/schema/user.xsd">
+
+	<fade:user id="1" username="fade" email="fade@test.com" />
+
+</beans>
