@@ -1,4 +1,4 @@
-package fade.demo.springframework.transaction;
+package org.fade.demo.springframework.transaction;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
@@ -6,7 +6,14 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.sql.DataSource;
+import java.sql.Types;
 
+/**
+ * 用户服务实现类
+ *
+ * @author fade
+ * @date 2021/12/23
+ */
 @Transactional(propagation = Propagation.REQUIRED)
 @Service
 public class UserServiceImpl implements UserService{
@@ -19,7 +26,10 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public void save(User user) {
-
+		jdbcTemplate.update("insert into user(name, age, sex) values(?, ?, ?)",
+				new Object[] {user.getName(), user.getAge(), user.getSex()},
+				new int[] {Types.VARCHAR, Types.INTEGER, Types.VARCHAR});
+		throw new RuntimeException("test transaction");
 	}
 
 }

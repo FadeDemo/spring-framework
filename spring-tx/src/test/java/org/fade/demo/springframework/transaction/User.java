@@ -1,4 +1,4 @@
-package fade.demo.springframework.transaction;
+package org.fade.demo.springframework.transaction;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -26,5 +26,8 @@ dependencies {
 	testImplementation("io.projectreactor:reactor-test")
 	testCompileOnly 'org.projectlombok:lombok:1.18.22'
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
-	optional(project(":spring-jdbc"))
+	testCompileOnly project(":spring-jdbc")
+	testImplementation 'com.alibaba:druid:1.2.8'
+	testImplementation 'mysql:mysql-connector-java:8.0.27'
+	testImplementation 'cn.hutool:hutool-all:5.7.17'
 }

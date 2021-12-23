@@ -44,3 +44,6 @@ atlassian-ide-plugin.xml
 
 # VS Code
 .vscode/
+
+# database setting file
+**/database.properties

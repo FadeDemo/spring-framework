@@ -1,0 +1,27 @@
+package org.fade.demo.springframework.transaction;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+/**
+ * 测试
+ *
+ * @author fade
+ * @date 2021/12/23
+ */
+public class TestCase {
+
+	@Test
+	public void main() {
+		// fixme module java.base does not "opens java.lang" to unnamed module @6aceb1a5
+		ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+		UserService userService = context.getBean("userServiceImpl", UserService.class);
+		User user = new User();
+		user.setName("张三");
+		user.setAge(18);
+		user.setSex("男");
+		userService.save(user);
+	}
+
+}
