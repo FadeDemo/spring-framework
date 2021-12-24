@@ -14,7 +14,7 @@ public class TestCase {
 
 	@Test
 	public void main() {
-		// fixme module java.base does not "opens java.lang" to unnamed module @6aceb1a5
+		// --add-opens java.base/java.lang=ALL-UNNAMED
 		ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
 		UserService userService = context.getBean("userServiceImpl", UserService.class);
 		User user = new User();

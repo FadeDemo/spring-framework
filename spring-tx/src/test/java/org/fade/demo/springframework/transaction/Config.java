@@ -33,10 +33,11 @@ public class Config {
 	public DataSource dataSource() {
 		DruidDataSource druidDataSource = new DruidDataSource();
 		druidDataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-		druidDataSource.setUrl("jdbc:mysql:///spring");
 		Props props = new Props("org/fade/demo/springframework/transaction/database.properties");
+		String url = props.getStr("mysql.url");
 		String username = props.getStr("mysql.username");
 		String password = props.getStr("mysql.password");
+		druidDataSource.setUrl(url);
 		druidDataSource.setUsername(username);
 		druidDataSource.setPassword(password);
 		druidDataSource.setInitialSize(1);
