@@ -11,7 +11,8 @@ import java.sql.Types;
 
 /**
  * 用户服务实现类
- *
+ * 默认情况下Spring的事务只对 {@link RuntimeException} 和 {@link Error} 起作用，
+ * 这点在 {@link Transactional#rollbackFor()} 的 JavaDoc 中也有说明
  * @author fade
  * @date 2021/12/23
  */
