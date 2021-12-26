@@ -1,5 +1,6 @@
 package org.springframework.transaction.config;
 
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.w3c.dom.Element;
 
 import org.springframework.aop.config.AopNamespaceUtils;
@@ -46,6 +47,10 @@ class AnnotationDrivenBeanDefinitionParser implements BeanDefinitionParser {
 	public BeanDefinition parse(Element element, ParserContext parserContext) {
 		registerTransactionalEventListenerFactory(parserContext);
 		String mode = element.getAttribute("mode");
+		/** 对应tx:annotation-driven标签的mode属性
+		 *  或
+		 *  {@link EnableTransactionManagement#mode()}
+		 * */
 		if ("aspectj".equals(mode)) {
 			// mode="aspectj"
 			registerTransactionAspect(element, parserContext);
@@ -108,33 +113,58 @@ class AnnotationDrivenBeanDefinitionParser implements BeanDefinitionParser {
 			String txAdvisorBeanName = TransactionManagementConfigUtils.TRANSACTION_ADVISOR_BEAN_NAME;
 			if (!parserContext.getRegistry().containsBeanDefinition(txAdvisorBeanName)) {
 				Object eleSource = parserContext.extractSource(element);
-
+				/**
+				 * 创建 {@link org.springframework.transaction.interceptor.TransactionAttributeSource}
+				 * @see org.springframework.transaction.interceptor.TransactionAttributeSource
+				 * @see org.springframework.transaction.annotation.AnnotationTransactionAttributeSource
+				 * */
 				// Create the TransactionAttributeSource definition.
 				RootBeanDefinition sourceDef = new RootBeanDefinition(
 						"org.springframework.transaction.annotation.AnnotationTransactionAttributeSource");
 				sourceDef.setSource(eleSource);
 				sourceDef.setRole(BeanDefinition.ROLE_INFRASTRUCTURE);
+				// 以Spring默认规则生成的bean的名字注册
 				String sourceName = parserContext.getReaderContext().registerWithGeneratedName(sourceDef);
 
+				/**
+				 * 创建 {@link TransactionInterceptor}
+				 * */
 				// Create the TransactionInterceptor definition.
 				RootBeanDefinition interceptorDef = new RootBeanDefinition(TransactionInterceptor.class);
 				interceptorDef.setSource(eleSource);
 				interceptorDef.setRole(BeanDefinition.ROLE_INFRASTRUCTURE);
 				registerTransactionManager(element, interceptorDef);
 				interceptorDef.getPropertyValues().add("transactionAttributeSource", new RuntimeBeanReference(sourceName));
+				// 注册
 				String interceptorName = parserContext.getReaderContext().registerWithGeneratedName(interceptorDef);
 
+				/**
+				 * 创建 {@link org.springframework.transaction.interceptor.TransactionAttributeSourceAdvisor}
+				 * @see org.springframework.transaction.interceptor.TransactionAttributeSourceAdvisor
+				 * @see BeanFactoryTransactionAttributeSourceAdvisor
+				 * */
 				// Create the TransactionAttributeSourceAdvisor definition.
 				RootBeanDefinition advisorDef = new RootBeanDefinition(BeanFactoryTransactionAttributeSourceAdvisor.class);
 				advisorDef.setSource(eleSource);
 				advisorDef.setRole(BeanDefinition.ROLE_INFRASTRUCTURE);
+				/**
+				 * 将前面创建的 {@link org.springframework.transaction.interceptor.TransactionAttributeSource} 注入
+				 * */
 				advisorDef.getPropertyValues().add("transactionAttributeSource", new RuntimeBeanReference(sourceName));
+				/**
+				 * 将前面创建的 {@link TransactionInterceptor} 注入
+				 * */
 				advisorDef.getPropertyValues().add("adviceBeanName", interceptorName);
 				if (element.hasAttribute("order")) {
+					// 配置order属性
 					advisorDef.getPropertyValues().add("order", element.getAttribute("order"));
 				}
+				// 注册
 				parserContext.getRegistry().registerBeanDefinition(txAdvisorBeanName, advisorDef);
 
+				/**
+				 * 创建 {@link CompositeComponentDefinition}
+				 * */
 				CompositeComponentDefinition compositeDef = new CompositeComponentDefinition(element.getTagName(), eleSource);
 				compositeDef.addNestedComponent(new BeanComponentDefinition(sourceDef, sourceName));
 				compositeDef.addNestedComponent(new BeanComponentDefinition(interceptorDef, interceptorName));
