@@ -1,19 +1,3 @@
-/*
- * Copyright 2002-2021 the original author or authors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package org.springframework.aop.support;
 
 import java.lang.reflect.InvocationTargetException;
@@ -227,6 +211,10 @@ public abstract class AopUtils {
 			return false;
 		}
 
+		/**
+		 * 返回自身，即pc
+		 * @see org.springframework.transaction.interceptor.TransactionAttributeSourcePointcut
+		 * */
 		MethodMatcher methodMatcher = pc.getMethodMatcher();
 		if (methodMatcher == MethodMatcher.TRUE) {
 			// No need to iterate the methods if we're matching any method anyway...
@@ -238,6 +226,7 @@ public abstract class AopUtils {
 			introductionAwareMethodMatcher = (IntroductionAwareMethodMatcher) methodMatcher;
 		}
 
+		// 获取对应类的所有接口并连同本身
 		Set<Class<?>> classes = new LinkedHashSet<>();
 		if (!Proxy.isProxyClass(targetClass)) {
 			classes.add(ClassUtils.getUserClass(targetClass));
@@ -245,8 +234,10 @@ public abstract class AopUtils {
 		classes.addAll(ClassUtils.getAllInterfacesForClassAsSet(targetClass));
 
 		for (Class<?> clazz : classes) {
+			// 对classes中类的方法进行遍历
 			Method[] methods = ReflectionUtils.getAllDeclaredMethods(clazz);
 			for (Method method : methods) {
+				// 判断是否能匹配
 				if (introductionAwareMethodMatcher != null ?
 						introductionAwareMethodMatcher.matches(method, targetClass, hasIntroductions) :
 						methodMatcher.matches(method, targetClass)) {
@@ -284,7 +275,16 @@ public abstract class AopUtils {
 		if (advisor instanceof IntroductionAdvisor) {
 			return ((IntroductionAdvisor) advisor).getClassFilter().matches(targetClass);
 		}
+		/**
+		 * <p> {@link org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor}
+		 * 实现了 {@link PointcutAdvisor}</p>
+		 * */
 		else if (advisor instanceof PointcutAdvisor pca) {
+			/**
+			 * <p>以 {@link org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor} 里注入的
+			 *  {@link org.springframework.transaction.interceptor.TransactionAttributeSource} 构造
+			 *  {@link org.springframework.transaction.interceptor.TransactionAttributeSourcePointcut} 作为参数</p>
+			 * */
 			return canApply(pca.getPointcut(), targetClass, hasIntroductions);
 		}
 		else {
@@ -306,6 +306,8 @@ public abstract class AopUtils {
 			return candidateAdvisors;
 		}
 		List<Advisor> eligibleAdvisors = new ArrayList<>();
+		// 首先处理引介增强
+		// 引介增强是一种比较特殊的增强类型，它不是在目标方法周围织入增强，而是为目标创建新的方法和属性，所以它的连接点是类级别的而非方法级别的。
 		for (Advisor candidate : candidateAdvisors) {
 			if (candidate instanceof IntroductionAdvisor && canApply(candidate, clazz)) {
 				eligibleAdvisors.add(candidate);
@@ -313,10 +315,12 @@ public abstract class AopUtils {
 		}
 		boolean hasIntroductions = !eligibleAdvisors.isEmpty();
 		for (Advisor candidate : candidateAdvisors) {
+			// 引介增强已经处理
 			if (candidate instanceof IntroductionAdvisor) {
 				// already processed
 				continue;
 			}
+			// 对于普通bean的处理
 			if (canApply(candidate, clazz, hasIntroductions)) {
 				eligibleAdvisors.add(candidate);
 			}

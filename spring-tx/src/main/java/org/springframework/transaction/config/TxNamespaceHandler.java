@@ -44,6 +44,8 @@ public class TxNamespaceHandler extends NamespaceHandlerSupport {
 		LOG.debug("即将开始注册annotation-driven标签的BeanDefinitionParser");
 		/**
 		 * 注册annotation-driven标签的 {@link org.springframework.beans.factory.xml.BeanDefinitionParser}
+		 * @see org.springframework.beans.factory.xml.BeanDefinitionParser
+		 * @see AnnotationDrivenBeanDefinitionParser
 		 * */
 		registerBeanDefinitionParser("annotation-driven", new AnnotationDrivenBeanDefinitionParser());
 		LOG.debug("注册annotation-driven标签的BeanDefinitionParser结束");

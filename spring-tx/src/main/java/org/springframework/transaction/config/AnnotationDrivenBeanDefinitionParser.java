@@ -170,6 +170,13 @@ class AnnotationDrivenBeanDefinitionParser implements BeanDefinitionParser {
 				compositeDef.addNestedComponent(new BeanComponentDefinition(interceptorDef, interceptorName));
 				compositeDef.addNestedComponent(new BeanComponentDefinition(advisorDef, txAdvisorBeanName));
 				parserContext.registerComponent(compositeDef);
+
+				/**
+				 * <p>{@link BeanFactoryTransactionAttributeSourceAdvisor} 作为 {@link org.springframework.aop.Advisor}
+				 * 的实现类，要遵从 {@link org.springframework.aop.Advisor} 的处理方式，而 {@link BeanFactoryTransactionAttributeSourceAdvisor}
+				 * 的advice是 {@link TransactionInterceptor}, 所以
+				 * 最后整个事务逻辑是在 {@link TransactionInterceptor} 中实现的</p>
+				 * */
 			}
 		}
 	}

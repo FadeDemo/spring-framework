@@ -1,19 +1,3 @@
-/*
- * Copyright 2002-2021 the original author or authors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package org.springframework.transaction.interceptor;
 
 import java.lang.reflect.Method;
@@ -106,6 +90,7 @@ public abstract class AbstractFallbackTransactionAttributeSource
 			return null;
 		}
 
+		// 先尝试从缓存中加载
 		// First, see if we have a cached value.
 		Object cacheKey = getCacheKey(method, targetClass);
 		TransactionAttribute cached = this.attributeCache.get(cacheKey);
@@ -120,6 +105,9 @@ public abstract class AbstractFallbackTransactionAttributeSource
 			}
 		}
 		else {
+			/**
+			 * 对应信息未被缓存时，工作委托给 {@link #computeTransactionAttribute(Method, Class)}
+			 * */
 			// We need to work it out.
 			TransactionAttribute txAttr = computeTransactionAttribute(method, targetClass);
 			// Put it in the cache.
@@ -171,24 +159,34 @@ public abstract class AbstractFallbackTransactionAttributeSource
 		// If the target class is null, the method will be unchanged.
 		Method specificMethod = AopUtils.getMostSpecificMethod(method, targetClass);
 
+		/**
+		 * 实际搜寻事务属性的执行方法是 {@link #findTransactionAttribute(Method) 和
+		 * {@link #findTransactionAttribute(Class)}}
+		 * */
+
+		// 查看方法中是否有事务声明
 		// First try is the method in the target class.
 		TransactionAttribute txAttr = findTransactionAttribute(specificMethod);
 		if (txAttr != null) {
 			return txAttr;
 		}
 
+		// 查看方法所在类中是否存在事务声明
 		// Second try is the transaction attribute on the target class.
 		txAttr = findTransactionAttribute(specificMethod.getDeclaringClass());
 		if (txAttr != null && ClassUtils.isUserLevelMethod(method)) {
 			return txAttr;
 		}
 
+		// 如果存在接口，则去接口中寻找
 		if (specificMethod != method) {
+			// 查找接口方法
 			// Fallback is to look at the original method.
 			txAttr = findTransactionAttribute(method);
 			if (txAttr != null) {
 				return txAttr;
 			}
+			// 到接口中的类中寻找
 			// Last fallback is the class of the original method.
 			txAttr = findTransactionAttribute(method.getDeclaringClass());
 			if (txAttr != null && ClassUtils.isUserLevelMethod(method)) {
