@@ -627,6 +627,7 @@ public abstract class AbstractPlatformTransactionManager implements PlatformTran
 	 * @param resourcesHolder the object that holds suspended resources,
 	 * as returned by {@code suspend} (or {@code null} to just
 	 * resume synchronizations, if any)
+	 * 结束事务之前的挂起状态，恢复挂起的事务
 	 * @see #doResume
 	 * @see #suspend
 	 */
@@ -706,12 +707,14 @@ public abstract class AbstractPlatformTransactionManager implements PlatformTran
 	@Override
 	public final void commit(TransactionStatus status) throws TransactionException {
 		if (status.isCompleted()) {
+			// 已经完成了则报错
 			throw new IllegalTransactionStateException(
 					"Transaction is already completed - do not call commit or rollback more than once per transaction");
 		}
 
 		DefaultTransactionStatus defStatus = (DefaultTransactionStatus) status;
 		if (defStatus.isLocalRollbackOnly()) {
+			// 如果在事务链中已经被标记了回滚，那么也不会提交，而是直接回滚
 			if (defStatus.isDebug()) {
 				logger.debug("Transactional code has requested rollback");
 			}
@@ -727,6 +730,7 @@ public abstract class AbstractPlatformTransactionManager implements PlatformTran
 			return;
 		}
 
+		// 处理事务提交
 		processCommit(defStatus);
 	}
 
@@ -742,8 +746,15 @@ public abstract class AbstractPlatformTransactionManager implements PlatformTran
 
 			try {
 				boolean unexpectedRollback = false;
+				// 做准备
 				prepareForCommit(status);
+				/**
+				 * 添加 {@link TransactionSynchronization} 中对应方法的调用
+				 * */
 				triggerBeforeCommit(status);
+				/**
+				 * 添加 {@link TransactionSynchronization} 中对应方法的调用
+				 * */
 				triggerBeforeCompletion(status);
 				beforeCompletionInvoked = true;
 
@@ -752,6 +763,7 @@ public abstract class AbstractPlatformTransactionManager implements PlatformTran
 						logger.debug("Releasing transaction savepoint");
 					}
 					unexpectedRollback = status.isGlobalRollbackOnly();
+					// 如果存在保存点，则清除保存点信息
 					status.releaseHeldSavepoint();
 				}
 				else if (status.isNewTransaction()) {
@@ -759,6 +771,7 @@ public abstract class AbstractPlatformTransactionManager implements PlatformTran
 						logger.debug("Initiating transaction commit");
 					}
 					unexpectedRollback = status.isGlobalRollbackOnly();
+					// 如果是独立的事务则直接提交
 					doCommit(status);
 				}
 				else if (isFailEarlyOnGlobalRollbackOnly()) {
@@ -789,8 +802,12 @@ public abstract class AbstractPlatformTransactionManager implements PlatformTran
 			}
 			catch (RuntimeException | Error ex) {
 				if (!beforeCompletionInvoked) {
+					/**
+					 * 添加 {@link TransactionSynchronization} 中对应方法的调用
+					 * */
 					triggerBeforeCompletion(status);
 				}
+				// 提交过程中出现异常则回滚
 				doRollbackOnCommitException(status, ex);
 				throw ex;
 			}
@@ -798,6 +815,9 @@ public abstract class AbstractPlatformTransactionManager implements PlatformTran
 			// Trigger afterCommit callbacks, with an exception thrown there
 			// propagated to callers but the transaction still considered as committed.
 			try {
+				/**
+				 * 添加 {@link TransactionSynchronization} 中对应方法的调用
+				 * */
 				triggerAfterCommit(status);
 			}
 			finally {
@@ -1011,21 +1031,26 @@ public abstract class AbstractPlatformTransactionManager implements PlatformTran
 	/**
 	 * Clean up after completion, clearing synchronization if necessary,
 	 * and invoking doCleanupAfterCompletion.
+	 * 清空记录的资源并将挂起的资源恢复
 	 * @param status object representing the transaction
 	 * @see #doCleanupAfterCompletion
 	 */
 	private void cleanupAfterCompletion(DefaultTransactionStatus status) {
+		// 设置完成状态
 		status.setCompleted();
 		if (status.isNewSynchronization()) {
+			// 如果当前事务是新的同步状态，需要将绑定到当前线程的事务信息清除
 			TransactionSynchronizationManager.clear();
 		}
 		if (status.isNewTransaction()) {
+			// 如果是新的事务则需要清除资源
 			doCleanupAfterCompletion(status.getTransaction());
 		}
 		if (status.getSuspendedResources() != null) {
 			if (status.isDebug()) {
 				logger.debug("Resuming suspended transaction after completion of inner transaction");
 			}
+			// 结束事务之前的挂起状态
 			Object transaction = (status.hasTransaction() ? status.getTransaction() : null);
 			resume(transaction, (SuspendedResourcesHolder) status.getSuspendedResources());
 		}
