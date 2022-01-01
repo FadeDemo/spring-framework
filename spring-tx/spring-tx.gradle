@@ -6,7 +6,7 @@ dependencies {
 	api(project(":spring-beans"))
 	api(project(":spring-core"))
 	optional(project(":spring-aop"))
-	optional(project(":spring-jdbc"))
+//	optional(project(":spring-jdbc"))
 	optional(project(":spring-context"))  // for JCA, @EnableTransactionManagement
 	optional("jakarta.ejb:jakarta.ejb-api")
 	optional("jakarta.interceptor:jakarta.interceptor-api")
