@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+	<component name="XDebuggerManager">
+		<breakpoint-manager>
+			<breakpoints>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/config/TxNamespaceHandler.java</url>
+					<line>49</line>
+					<option name="timeStamp" value="1" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/config/AnnotationDrivenBeanDefinitionParser.java</url>
+					<line>110</line>
+					<option name="timeStamp" value="2" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/config/AnnotationDrivenBeanDefinitionParser.java</url>
+					<line>47</line>
+					<option name="timeStamp" value="3" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/config/AopNamespaceUtils.java</url>
+					<line>48</line>
+					<option name="timeStamp" value="5" />
+				</line-breakpoint>
+				<line-breakpoint type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/config/AopConfigUtils.java</url>
+					<line>59</line>
+					<option name="timeStamp" value="6" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="beanName.equals(&quot;userServiceImpl&quot;)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java</url>
+					<line>271</line>
+					<option name="timeStamp" value="7" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="beanName.equals(&quot;userServiceImpl&quot;)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java</url>
+					<line>313</line>
+					<option name="timeStamp" value="8" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="beanName.equals(&quot;userServiceImpl&quot;)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java</url>
+					<line>61</line>
+					<option name="timeStamp" value="9" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="beanName.equals(&quot;userServiceImpl&quot;)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java</url>
+					<line>81</line>
+					<option name="timeStamp" value="10" />
+				</line-breakpoint>
+				<line-breakpoint type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java</url>
+					<line>96</line>
+					<option name="timeStamp" value="11" />
+				</line-breakpoint>
+				<line-breakpoint type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/BeanFactoryAdvisorRetrievalHelper.java</url>
+					<line>53</line>
+					<option name="timeStamp" value="12" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="beanName.equals(&quot;userServiceImpl&quot;)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java</url>
+					<line>112</line>
+					<option name="timeStamp" value="14" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="clazz.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" custom="org.fade.demo.springframework.transaction.UserServiceImpl" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
+					<line>304</line>
+					<option name="timeStamp" value="15" />
+				</line-breakpoint>
+				<line-breakpoint type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
+					<line>260</line>
+					<option name="timeStamp" value="16" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
+					<line>274</line>
+					<option name="timeStamp" value="17" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" custom="org.fade.demo.springframework.transaction.UserServiceImpl" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
+					<line>208</line>
+					<option name="timeStamp" value="18" />
+				</line-breakpoint>
+				<line-breakpoint type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/StaticMethodMatcherPointcut.java</url>
+					<line>53</line>
+					<option name="timeStamp" value="19" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAttributeSourcePointcut.java</url>
+					<line>32</line>
+					<option name="timeStamp" value="20" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/AbstractFallbackTransactionAttributeSource.java</url>
+					<line>153</line>
+					<option name="timeStamp" value="22" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="clazz.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/annotation/AnnotationTransactionAttributeSource.java</url>
+					<line>136</line>
+					<option name="timeStamp" value="24" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="((element instanceof java.lang.reflect.Method) &amp;&amp; ((java.lang.reflect.Method) element).getName().equals(&quot;save&quot;)) || ((element instanceof Class&lt;?&gt;) &amp;&amp; ((Class&lt;?&gt;)element).getName().equals(&quot;org.fade.demo.springframework.transaction.UserServiceImpl&quot;))" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/annotation/SpringTransactionAnnotationParser.java</url>
+					<line>38</line>
+					<option name="timeStamp" value="26" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionInterceptor.java</url>
+					<line>99</line>
+					<option name="timeStamp" value="27" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java</url>
+					<line>339</line>
+					<option name="timeStamp" value="28" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java</url>
+					<line>600</line>
+					<option name="timeStamp" value="29" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>331</line>
+					<option name="timeStamp" value="30" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>394</line>
+					<option name="timeStamp" value="31" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceTransactionManager.java</url>
+					<line>226</line>
+					<option name="timeStamp" value="32" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceUtils.java</url>
+					<line>163</line>
+					<option name="timeStamp" value="34" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>545</line>
+					<option name="timeStamp" value="35" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>417</line>
+					<option name="timeStamp" value="36" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>587</line>
+					<option name="timeStamp" value="37" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java</url>
+					<line>643</line>
+					<option name="timeStamp" value="38" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java</url>
+					<line>694</line>
+					<option name="timeStamp" value="39" />
+				</line-breakpoint>
+				<line-breakpoint type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/DefaultTransactionAttribute.java</url>
+					<line>187</line>
+					<option name="timeStamp" value="40" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>842</line>
+					<option name="timeStamp" value="41" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>859</line>
+					<option name="timeStamp" value="43" />
+				</line-breakpoint>
+				<line-breakpoint type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/TransactionSynchronizationManager.java</url>
+					<line>273</line>
+					<option name="timeStamp" value="45" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractTransactionStatus.java</url>
+					<line>147</line>
+					<option name="timeStamp" value="46" />
+				</line-breakpoint>
+				<line-breakpoint type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/JdbcTransactionObjectSupport.java</url>
+					<line>173</line>
+					<option name="timeStamp" value="47" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>1039</line>
+					<option name="timeStamp" value="48" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceTransactionManager.java</url>
+					<line>360</line>
+					<option name="timeStamp" value="49" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>636</line>
+					<option name="timeStamp" value="50" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java</url>
+					<line>676</line>
+					<option name="timeStamp" value="51" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>708</line>
+					<option name="timeStamp" value="53" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>744</line>
+					<option name="timeStamp" value="54" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceTransactionManager.java</url>
+					<line>320</line>
+					<option name="timeStamp" value="55" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/config/TxNamespaceHandler.java</url>
+					<line>42</line>
+					<option name="timeStamp" value="56" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/config/AnnotationDrivenBeanDefinitionParser.java</url>
+					<line>62</line>
+					<option name="timeStamp" value="57" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="beanName.equals(&quot;userServiceImpl&quot;)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java</url>
+					<line>276</line>
+					<option name="timeStamp" value="58" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="beanName.equals(&quot;userServiceImpl&quot;)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java</url>
+					<line>329</line>
+					<option name="timeStamp" value="59" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="beanName.equals(&quot;userServiceImpl&quot;)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java</url>
+					<line>83</line>
+					<option name="timeStamp" value="60" />
+				</line-breakpoint>
+				<line-breakpoint type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/BeanFactoryAdvisorRetrievalHelper.java</url>
+					<line>62</line>
+					<option name="timeStamp" value="61" />
+				</line-breakpoint>
+				<line-breakpoint type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/BeanFactoryUtils.java</url>
+					<line>246</line>
+					<option name="timeStamp" value="62" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="beanName.equals(&quot;userServiceImpl&quot;)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java</url>
+					<line>114</line>
+					<option name="timeStamp" value="63" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="clazz.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
+					<line>323</line>
+					<option name="timeStamp" value="64" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="clazz.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
+					<line>311</line>
+					<option name="timeStamp" value="65" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
+					<line>287</line>
+					<option name="timeStamp" value="66" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class) &amp;&amp; method.getName().equals(&quot;save&quot;)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
+					<line>242</line>
+					<option name="timeStamp" value="67" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAttributeSourcePointcut.java</url>
+					<line>37</line>
+					<option name="timeStamp" value="68" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" custom="org.fade.demo.springframework.transaction.UserServiceImpl" />
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/AbstractFallbackTransactionAttributeSource.java</url>
+					<line>88</line>
+					<option name="timeStamp" value="69" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/AbstractFallbackTransactionAttributeSource.java</url>
+					<line>111</line>
+					<option name="timeStamp" value="70" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/AbstractFallbackTransactionAttributeSource.java</url>
+					<line>168</line>
+					<option name="timeStamp" value="72" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="method.getName().equals(&quot;save&quot;)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/annotation/AnnotationTransactionAttributeSource.java</url>
+					<line>142</line>
+					<option name="timeStamp" value="73" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="((element instanceof java.lang.reflect.Method) &amp;&amp; ((java.lang.reflect.Method) element).getName().equals(&quot;save&quot;)) || ((element instanceof Class&lt;?&gt;) &amp;&amp; ((Class&lt;?&gt;)element).getName().equals(&quot;org.fade.demo.springframework.transaction.UserServiceImpl&quot;))" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/annotation/SpringTransactionAnnotationParser.java</url>
+					<line>42</line>
+					<option name="timeStamp" value="75" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="((element instanceof java.lang.reflect.Method) &amp;&amp; ((java.lang.reflect.Method) element).getName().equals(&quot;save&quot;)) || ((element instanceof Class&lt;?&gt;) &amp;&amp; ((Class&lt;?&gt;)element).getName().equals(&quot;org.fade.demo.springframework.transaction.UserServiceImpl&quot;))" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/annotation/AnnotationTransactionAttributeSource.java</url>
+					<line>161</line>
+					<option name="timeStamp" value="76" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/annotation/SpringTransactionAnnotationParser.java</url>
+					<line>54</line>
+					<option name="timeStamp" value="77" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/AbstractFallbackTransactionAttributeSource.java</url>
+					<line>175</line>
+					<option name="timeStamp" value="78" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java</url>
+					<line>391</line>
+					<option name="timeStamp" value="79" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java</url>
+					<line>615</line>
+					<option name="timeStamp" value="80" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>334</line>
+					<option name="timeStamp" value="81" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>365</line>
+					<option name="timeStamp" value="82" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>370</line>
+					<option name="timeStamp" value="83" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>401</line>
+					<option name="timeStamp" value="84" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceTransactionManager.java</url>
+					<line>244</line>
+					<option name="timeStamp" value="85" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceTransactionManager.java</url>
+					<line>261</line>
+					<option name="timeStamp" value="86" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>403</line>
+					<option name="timeStamp" value="87" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java</url>
+					<line>627</line>
+					<option name="timeStamp" value="88" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java</url>
+					<line>398</line>
+					<option name="timeStamp" value="89" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionInterceptor.java</url>
+					<line>106</line>
+					<option name="timeStamp" value="90" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/test/java/org/fade/demo/springframework/transaction/UserServiceImpl.java</url>
+					<line>31</line>
+					<option name="timeStamp" value="91" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java</url>
+					<line>403</line>
+					<option name="timeStamp" value="92" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java</url>
+					<line>705</line>
+					<option name="timeStamp" value="93" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>848</line>
+					<option name="timeStamp" value="94" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>873</line>
+					<option name="timeStamp" value="95" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>880</line>
+					<option name="timeStamp" value="96" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>925</line>
+					<option name="timeStamp" value="97" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceTransactionManager.java</url>
+					<line>335</line>
+					<option name="timeStamp" value="98" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>1046</line>
+					<option name="timeStamp" value="99" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>1054</line>
+					<option name="timeStamp" value="100" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java</url>
+					<line>722</line>
+					<option name="timeStamp" value="101" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>720</line>
+					<option name="timeStamp" value="102" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>728</line>
+					<option name="timeStamp" value="103" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>733</line>
+					<option name="timeStamp" value="104" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>774</line>
+					<option name="timeStamp" value="105" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java</url>
+					<line>420</line>
+					<option name="timeStamp" value="106" />
+				</line-breakpoint>
+			</breakpoints>
+		</breakpoint-manager>
+	</component>
+</project>
