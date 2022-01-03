@@ -2,16 +2,25 @@ package org.fade.demo.springframework.beans.factory;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 
+/**
+ * bean工厂测试
+ *
+ * @author fade
+ * @date 2022/01/03
+ */
 public class BeanFactoryTest {
 
 	@Test
-	public void testXmlBeanFactory() {
-		// todo 废弃类的替代方法
+	@SuppressWarnings("deprecation")
+	public void testSimpleLoad() {
+		final String str = "testStr";
 		BeanFactory bf = new XmlBeanFactory(new ClassPathResource("org/fade/demo/springframework/beans/factory/beanFactoryTest.xml"));
+		MyTestBean bean = bf.getBean("myTestBean", MyTestBean.class);
+		assert bean != null;
+		assert str.equals(bean.getTestStr());
 	}
 
 }
