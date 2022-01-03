@@ -205,7 +205,7 @@
 					<line>147</line>
 					<option name="timeStamp" value="46" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/JdbcTransactionObjectSupport.java</url>
 					<line>173</line>
 					<option name="timeStamp" value="47" />
@@ -428,7 +428,7 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-tx/src/test/java/org/fade/demo/springframework/transaction/UserServiceImpl.java</url>
-					<line>31</line>
+					<line>35</line>
 					<option name="timeStamp" value="91" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -505,6 +505,31 @@
 					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java</url>
 					<line>420</line>
 					<option name="timeStamp" value="106" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>341</line>
+					<option name="timeStamp" value="107" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/test/java/org/fade/demo/springframework/transaction/PropagationServiceImpl.java</url>
+					<line>16</line>
+					<option name="timeStamp" value="108" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/test/java/org/fade/demo/springframework/transaction/PropagationServiceImpl.java</url>
+					<line>37</line>
+					<option name="timeStamp" value="109" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionAspectSupport.java</url>
+					<line>681</line>
+					<option name="timeStamp" value="110" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
+					<line>828</line>
+					<option name="timeStamp" value="111" />
 				</line-breakpoint>
 			</breakpoints>
 		</breakpoint-manager>

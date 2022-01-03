@@ -16,8 +16,8 @@ public class TestCase {
 	@Test
 	public void main() {
 		// --add-opens java.base/java.lang=ALL-UNNAMED
-//		ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
-		ApplicationContext context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/transaction/applicationContext.xml");
+		ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+//		ApplicationContext context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/transaction/applicationContext.xml");
 		UserService userService = context.getBean("userServiceImpl", UserService.class);
 		User user = new User();
 		user.setName("张三");
