@@ -318,6 +318,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	@Override
 	public int loadBeanDefinitions(Resource resource) throws BeanDefinitionStoreException {
 		/**
+		 * <p>对 {@link Resource} 用 {@link EncodedResource} 进行封装</p>
 		 * 对资源文件的编码进行处理
 		 * 具体逻辑查看 {@link EncodedResource#getReader()}方法
 		 * */
@@ -328,6 +329,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	 * Load bean definitions from the specified XML file.
 	 * @param encodedResource the resource descriptor for the XML file,
 	 * allowing to specify an encoding to use for parsing the file
+	 * <p>数据准备阶段</p>
 	 * @return the number of bean definitions found
 	 * @throws BeanDefinitionStoreException in case of loading or parsing errors
 	 */
@@ -345,7 +347,14 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 					"Detected cyclic loading of " + encodedResource + " - check your import definitions!");
 		}
 
+		/**
+		 * <p>try-with-resource 获取 {@link InputStream}</p>
+		 * */
 		try (InputStream inputStream = encodedResource.getResource().getInputStream()) {
+			/**
+			 * <p>用 {@link InputSource} 包装 {@link InputStream}</p>
+			 * <p> {@link InputSource} 不是spring的类</p>
+			 * */
 			InputSource inputSource = new InputSource(inputStream);
 			if (encodedResource.getEncoding() != null) {
 				inputSource.setEncoding(encodedResource.getEncoding());
@@ -392,6 +401,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 
 	/**
 	 * Actually load bean definitions from the specified XML file.
+	 * <p>从xml文件中加载 {@link org.springframework.beans.factory.config.BeanDefinition}</p>
 	 * @param inputSource the SAX InputSource to read from
 	 * @param resource the resource descriptor for the XML file
 	 * @return the number of bean definitions found
@@ -465,6 +475,9 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	 * mode gets {@link #detectValidationMode detected} from the given resource.
 	 * <p>Override this method if you would like full control over the validation
 	 * mode, even when something other than {@link #VALIDATION_AUTO} was set.
+	 * <p>获取XML文件的验证模式</p>
+	 * <p>因为XSD的XML Schema本身是xml，可以用
+	 * 通用的xml解析器去解析，故使用XSD验证模式更为普遍</p>
 	 * @see #detectValidationMode
 	 */
 	protected int getValidationModeForResource(Resource resource) {
@@ -512,7 +525,9 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 		}
 
 		try {
-			// 自动检测XML文档验证模式
+			/**
+			 * <p>把自动检测验证模式的工作委托给 {@link XmlValidationModeDetector} </p>
+			 * */
 			return this.validationModeDetector.detectValidationMode(inputStream);
 		}
 		catch (IOException ex) {
