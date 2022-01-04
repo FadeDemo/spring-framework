@@ -463,7 +463,8 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	 */
 	protected Document doLoadDocument(InputSource inputSource, Resource resource) throws Exception {
 		/**
-		 * {@link #getValidationModeForResource(Resource)} 用于获取XML文件的验证模式
+		 * <p> {@link #getValidationModeForResource(Resource)} 用于获取XML文件的验证模式 </p>
+		 * <p> {@link EntityResolver} 可用于提供一个寻找校验模式文件的方法</p>
 		 * */
 		return this.documentLoader.loadDocument(inputSource, getEntityResolver(), this.errorHandler,
 				getValidationModeForResource(resource), isNamespaceAware());
@@ -541,6 +542,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	 * Called by {@code loadBeanDefinitions}.
 	 * <p>Creates a new instance of the parser class and invokes
 	 * {@code registerBeanDefinitions} on it.
+	 * <p>根据 {@link Document} 注册Bean</p>
 	 * @param doc the DOM document
 	 * @param resource the resource descriptor (for context information)
 	 * @return the number of bean definitions found
