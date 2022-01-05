@@ -52,12 +52,12 @@
 					<line>81</line>
 					<option name="timeStamp" value="10" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java</url>
 					<line>96</line>
 					<option name="timeStamp" value="11" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/BeanFactoryAdvisorRetrievalHelper.java</url>
 					<line>53</line>
 					<option name="timeStamp" value="12" />
@@ -273,7 +273,7 @@
 					<line>83</line>
 					<option name="timeStamp" value="60" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/BeanFactoryAdvisorRetrievalHelper.java</url>
 					<line>62</line>
 					<option name="timeStamp" value="61" />
@@ -513,7 +513,7 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-tx/src/test/java/org/fade/demo/springframework/transaction/PropagationServiceImpl.java</url>
-					<line>37</line>
+					<line>38</line>
 					<option name="timeStamp" value="109" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -528,7 +528,7 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-tx/src/test/java/org/fade/demo/springframework/transaction/PropagationServiceImpl.java</url>
-					<line>28</line>
+					<line>29</line>
 					<option name="timeStamp" value="162" />
 				</line-breakpoint>
 			</breakpoints>
