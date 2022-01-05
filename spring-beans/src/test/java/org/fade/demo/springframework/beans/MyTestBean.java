@@ -1,4 +1,4 @@
-package org.fade.demo.springframework.beans.factory;
+package org.fade.demo.springframework.beans;
 
 import lombok.Data;
 

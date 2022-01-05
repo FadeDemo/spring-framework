@@ -1,4 +1,4 @@
-package org.fade.demo.springframework.beans.factory;
+package org.fade.demo.springframework.beans;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.BeanFactory;
@@ -17,7 +17,7 @@ public class BeanFactoryTest {
 	@SuppressWarnings("deprecation")
 	public void testSimpleLoad() {
 		final String str = "testStr";
-		BeanFactory bf = new XmlBeanFactory(new ClassPathResource("org/fade/demo/springframework/beans/factory/beanFactoryTest.xml"));
+		BeanFactory bf = new XmlBeanFactory(new ClassPathResource("org/fade/demo/springframework/beans/beanFactoryTest.xml"));
 		MyTestBean bean = bf.getBean("myTestBean", MyTestBean.class);
 		assert bean != null;
 		assert str.equals(bean.getTestStr());

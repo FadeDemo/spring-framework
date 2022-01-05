@@ -532,8 +532,8 @@
 					<option name="timeStamp" value="111" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
-					<url>file://$PROJECT_DIR$/spring-beans/src/test/java/org/fade/demo/springframework/beans/factory/BeanFactoryTest.java</url>
-					<line>19</line>
+					<url>file://$PROJECT_DIR$/spring-beans/src/test/java/org/fade/demo/springframework/beans/BeanFactoryTest.java</url>
+					<line>20</line>
 					<option name="timeStamp" value="113" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -663,18 +663,98 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
-					<line>1618</line>
+					<line>1624</line>
 					<option name="timeStamp" value="142" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
-					<line>1610</line>
+					<line>1616</line>
 					<option name="timeStamp" value="143" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
-					<line>1579</line>
+					<line>1585</line>
 					<option name="timeStamp" value="144" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultBeanDefinitionDocumentReader.java</url>
+					<line>189</line>
+					<option name="timeStamp" value="145" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultBeanDefinitionDocumentReader.java</url>
+					<line>206</line>
+					<option name="timeStamp" value="146" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultBeanDefinitionDocumentReader.java</url>
+					<line>215</line>
+					<option name="timeStamp" value="147" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/DefaultBeanDefinitionDocumentReader.java</url>
+					<line>345</line>
+					<option name="timeStamp" value="148" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
+					<line>383</line>
+					<option name="timeStamp" value="149" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
+					<line>394</line>
+					<option name="timeStamp" value="150" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
+					<line>423</line>
+					<option name="timeStamp" value="151" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
+					<line>490</line>
+					<option name="timeStamp" value="152" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
+					<line>507</line>
+					<option name="timeStamp" value="153" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
+					<line>665</line>
+					<option name="timeStamp" value="154" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/BeanDefinitionReaderUtils.java</url>
+					<line>59</line>
+					<option name="timeStamp" value="155" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
+					<line>510</line>
+					<option name="timeStamp" value="156" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
+					<line>566</line>
+					<option name="timeStamp" value="157" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
+					<line>515</line>
+					<option name="timeStamp" value="158" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
+					<line>674</line>
+					<option name="timeStamp" value="159" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
+					<line>522</line>
+					<option name="timeStamp" value="160" />
 				</line-breakpoint>
 			</breakpoints>
 		</breakpoint-manager>

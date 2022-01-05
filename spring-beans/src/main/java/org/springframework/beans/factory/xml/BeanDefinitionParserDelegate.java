@@ -423,7 +423,7 @@ public class BeanDefinitionParserDelegate {
 		 * */
 		AbstractBeanDefinition beanDefinition = parseBeanDefinitionElement(ele, beanName, containingBean);
 		if (beanDefinition != null) {
-			// id和name属性都没有指定，按照默认规则生成bean
+			// id和name属性都没有指定，按照默认规则生成beanName
 			if (!StringUtils.hasText(beanName)) {
 				try {
 					if (containingBean != null) {
@@ -516,7 +516,6 @@ public class BeanDefinitionParserDelegate {
 			parseMetaElements(ele, bd);
 			// 解析lookup-method子元素
 			// 获取器注入
-			// 类似于@Bean注解标注的方法
 			/**
 			 * 示例见 {@link org.fade.demo.springframework.beans.parse.ParseTest#}
 			 * */
@@ -587,6 +586,9 @@ public class BeanDefinitionParserDelegate {
 		if (isDefaultValue(lazyInit)) {
 			lazyInit = this.defaults.getLazyInit();
 		}
+		/**
+		 * 没有设置或设置为非 {@link TRUE_VALUE} 都不开启
+		 * */
 		bd.setLazyInit(TRUE_VALUE.equals(lazyInit));
 
 		// 解析autowire属性
@@ -677,6 +679,9 @@ public class BeanDefinitionParserDelegate {
 				Element metaElement = (Element) node;
 				String key = metaElement.getAttribute(KEY_ATTRIBUTE);
 				String value = metaElement.getAttribute(VALUE_ATTRIBUTE);
+				/**
+				 * 使用key和value构造 {@link BeanMetadataAttribute}
+				 * */
 				BeanMetadataAttribute attribute = new BeanMetadataAttribute(key, value);
 				attribute.setSource(extractSource(metaElement));
 				attributeAccessor.addMetadataAttribute(attribute);
