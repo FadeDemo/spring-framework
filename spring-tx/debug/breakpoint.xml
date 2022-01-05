@@ -37,7 +37,7 @@
 				<line-breakpoint enabled="true" type="java-line">
 					<condition expression="beanName.equals(&quot;userServiceImpl&quot;)" language="JAVA" />
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java</url>
-					<line>313</line>
+					<line>314</line>
 					<option name="timeStamp" value="8" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -258,13 +258,13 @@
 				<line-breakpoint enabled="true" type="java-line">
 					<condition expression="beanName.equals(&quot;userServiceImpl&quot;)" language="JAVA" />
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java</url>
-					<line>276</line>
+					<line>277</line>
 					<option name="timeStamp" value="58" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<condition expression="beanName.equals(&quot;userServiceImpl&quot;)" language="JAVA" />
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java</url>
-					<line>329</line>
+					<line>330</line>
 					<option name="timeStamp" value="59" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -513,11 +513,6 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-tx/src/test/java/org/fade/demo/springframework/transaction/PropagationServiceImpl.java</url>
-					<line>16</line>
-					<option name="timeStamp" value="108" />
-				</line-breakpoint>
-				<line-breakpoint enabled="true" type="java-line">
-					<url>file://$PROJECT_DIR$/spring-tx/src/test/java/org/fade/demo/springframework/transaction/PropagationServiceImpl.java</url>
 					<line>37</line>
 					<option name="timeStamp" value="109" />
 				</line-breakpoint>
@@ -530,6 +525,11 @@
 					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/AbstractPlatformTransactionManager.java</url>
 					<line>828</line>
 					<option name="timeStamp" value="111" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/test/java/org/fade/demo/springframework/transaction/PropagationServiceImpl.java</url>
+					<line>28</line>
+					<option name="timeStamp" value="162" />
 				</line-breakpoint>
 			</breakpoints>
 		</breakpoint-manager>

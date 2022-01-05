@@ -867,7 +867,7 @@ public abstract class AbstractPlatformTransactionManager implements PlatformTran
 
 				if (status.hasSavepoint()) {
 					// 如果有保存点，则回滚到保存点
-					// 嵌套事务的回滚并不会引起外部事务的回滚，但嵌套事务是在外部事务结束时一起提交的
+					// 嵌套事务是在外部事务结束时一起提交的
 					if (status.isDebug()) {
 						logger.debug("Rolling back transaction to savepoint");
 					}

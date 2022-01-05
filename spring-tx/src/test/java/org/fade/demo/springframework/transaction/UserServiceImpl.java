@@ -37,11 +37,11 @@ public class UserServiceImpl implements UserService{
 				new Object[] {user.getName(), user.getAge(), user.getSex()},
 				new int[] {Types.VARCHAR, Types.INTEGER, Types.VARCHAR});
 //		propagationService.nestedThrowException(user);
-		try {
-			propagationService.nestedThrowException(user);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+//		try {
+//			propagationService.nestedThrowException(user);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
 //		propagationService.nestedOk(user);
 		throw new RuntimeException("test transaction");
 	}
