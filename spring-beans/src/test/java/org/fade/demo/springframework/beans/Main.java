@@ -11,10 +11,24 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
 
 	@Test
-	public void main() {
-		ApplicationContext context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/getBeanTest.xml");
+	public void testLookupMethod() {
+		ApplicationContext context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/parseTest.xml");
 		GetBeanTest bean = context.getBean("getBeanTest", GetBeanTest.class);
 		bean.showMe();
+	}
+
+	@Test
+	public void testReplacedMethod() {
+		ApplicationContext context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/parseTest.xml");
+		TestChangeMethod testReplacedMethod = context.getBean("testReplacedMethod", TestChangeMethod.class);
+		testReplacedMethod.changeMe();
+	}
+
+	@Test
+	public void testConstructorArg() {
+		ApplicationContext context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/parseTest.xml");
+		ConstructorArgBean testConstructorArg = context.getBean("testConstructorArg", ConstructorArgBean.class);
+		System.out.println(testConstructorArg);
 	}
 
 }
