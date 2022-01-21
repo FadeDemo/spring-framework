@@ -54,7 +54,7 @@ public class SimpleAliasRegistry implements AliasRegistry {
 		Assert.hasText(alias, "'alias' must not be empty");
 		// 确保多线程访问的安全
 		synchronized (this.aliasMap) {
-			// 别名和beanName相同则不记录
+			// 别名和beanName相同则不记录，并删除此别名
 			if (alias.equals(name)) {
 				this.aliasMap.remove(alias);
 				if (logger.isDebugEnabled()) {

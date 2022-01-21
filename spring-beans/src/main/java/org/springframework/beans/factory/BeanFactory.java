@@ -96,7 +96,6 @@ import org.springframework.lang.Nullable;
  * </ol>
  *
  * 定义获取bean及bean的各种属性
- *
  * @see BeanNameAware#setBeanName
  * @see BeanClassLoaderAware#setBeanClassLoader
  * @see BeanFactoryAware#setBeanFactory

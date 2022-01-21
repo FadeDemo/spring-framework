@@ -23,4 +23,8 @@
 		<constructor-arg type="java.lang.String" value="fade" />
 	</bean>
 
+	<bean id="testAlias" name="gardener" class="org.fade.demo.springframework.beans.Teacher" />
+
+	<alias name="testAlias" alias="candle" />
+
 </beans>

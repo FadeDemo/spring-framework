@@ -148,7 +148,7 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 	private String scope = SCOPE_DEFAULT;
 
 	/**
-	 * 是否是抽象，对应bean元素的scope属性
+	 * 是否是抽象，对应bean元素的abstract属性
 	 * */
 	private boolean abstractFlag = false;
 

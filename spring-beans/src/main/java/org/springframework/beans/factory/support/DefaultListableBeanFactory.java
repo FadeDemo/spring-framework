@@ -934,7 +934,8 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 			try {
 				/**
 				 * 校验 {@link AbstractBeanDefinition#methodOverrides} 和
-				 * {@link AbstractBeanDefinition#factoryMethodName} 是否共存
+				 * {@link AbstractBeanDefinition#factoryMethodName} 是否共存，
+				 * 或者methodOverrides对应的方法不存在
 				 * */
 				((AbstractBeanDefinition) beanDefinition).validate();
 			}

@@ -31,4 +31,15 @@ public class Main {
 		System.out.println(testConstructorArg);
 	}
 
+	@Test
+	public void testAlias() {
+		ApplicationContext context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/parseTest.xml");
+		Teacher testAlias = context.getBean("testAlias", Teacher.class);
+		Teacher gardener = context.getBean("gardener", Teacher.class);
+		Teacher candle = context.getBean("candle", Teacher.class);
+		assert testAlias == gardener;
+		assert gardener == candle;
+		candle.showMe();
+	}
+
 }

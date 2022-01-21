@@ -220,6 +220,7 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 		// 递归调用beans标签的解析
 		else if (delegate.nodeNameEquals(ele, NESTED_BEANS_ELEMENT)) {
 			// recurse
+			// 递归
 			doRegisterBeanDefinitions(ele);
 		}
 	}
