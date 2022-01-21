@@ -803,6 +803,7 @@ public class BeanDefinitionParserDelegate {
 		if (StringUtils.hasLength(indexAttr)) {
 			try {
 				int index = Integer.parseInt(indexAttr);
+				// 判断下标是否合法
 				if (index < 0) {
 					error("'index' cannot be lower than 0", ele);
 				}
@@ -819,7 +820,7 @@ public class BeanDefinitionParserDelegate {
 							valueHolder.setName(nameAttr);
 						}
 						valueHolder.setSource(extractSource(ele));
-						// 不允许重复指定相同参数
+						// 不允许重复指定index
 						if (bd.getConstructorArgumentValues().hasIndexedArgumentValue(index)) {
 							error("Ambiguous constructor-arg entries for index " + index, ele);
 						}
@@ -841,6 +842,7 @@ public class BeanDefinitionParserDelegate {
 			}
 		}
 		else {
+			// 没有指定index的情况
 			try {
 				this.parseState.push(new ConstructorArgumentEntry());
 				// 解析value、ref或者value和ref对应的子标签
