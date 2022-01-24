@@ -94,7 +94,6 @@ import org.springframework.lang.Nullable;
  * <li>DisposableBean's {@code destroy}
  * <li>a custom {@code destroy-method} definition
  * </ol>
- *
  * 定义获取bean及bean的各种属性
  * @see BeanNameAware#setBeanName
  * @see BeanClassLoaderAware#setBeanClassLoader

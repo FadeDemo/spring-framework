@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	   xmlns:test="http://www.demo.fade.org/custom-element"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						   http://www.demo.fade.org/custom-element http://www.demo.fade.org/custom-element.xsd">
 
 	<bean id="teacher" class="org.fade.demo.springframework.beans.Teacher" />
 
@@ -26,5 +28,7 @@
 	<bean id="testAlias" name="gardener" class="org.fade.demo.springframework.beans.Teacher" />
 
 	<alias name="testAlias" alias="candle" />
+
+	<test:custom-element id="1" username="fade" email="fade@demo.fade.org" />
 
 </beans>

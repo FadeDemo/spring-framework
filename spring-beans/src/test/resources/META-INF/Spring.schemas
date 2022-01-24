@@ -1,1 +1,1 @@
-http\://demo.fade.org/schema/user.xsd=org/fade/demo/springframework/beans/customerElement/user.xsd
+http\://www.demo.fade.org/custom-element.xsd=org/fade/demo/springframework/beans/custom-element.xsd

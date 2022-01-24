@@ -1,1 +1,1 @@
-http\://demo.fade.org/schema/user=org.fade.demo.springframework.beans.parse.customElement.UserNamespaceHandler
+http\://www.demo.fade.org/custom-element=org.fade.demo.springframework.beans.CustomElementNamespaceHandler

@@ -42,4 +42,11 @@ public class Main {
 		candle.showMe();
 	}
 
+	@Test
+	public void testCustomElement() {
+		ApplicationContext context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/parseTest.xml");
+		CustomElementBean bean = context.getBean("1", CustomElementBean.class);
+		System.out.println(bean);
+	}
+
 }
