@@ -49,4 +49,11 @@ public class Main {
 		System.out.println(bean);
 	}
 
+	@Test
+	public void testNestedBean() {
+		ApplicationContext context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/parseTest.xml");
+		NestedBean testNestedBean = context.getBean("testNestedBean", NestedBean.class);
+		testNestedBean.getUser().showMe();
+	}
+
 }
