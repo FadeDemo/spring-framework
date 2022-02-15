@@ -235,10 +235,20 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 			String name, @Nullable Class<T> requiredType, @Nullable Object[] args, boolean typeCheckOnly)
 			throws BeansException {
 
+		// 提取对应的beanName
 		String beanName = transformedBeanName(name);
 		Object beanInstance;
 
+		/**
+		 * <p>检查缓存或者实例工厂中是否有对应的实例</p>
+		 * <p>先使用这段代码的原因是在创建单例bean的时候会存在依赖注入的情况，而
+		 * 在创建依赖的时候为了避免循环依赖</p>
+		 * <p>Spring创建bean的原则是不等bean创建完成就将创建bean的
+		 * {@link org.springframework.beans.factory.ObjectFactory} 提早曝光，即将其
+		 * 加入到缓存中，这样下个bean创建时依赖前面的bean就直接使用前面的ObjectFactory</p>
+		 * */
 		// Eagerly check singleton cache for manually registered singletons.
+		// 尝试从缓存获取或者从ObjectFactory中获取
 		Object sharedInstance = getSingleton(beanName);
 		if (sharedInstance != null && args == null) {
 			if (logger.isTraceEnabled()) {
@@ -250,10 +260,13 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 					logger.trace("Returning cached instance of singleton bean '" + beanName + "'");
 				}
 			}
+			// 返回对应的实例
 			beanInstance = getObjectForBeanInstance(sharedInstance, name, beanName, null);
 		}
 
 		else {
+			// 只有在单例情况才会尝试解决循环依赖
+			// 原型模式下，如果存在循环依赖
 			// Fail if we're already creating this bean instance:
 			// We're assumably within a circular reference.
 			if (isPrototypeCurrentlyInCreation(beanName)) {
@@ -262,6 +275,9 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 
 			// Check if bean definition exists in this factory.
 			BeanFactory parentBeanFactory = getParentBeanFactory();
+			/**
+			 * <p> {@link #containsBeanDefinition(String)} 会 </p>
+			 * */
 			if (parentBeanFactory != null && !containsBeanDefinition(beanName)) {
 				// Not found -> check parent.
 				String nameToLookup = originalBeanName(name);
