@@ -31,10 +31,10 @@
 
 	<test:custom-element id="1" username="fade" email="fade@demo.fade.org" />
 
-<!--	<bean id="testNestedBean" class="org.fade.demo.springframework.beans.NestedBean">-->
-<!--		<property name="user">-->
-<!--			<bean class="org.fade.demo.springframework.beans.User" />-->
-<!--		</property>-->
-<!--	</bean>-->
+	<bean id="testNestedBean" class="org.fade.demo.springframework.beans.NestedBean">
+		<property name="user">
+			<bean class="org.fade.demo.springframework.beans.User" />
+		</property>
+	</bean>
 
 </beans>

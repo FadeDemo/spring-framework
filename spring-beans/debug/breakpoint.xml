@@ -23,7 +23,7 @@
 					<line>48</line>
 					<option name="timeStamp" value="5" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/config/AopConfigUtils.java</url>
 					<line>59</line>
 					<option name="timeStamp" value="6" />
@@ -52,12 +52,12 @@
 					<line>81</line>
 					<option name="timeStamp" value="10" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java</url>
 					<line>96</line>
 					<option name="timeStamp" value="11" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/BeanFactoryAdvisorRetrievalHelper.java</url>
 					<line>53</line>
 					<option name="timeStamp" value="12" />
@@ -74,7 +74,7 @@
 					<line>304</line>
 					<option name="timeStamp" value="15" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
 					<line>260</line>
 					<option name="timeStamp" value="16" />
@@ -91,7 +91,7 @@
 					<line>208</line>
 					<option name="timeStamp" value="18" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/StaticMethodMatcherPointcut.java</url>
 					<line>53</line>
 					<option name="timeStamp" value="19" />
@@ -180,7 +180,7 @@
 					<line>694</line>
 					<option name="timeStamp" value="39" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/DefaultTransactionAttribute.java</url>
 					<line>187</line>
 					<option name="timeStamp" value="40" />
@@ -195,7 +195,7 @@
 					<line>859</line>
 					<option name="timeStamp" value="43" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/support/TransactionSynchronizationManager.java</url>
 					<line>273</line>
 					<option name="timeStamp" value="45" />
@@ -273,12 +273,12 @@
 					<line>83</line>
 					<option name="timeStamp" value="60" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/BeanFactoryAdvisorRetrievalHelper.java</url>
 					<line>62</line>
 					<option name="timeStamp" value="61" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/BeanFactoryUtils.java</url>
 					<line>246</line>
 					<option name="timeStamp" value="62" />
@@ -738,11 +738,6 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
-					<line>537</line>
-					<option name="timeStamp" value="157" />
-				</line-breakpoint>
-				<line-breakpoint enabled="true" type="java-line">
-					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
 					<line>482</line>
 					<option name="timeStamp" value="158" />
 				</line-breakpoint>
@@ -1010,6 +1005,16 @@
 					<url>file://$PROJECT_DIR$/spring-beans/src/test/java/org/fade/demo/springframework/beans/CustomElementBeanDefinitionParser.java</url>
 					<line>22</line>
 					<option name="timeStamp" value="212" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
+					<line>536</line>
+					<option name="timeStamp" value="213" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
+					<line>1489</line>
+					<option name="timeStamp" value="214" />
 				</line-breakpoint>
 			</breakpoints>
 		</breakpoint-manager>
