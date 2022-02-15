@@ -18,6 +18,7 @@ dependencies {
 	testFixturesImplementation("org.assertj:assertj-core")
 	testCompileOnly 'org.projectlombok:lombok:1.18.22'
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+	implementation 'cn.hutool:hutool-all:5.7.21'
 }
 
 // This module does joint compilation for Java and Groovy code with the compileGroovy task.

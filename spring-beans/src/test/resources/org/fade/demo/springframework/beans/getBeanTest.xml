@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="testFactoryBean" class="org.fade.demo.springframework.beans.CarFactoryBean">
+		<property name="carInfo" value="400,超级跑车,2000000" />
+	</bean>
+
+</beans>

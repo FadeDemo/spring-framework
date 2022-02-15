@@ -220,6 +220,8 @@ public class SimpleAliasRegistry implements AliasRegistry {
 	 * @return the transformed name
 	 */
 	public String canonicalName(String name) {
+		// 取指定的alias所表示的最终beanName
+		// aliasMap的value即为alias对应的beanName
 		String canonicalName = name;
 		// Handle aliasing...
 		String resolvedName;

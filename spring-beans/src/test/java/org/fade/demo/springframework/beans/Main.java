@@ -56,4 +56,18 @@ public class Main {
 		testNestedBean.getUser().showMe();
 	}
 
+	@Test
+	public void testFactoryBean() {
+		ApplicationContext context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/getBeanTest.xml");
+		Object testFactoryBean = context.getBean("testFactoryBean");
+//		assert testFactoryBean instanceof CarFactoryBean;
+		assert testFactoryBean instanceof Car;
+		// 获取工厂bean本身要加&
+		Object bean = context.getBean("&testFactoryBean");
+//		assert bean instanceof Car;
+		assert bean instanceof CarFactoryBean;
+		Car car = context.getBean("testFactoryBean", Car.class);
+		System.out.println(car);
+	}
+
 }
