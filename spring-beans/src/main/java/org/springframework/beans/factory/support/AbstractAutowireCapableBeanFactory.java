@@ -499,6 +499,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 			 * <p>给 {@link BeanPostProcessor} 一个机会来返回代理代替真正的实例</p>
 			 * */
 			Object bean = resolveBeforeInstantiation(beanName, mbdToUse);
+			// 短路判断
 			if (bean != null) {
 				return bean;
 			}
@@ -1097,13 +1098,16 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 	@Nullable
 	protected Object resolveBeforeInstantiation(String beanName, RootBeanDefinition mbd) {
 		Object bean = null;
+		// 如果尚未被解析
 		if (!Boolean.FALSE.equals(mbd.beforeInstantiationResolved)) {
 			// Make sure bean class is actually resolved at this point.
 			if (!mbd.isSynthetic() && hasInstantiationAwareBeanPostProcessors()) {
 				Class<?> targetType = determineTargetType(beanName, mbd);
 				if (targetType != null) {
+					// 实例化前的后处理器应用
 					bean = applyBeanPostProcessorsBeforeInstantiation(targetType, beanName);
 					if (bean != null) {
+						// 实例化后的后处理器应用
 						bean = applyBeanPostProcessorsAfterInitialization(bean, beanName);
 					}
 				}

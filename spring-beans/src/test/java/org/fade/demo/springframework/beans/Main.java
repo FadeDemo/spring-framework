@@ -1,6 +1,7 @@
 package org.fade.demo.springframework.beans;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.BeanCurrentlyInCreationException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -68,6 +69,16 @@ public class Main {
 		assert bean instanceof CarFactoryBean;
 		Car car = context.getBean("testFactoryBean", Car.class);
 		System.out.println(car);
+	}
+
+	@Test
+	public void testConstructorCyclicDependencies() {
+		// 构造器循环依赖无法解决
+		try {
+			ApplicationContext context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/constructorCyclicDependencies.xml");
+		} catch (Exception e) {
+			assert e.getCause().getCause().getCause() instanceof BeanCurrentlyInCreationException;
+		}
 	}
 
 }
