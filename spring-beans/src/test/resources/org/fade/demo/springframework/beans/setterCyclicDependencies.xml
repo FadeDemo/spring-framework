@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="testASingleton" class="org.fade.demo.springframework.beans.TestA">
+		<property name="testB" ref="testBSingleton" />
+	</bean>
+
+	<bean id="testBSingleton" class="org.fade.demo.springframework.beans.TestB">
+		<property name="testC" ref="testCSingleton" />
+	</bean>
+
+	<bean id="testCSingleton" class="org.fade.demo.springframework.beans.TestC">
+		<property name="testA" ref="testASingleton" />
+	</bean>
+
+	<bean id="testAPrototype" class="org.fade.demo.springframework.beans.TestA" scope="prototype">
+		<property name="testB" ref="testBPrototype" />
+	</bean>
+
+	<bean id="testBPrototype" class="org.fade.demo.springframework.beans.TestB" scope="prototype">
+		<property name="testC" ref="testCPrototype" />
+	</bean>
+
+	<bean id="testCPrototype" class="org.fade.demo.springframework.beans.TestC" scope="prototype">
+		<property name="testA" ref="testAPrototype" />
+	</bean>
+
+</beans>

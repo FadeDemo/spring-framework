@@ -78,6 +78,29 @@ public class Main {
 			ApplicationContext context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/constructorCyclicDependencies.xml");
 		} catch (Exception e) {
 			assert e.getCause().getCause().getCause() instanceof BeanCurrentlyInCreationException;
+			System.out.println(e);
+		}
+	}
+
+	@Test
+	public void testSingletonSetterCyclicDependencies() {
+		// 可以解决单例的setter循环依赖
+		ApplicationContext context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/setterCyclicDependencies.xml");
+		TestA testASingleton = context.getBean("testASingleton", TestA.class);
+		assert testASingleton != null;
+//		testASingleton.a();
+	}
+
+	@Test
+	public void testPrototypeSetterCyclicDependencies() {
+		// 原型setter循环依赖无法解决
+		// 而且异常产生的时机与构造器循环依赖不同
+		try {
+			ApplicationContext context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/setterCyclicDependencies.xml");
+			TestA testASingleton = context.getBean("testAPrototype", TestA.class);
+		} catch (Exception e) {
+			assert e.getCause().getCause().getCause() instanceof BeanCurrentlyInCreationException;
+			System.out.println(e);
 		}
 	}
 
