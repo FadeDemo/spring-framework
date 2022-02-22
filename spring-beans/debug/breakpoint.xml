@@ -1053,7 +1053,7 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/test/java/org/fade/demo/springframework/beans/Main.java</url>
-					<line>60</line>
+					<line>61</line>
 					<option name="timeStamp" value="222" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -1123,7 +1123,7 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-					<line>1864</line>
+					<line>1895</line>
 					<option name="timeStamp" value="238" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -1190,6 +1190,69 @@
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
 					<line>467</line>
 					<option name="timeStamp" value="251" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>488</line>
+					<option name="timeStamp" value="252" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanDefinition.java</url>
+					<line>1218</line>
+					<option name="timeStamp" value="253" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanDefinition.java</url>
+					<line>1232</line>
+					<option name="timeStamp" value="254" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>500</line>
+					<option name="timeStamp" value="255" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>1125</line>
+					<option name="timeStamp" value="256" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>1131</line>
+					<option name="timeStamp" value="257" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>1134</line>
+					<option name="timeStamp" value="258" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>1156</line>
+					<option name="timeStamp" value="259" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/test/java/org/fade/demo/springframework/beans/Main.java</url>
+					<line>79</line>
+					<option name="timeStamp" value="260" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>513</line>
+					<option name="timeStamp" value="261" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>549</line>
+					<option name="timeStamp" value="262" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>596</line>
+					<properties>
+						<option name="lambda-ordinal" value="-1" />
+					</properties>
+					<option name="timeStamp" value="263" />
 				</line-breakpoint>
 			</breakpoints>
 		</breakpoint-manager>
