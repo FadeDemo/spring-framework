@@ -548,7 +548,7 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-					<line>148</line>
+					<line>137</line>
 					<option name="timeStamp" value="117" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -1123,12 +1123,12 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-					<line>1912</line>
+					<line>1939</line>
 					<option name="timeStamp" value="238" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-					<line>415</line>
+					<line>404</line>
 					<option name="timeStamp" value="239" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -1188,12 +1188,12 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-					<line>467</line>
+					<line>456</line>
 					<option name="timeStamp" value="251" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-					<line>488</line>
+					<line>477</line>
 					<option name="timeStamp" value="252" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -1208,7 +1208,7 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-					<line>500</line>
+					<line>489</line>
 					<option name="timeStamp" value="255" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -1238,17 +1238,17 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-					<line>513</line>
+					<line>502</line>
 					<option name="timeStamp" value="261" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-					<line>549</line>
+					<line>538</line>
 					<option name="timeStamp" value="262" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-					<line>602</line>
+					<line>601</line>
 					<properties>
 						<option name="lambda-ordinal" value="-1" />
 					</properties>
@@ -1261,7 +1261,7 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-					<line>558</line>
+					<line>547</line>
 					<option name="timeStamp" value="265" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -1288,6 +1288,56 @@
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
 					<line>1333</line>
 					<option name="timeStamp" value="271" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>1223</line>
+					<option name="timeStamp" value="272" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/SimpleInstantiationStrategy.java</url>
+					<line>61</line>
+					<option name="timeStamp" value="273" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/CglibSubclassingInstantiationStrategy.java</url>
+					<line>145</line>
+					<option name="timeStamp" value="274" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>983</line>
+					<option name="timeStamp" value="275" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>608</line>
+					<option name="timeStamp" value="276" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>1390</line>
+					<option name="timeStamp" value="277" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>1427</line>
+					<option name="timeStamp" value="278" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>1493</line>
+					<option name="timeStamp" value="279" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>1432</line>
+					<option name="timeStamp" value="280" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+					<line>1529</line>
+					<option name="timeStamp" value="281" />
 				</line-breakpoint>
 			</breakpoints>
 		</breakpoint-manager>
