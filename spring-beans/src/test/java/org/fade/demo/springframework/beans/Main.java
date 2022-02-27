@@ -104,4 +104,11 @@ public class Main {
 		}
 	}
 
+	@Test
+	public void testAware() {
+		ApplicationContext context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/awareTest.xml");
+		BeanFactoryAwareTest testBeanFactoryAware = context.getBean("testBeanFactoryAware", BeanFactoryAwareTest.class);
+		testBeanFactoryAware.testAware();
+	}
+
 }
