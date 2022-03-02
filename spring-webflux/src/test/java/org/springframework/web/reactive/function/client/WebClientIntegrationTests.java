@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2020 the original author or authors.
+ * Copyright 2002-2022 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,6 +34,7 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -67,9 +68,9 @@ import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.reactive.ClientHttpConnector;
 import org.springframework.http.client.reactive.HttpComponentsClientHttpConnector;
+import org.springframework.http.client.reactive.JdkClientHttpConnector;
 import org.springframework.http.client.reactive.JettyClientHttpConnector;
 import org.springframework.http.client.reactive.ReactorClientHttpConnector;
-import org.springframework.util.SocketUtils;
 import org.springframework.web.reactive.function.BodyExtractors;
 import org.springframework.web.reactive.function.client.WebClient.ResponseSpec;
 import org.springframework.web.testfixture.xml.Pojo;
@@ -98,6 +99,7 @@ class WebClientIntegrationTests {
 	static Stream<ClientHttpConnector> arguments() {
 		return Stream.of(
 				new ReactorClientHttpConnector(),
+				new JdkClientHttpConnector(),
 				new JettyClientHttpConnector(),
 				new HttpComponentsClientHttpConnector()
 		);
@@ -1245,11 +1247,12 @@ class WebClientIntegrationTests {
 	private <T> Mono<T> doMalformedChunkedResponseTest(
 			ClientHttpConnector connector, Function<ResponseSpec, Mono<T>> handler) {
 
-		int port = SocketUtils.findAvailableTcpPort();
+		AtomicInteger port = new AtomicInteger();
 
 		Thread serverThread = new Thread(() -> {
 			// No way to simulate a malformed chunked response through MockWebServer.
-			try (ServerSocket serverSocket = new ServerSocket(port)) {
+			try (ServerSocket serverSocket = new ServerSocket(0)) {
+				port.set(serverSocket.getLocalPort());
 				Socket socket = serverSocket.accept();
 				InputStream is = socket.getInputStream();
 
@@ -1257,10 +1260,13 @@ class WebClientIntegrationTests {
 				is.read(new byte[4096]);
 
 				OutputStream os = socket.getOutputStream();
-				os.write("HTTP/1.1 200 OK\r\n".getBytes(StandardCharsets.UTF_8));
-				os.write("Transfer-Encoding: chunked\r\n".getBytes(StandardCharsets.UTF_8));
-				os.write("\r\n".getBytes(StandardCharsets.UTF_8));
-				os.write("lskdu018973t09sylgasjkfg1][]'./.sdlv".getBytes(StandardCharsets.UTF_8));
+				os.write("""
+						HTTP/1.1 200 OK
+						Transfer-Encoding: chunked
+
+						lskdu018973t09sylgasjkfg1][]'./.sdlv"""
+						.replace("\n", "\r\n").getBytes(StandardCharsets.UTF_8));
+
 				socket.close();
 			}
 			catch (IOException ex) {
@@ -1320,4 +1326,5 @@ class WebClientIntegrationTests {
 			this.containerValue = containerValue;
 		}
 	}
+
 }

@@ -84,10 +84,6 @@ public abstract class AbstractBeanDefinitionReader implements BeanDefinitionRead
 	}
 
 
-	public final BeanDefinitionRegistry getBeanFactory() {
-		return this.registry;
-	}
-
 	@Override
 	public final BeanDefinitionRegistry getRegistry() {
 		return this.registry;

@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2021 the original author or authors.
+ * Copyright 2002-2022 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -164,33 +164,13 @@ public class DefaultResponseErrorHandler implements ResponseErrorHandler {
 		String message = getErrorMessage(statusCode.value(), statusText, body, charset);
 
 		switch (statusCode.series()) {
-			case CLIENT_ERROR:
+			case CLIENT_ERROR ->
 				throw HttpClientErrorException.create(message, statusCode, statusText, headers, body, charset);
-			case SERVER_ERROR:
+			case SERVER_ERROR ->
 				throw HttpServerErrorException.create(message, statusCode, statusText, headers, body, charset);
-			default:
+			default ->
 				throw new UnknownHttpStatusCodeException(message, statusCode.value(), statusText, headers, body, charset);
 		}
-	}
-
-	/**
-	 * Determine the HTTP status of the given response.
-	 * @param response the response to inspect
-	 * @return the associated HTTP status
-	 * @throws IOException in case of I/O errors
-	 * @throws UnknownHttpStatusCodeException in case of an unknown status code
-	 * that cannot be represented with the {@link HttpStatus} enum
-	 * @since 4.3.8
-	 * @deprecated as of 5.0, in favor of {@link #handleError(ClientHttpResponse, HttpStatus)}
-	 */
-	@Deprecated
-	protected HttpStatus getHttpStatusCode(ClientHttpResponse response) throws IOException {
-		HttpStatus statusCode = HttpStatus.resolve(response.getRawStatusCode());
-		if (statusCode == null) {
-			throw new UnknownHttpStatusCodeException(response.getRawStatusCode(), response.getStatusText(),
-					response.getHeaders(), getResponseBody(response), getCharset(response));
-		}
-		return statusCode;
 	}
 
 	/**

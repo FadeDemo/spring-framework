@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2020 the original author or authors.
+ * Copyright 2002-2022 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -418,29 +418,6 @@ class AnnotationsScannerTests {
 	void typeHierarchyStrategyOnMethodWithGenericParameterNonOverrideScansAnnotations() {
 		Method source = ReflectionUtils.findMethod(GenericNonOverride.class, "method", StringBuilder.class);
 		assertThat(scan(source, SearchStrategy.TYPE_HIERARCHY)).containsExactly("0:TestAnnotation1");
-	}
-
-	@Test
-	void typeHierarchyWithEnclosedStrategyOnEnclosedStaticClassScansAnnotations() {
-		Class<?> source = AnnotationEnclosingClassSample.EnclosedStatic.EnclosedStaticStatic.class;
-		assertThat(scan(source, SearchStrategy.TYPE_HIERARCHY_AND_ENCLOSING_CLASSES))
-				.containsExactly("0:EnclosedThree", "1:EnclosedTwo", "2:EnclosedOne");
-	}
-
-	@Test
-	void typeHierarchyWithEnclosedStrategyOnEnclosedInnerClassScansAnnotations() {
-		Class<?> source = AnnotationEnclosingClassSample.EnclosedInner.EnclosedInnerInner.class;
-		assertThat(scan(source, SearchStrategy.TYPE_HIERARCHY_AND_ENCLOSING_CLASSES))
-				.containsExactly("0:EnclosedThree", "1:EnclosedTwo", "2:EnclosedOne");
-	}
-
-	@Test
-	void typeHierarchyWithEnclosedStrategyOnMethodHierarchyUsesTypeHierarchyScan() {
-		Method source = methodFrom(WithHierarchy.class);
-		assertThat(scan(source, SearchStrategy.TYPE_HIERARCHY_AND_ENCLOSING_CLASSES)).containsExactly(
-				"0:TestAnnotation1", "1:TestAnnotation5", "1:TestInheritedAnnotation5",
-				"2:TestAnnotation6", "3:TestAnnotation2", "3:TestInheritedAnnotation2",
-				"4:TestAnnotation3", "5:TestAnnotation4");
 	}
 
 	@Test

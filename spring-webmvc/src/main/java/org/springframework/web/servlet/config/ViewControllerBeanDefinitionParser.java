@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2017 the original author or authors.
+ * Copyright 2002-2022 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -82,22 +82,21 @@ class ViewControllerBeanDefinitionParser implements BeanDefinitionParser {
 
 		String name = element.getLocalName();
 		switch (name) {
-			case "view-controller":
+			case "view-controller" -> {
 				if (element.hasAttribute("view-name")) {
 					controller.getPropertyValues().add("viewName", element.getAttribute("view-name"));
 				}
 				if (statusCode != null) {
 					controller.getPropertyValues().add("statusCode", statusCode);
 				}
-				break;
-			case "redirect-view-controller":
+			}
+			case "redirect-view-controller" ->
 				controller.getPropertyValues().add("view", getRedirectView(element, statusCode, source));
-				break;
-			case "status-controller":
+			case "status-controller" -> {
 				controller.getPropertyValues().add("statusCode", statusCode);
 				controller.getPropertyValues().add("statusOnly", true);
-				break;
-			default:
+			}
+			default ->
 				// Should never happen...
 				throw new IllegalStateException("Unexpected tag name: " + name);
 		}

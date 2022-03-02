@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2021 the original author or authors.
+ * Copyright 2002-2022 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -48,6 +48,7 @@ import jakarta.servlet.http.Part;
 
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpRange;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.GenericHttpMessageConverter;
@@ -57,6 +58,7 @@ import org.springframework.http.server.ServletServerHttpRequest;
 import org.springframework.lang.Nullable;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MimeTypeUtils;
 import org.springframework.util.MultiValueMap;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.HttpMediaTypeNotSupportedException;
@@ -106,8 +108,13 @@ class DefaultServerRequest implements ServerRequest {
 				ServletRequestPathUtils.parseAndCache(servletRequest));
 	}
 
+	@Override
+	public HttpMethod method() {
+		return HttpMethod.valueOf(servletRequest().getMethod());
+	}
 
 	@Override
+	@Deprecated
 	public String methodName() {
 		return servletRequest().getMethod();
 	}
@@ -199,14 +206,16 @@ class DefaultServerRequest implements ServerRequest {
 				return theConverter.read(clazz, this.serverHttpRequest);
 			}
 		}
-		throw new HttpMediaTypeNotSupportedException(contentType, getSupportedMediaTypes(bodyClass));
+		throw new HttpMediaTypeNotSupportedException(contentType, getSupportedMediaTypes(bodyClass), method());
 	}
 
 	private List<MediaType> getSupportedMediaTypes(Class<?> bodyClass) {
-		return this.messageConverters.stream()
-				.flatMap(converter -> converter.getSupportedMediaTypes(bodyClass).stream())
-				.sorted(MediaType.SPECIFICITY_COMPARATOR)
-				.collect(Collectors.toList());
+		List<MediaType> result = new ArrayList<>(this.messageConverters.size());
+		for (HttpMessageConverter<?> converter : this.messageConverters) {
+			result.addAll(converter.getSupportedMediaTypes(bodyClass));
+		}
+		MimeTypeUtils.sortBySpecificity(result);
+		return result;
 	}
 
 	@Override
