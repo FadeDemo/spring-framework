@@ -45,7 +45,7 @@ XML配置文件 ---> `Resource` ---> `Document` ---> `Element` ---> `BeanDefinit
 </beans>
 ```
 
-首先创建 `testASingleton` -> 暴露 `ObjectFactory` ，将其加入三级缓存 `singletonFactories` -> 检测到依赖 `testBSingleton` ，创建 `testBSingleton` -> 暴露 `ObjectFactory` ，将其加入三级缓存 -> 检测到依赖 `testCSingleton` ，创建 `testCSingleton` -> 暴露 `ObjectFactory` ，将其加入三级缓存 -> 检测到依赖 `testASingleton` -> 从三级缓存中获取 `testASingleton` ，获取到后从三级缓存中移除它，并加入到二级缓存 `earlySingletonObjects` 中 -> `testCSingleton` 创建完毕，从前二级缓存中移除它，并加入到一级缓存 `singletonObjects` 中 -> `testBSingleton` 创建完毕，从前二级缓存中移除它，并加入到一级缓存 `singletonObjects` 中 -> `testASingleton` 创建完毕，从前二级缓存中移除它，并加入到一级缓存 `singletonObjects` 中
+首先创建 `testASingleton` -> 暴露 `ObjectFactory` ，将其加入三级缓存 `singletonFactories` -> 检测到依赖 `testBSingleton` ，创建 `testBSingleton` -> 暴露 `ObjectFactory` ，将其加入三级缓存 -> 检测到依赖 `testCSingleton` ，创建 `testCSingleton` -> 暴露 `ObjectFactory` ，将其加入三级缓存 -> 检测到依赖 `testASingleton` -> 从三级缓存中获取 `testASingleton` ，获取到后从三级缓存中移除它，并加入到二级缓存 `earlySingletonObjects` 中 -> `testCSingleton` 创建完毕，从前两级缓存中移除它，并加入到一级缓存 `singletonObjects` 中 -> `testBSingleton` 创建完毕，从前两级缓存中移除它，并加入到一级缓存 `singletonObjects` 中 -> `testASingleton` 创建完毕，从前两级缓存中移除它，并加入到一级缓存 `singletonObjects` 中
 
 总结，Spring解决单例setter依赖使用了三级缓存：
 
