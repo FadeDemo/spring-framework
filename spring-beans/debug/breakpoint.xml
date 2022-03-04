@@ -1103,42 +1103,42 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java</url>
-					<line>168</line>
+					<line>170</line>
 					<option name="timeStamp" value="240" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java</url>
-					<line>183</line>
+					<line>185</line>
 					<option name="timeStamp" value="241" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java</url>
-					<line>231</line>
+					<line>233</line>
 					<option name="timeStamp" value="243" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java</url>
-					<line>247</line>
+					<line>249</line>
 					<option name="timeStamp" value="244" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java</url>
-					<line>378</line>
+					<line>380</line>
 					<option name="timeStamp" value="245" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java</url>
-					<line>278</line>
+					<line>280</line>
 					<option name="timeStamp" value="246" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java</url>
-					<line>392</line>
+					<line>394</line>
 					<option name="timeStamp" value="247" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java</url>
-					<line>282</line>
+					<line>284</line>
 					<option name="timeStamp" value="248" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -1308,7 +1308,7 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.java</url>
-					<line>255</line>
+					<line>257</line>
 					<option name="timeStamp" value="301" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
