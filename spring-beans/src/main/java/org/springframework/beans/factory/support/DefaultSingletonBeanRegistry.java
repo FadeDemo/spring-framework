@@ -157,6 +157,8 @@ public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements
 			if (!this.singletonObjects.containsKey(beanName)) {
 				this.singletonFactories.put(beanName, singletonFactory);
 				this.earlySingletonObjects.remove(beanName);
+//				System.out.println("未使用三级缓存");
+//				this.earlySingletonObjects.put(beanName, singletonFactory.getObject());
 				this.registeredSingletons.add(beanName);
 			}
 		}
