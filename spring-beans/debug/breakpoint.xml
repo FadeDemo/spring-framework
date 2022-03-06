@@ -1454,6 +1454,36 @@
 					<line>1886</line>
 					<option name="timeStamp" value="332" />
 				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/ClassPathXmlApplicationContext.java</url>
+					<line>84</line>
+					<option name="timeStamp" value="333" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/ClassPathXmlApplicationContext.java</url>
+					<line>141</line>
+					<option name="timeStamp" value="334" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/ClassPathXmlApplicationContext.java</url>
+					<line>143</line>
+					<option name="timeStamp" value="335" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractRefreshableConfigApplicationContext.java</url>
+					<line>76</line>
+					<option name="timeStamp" value="336" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+					<line>545</line>
+					<option name="timeStamp" value="337" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+					<line>550</line>
+					<option name="timeStamp" value="338" />
+				</line-breakpoint>
 			</breakpoints>
 		</breakpoint-manager>
 	</component>

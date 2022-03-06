@@ -111,4 +111,15 @@ public class Main {
 		testBeanFactoryAware.testAware();
 	}
 
+	@Test
+	public void testOverrideInitPropertySources() {
+		try {
+			ApplicationContext context = new MyClassPathXmlApplicationContext("org/fade/demo/springframework/beans/awareTest.xml");
+			BeanFactoryAwareTest testBeanFactoryAware = context.getBean("testBeanFactoryAware", BeanFactoryAwareTest.class);
+			testBeanFactoryAware.testAware();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 }
