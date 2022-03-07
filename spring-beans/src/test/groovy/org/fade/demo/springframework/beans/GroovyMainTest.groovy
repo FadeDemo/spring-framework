@@ -2,8 +2,9 @@ package org.fade.demo.springframework.beans
 
 import org.junit.jupiter.api.Test
 import org.springframework.context.ApplicationContext
+import org.springframework.context.support.ClassPathXmlApplicationContext
 
-class ApplicationContextTest {
+class GroovyMainTest {
 
 	@Test
 	void testOverrideInitPropertySources() {
@@ -14,6 +15,13 @@ class ApplicationContextTest {
 		} catch(Exception e) {
 			e.printStackTrace()
 		}
+	}
+
+	@Test
+	void testPropertyEditor() {
+		def context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/propertyEditorTest.xml")
+		def userManager = context.getBean("userManager", UserManager)
+		println userManager
 	}
 
 }

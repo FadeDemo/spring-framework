@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="userManager" class="org.fade.demo.springframework.beans.UserManager">
+		<property name="dateValue">
+			<value>2022-03-07</value>
+		</property>
+	</bean>
+
+	<bean id="customEditorConfigurer" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<!--方法一-->
+<!--		<property name="customEditors">-->
+<!--			<map>-->
+<!--				<entry key="java.util.Date" value="org.fade.demo.springframework.beans.DatePropertyEditor" />-->
+<!--			</map>-->
+<!--		</property>-->
+		<!--方法二-Spring自带-->
+		<property name="propertyEditorRegistrars">
+			<list>
+				<bean class="org.fade.demo.springframework.beans.DatePropertyEditorRegistrar" />
+			</list>
+		</property>
+	</bean>
+
+</beans>
