@@ -24,4 +24,13 @@ class GroovyMainTest {
 		println userManager
 	}
 
+	@Test
+	void testBeanFactoryPostProcessor() {
+		def context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/beanFactoryPostProcessorTest.xml")
+		def processor = context.getBean("myBeanFactoryPostProcessor", MyBeanFactoryPostProcessor)
+		processor.postProcessBeanFactory(context.autowireCapableBeanFactory)
+		def simple = context.getBean("simpleBean", SimpleBean)
+		println simple
+	}
+
 }
