@@ -33,4 +33,13 @@ class GroovyMainTest {
 		println simple
 	}
 
+	@Test
+	void testBeanPostProcessor() {
+		def context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/beanPostProcessorTest.xml")
+		def car = context.getBean("testFactoryBean", Car)
+		println car.price
+		println car.brand
+		println car.maxSpeed
+	}
+
 }
