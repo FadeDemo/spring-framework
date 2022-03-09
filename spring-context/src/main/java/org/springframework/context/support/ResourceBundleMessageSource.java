@@ -65,7 +65,7 @@ import org.springframework.util.ClassUtils;
  * property). Note that {@link #loadBundle(Reader)}/{@link #loadBundle(InputStream)}
  * won't be called in this case either, effectively ignoring overrides in subclasses.
  * Consider implementing a JDK 9 {@code java.util.spi.ResourceBundleProvider} instead.
- *
+ * <p>允许通过资源名加载国际化资源</p>
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @author Qimiao Chen

@@ -72,7 +72,8 @@ import org.springframework.util.StringUtils;
  *
  * <p>Thanks to Thomas Achleitner for providing the initial implementation of
  * this message source!
- *
+ * <p>允许通过资源名加载国际化资源，提供了定时刷新功能，允许
+ * 在不重启系统的情况下，更新资源的信息</p>
  * @author Juergen Hoeller
  * @see #setCacheSeconds
  * @see #setBasenames

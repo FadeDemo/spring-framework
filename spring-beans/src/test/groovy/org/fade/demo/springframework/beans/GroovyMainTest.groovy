@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test
 import org.springframework.context.ApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext
 
+import java.text.MessageFormat
+
 class GroovyMainTest {
 
 	@Test
@@ -40,6 +42,21 @@ class GroovyMainTest {
 		println car.price
 		println car.brand
 		println car.maxSpeed
+	}
+
+	@Test
+	void testMessageFormat() {
+		def pattern = "{0}，您好！您于{1}在工商银行存入了{2}元"
+		def params = ["john", new GregorianCalendar().getTime(), 1.0E3] as Object[]
+		println MessageFormat.format(pattern, params)
+		println new MessageFormat(pattern, Locale.US).format(params)
+	}
+
+	@Test
+	void testMessageSource() {
+		def context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/messageSourceTest.xml")
+		println context.getMessage("test", null, Locale.CHINA)
+		println context.getMessage("test", null, Locale.US)
 	}
 
 }

@@ -1649,6 +1649,16 @@
 					<line>806</line>
 					<option name="timeStamp" value="384" />
 				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+					<line>1402</line>
+					<option name="timeStamp" value="389" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractMessageSource.java</url>
+					<line>152</line>
+					<option name="timeStamp" value="390" />
+				</line-breakpoint>
 			</breakpoints>
 		</breakpoint-manager>
 	</component>
