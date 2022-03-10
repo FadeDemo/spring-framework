@@ -59,4 +59,12 @@ class GroovyMainTest {
 		println context.getMessage("test", null, Locale.US)
 	}
 
+	@Test
+	void testApplicationListener() {
+		def context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/applicationListenerTest.xml")
+		def event = new TestEvent("fade")
+		event.message = "hello world"
+		context.publishEvent(event)
+	}
+
 }
