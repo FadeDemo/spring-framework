@@ -85,3 +85,12 @@ protected void addSingletonFactory(String beanName, ObjectFactory<?> singletonFa
 这依旧可以解决循环依赖。
 
 个人倾向于认为这样设计是为了不破坏Spring的设计原则，比如说单一职责原则， `singletonObjects` 负责缓存创建好并初始化好的实例， `earlySingletonObjects` 负责缓存创建好但未初始化好的实例， `singletonFactories` 负责缓存 `ObjectFactory` 。
+
+
+### Spring后置处理器
+
+todo
+
+### Spring i18n
+
+todo
