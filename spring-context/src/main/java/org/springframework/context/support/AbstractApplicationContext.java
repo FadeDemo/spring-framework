@@ -960,9 +960,11 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 		beanFactory.setTempClassLoader(null);
 
 		// Allow for caching all bean definition metadata, not expecting further changes.
+		// 冻结所有的bean定义，说明注册的bean定义将不被修改或任何进一步处理
 		beanFactory.freezeConfiguration();
 
 		// Instantiate all remaining (non-lazy-init) singletons.
+		// 初始化剩下的单实例（非懒加载的）
 		beanFactory.preInstantiateSingletons();
 	}
 
@@ -977,12 +979,19 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 		clearResourceCaches();
 
 		// Initialize lifecycle processor for this context.
+		/**
+		 * <p>初始化 {@link LifecycleProcessor} </p>
+		 * */
 		initLifecycleProcessor();
 
 		// Propagate refresh to lifecycle processor first.
 		getLifecycleProcessor().onRefresh();
 
 		// Publish the final event.
+		/**
+		 * <p>发布 {@link ContextRefreshedEvent} 事件，
+		 * 以保证对应的监听器可以做进一步的逻辑处理</p>
+		 * */
 		publishEvent(new ContextRefreshedEvent(this));
 	}
 

@@ -67,4 +67,12 @@ class GroovyMainTest {
 		context.publishEvent(event)
 	}
 
+	@Test
+	void testConverter() {
+		def context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/beans/converterTest.xml")
+		def conversionService = context.getBean("conversionService")
+		def date = conversionService.convert("1949-10-01", Date)
+		println date
+	}
+
 }

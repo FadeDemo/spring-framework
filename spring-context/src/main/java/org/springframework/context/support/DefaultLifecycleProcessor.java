@@ -120,6 +120,9 @@ public class DefaultLifecycleProcessor implements LifecycleProcessor, BeanFactor
 
 	@Override
 	public void onRefresh() {
+		/**
+		 * <p>启动所有实现了 {@link LifecycleProcessor} 接口的bean</p>
+		 * */
 		startBeans(true);
 		this.running = true;
 	}
