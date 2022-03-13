@@ -1451,7 +1451,7 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
-					<line>699</line>
+					<line>698</line>
 					<option name="timeStamp" value="340" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -1516,7 +1516,7 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
-					<line>712</line>
+					<line>711</line>
 					<option name="timeStamp" value="353" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -1606,7 +1606,7 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
-					<line>786</line>
+					<line>785</line>
 					<option name="timeStamp" value="374" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -1616,7 +1616,7 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
-					<line>802</line>
+					<line>801</line>
 					<option name="timeStamp" value="377" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -1646,12 +1646,12 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
-					<line>810</line>
+					<line>809</line>
 					<option name="timeStamp" value="384" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
-					<line>1410</line>
+					<line>1418</line>
 					<option name="timeStamp" value="389" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -1666,7 +1666,7 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
-					<line>848</line>
+					<line>847</line>
 					<option name="timeStamp" value="392" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
@@ -1686,13 +1686,88 @@
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
-					<line>912</line>
+					<line>911</line>
 					<option name="timeStamp" value="396" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
-					<line>603</line>
+					<line>602</line>
 					<option name="timeStamp" value="397" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+					<line>939</line>
+					<option name="timeStamp" value="398" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+					<line>963</line>
+					<option name="timeStamp" value="399" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java</url>
+					<line>865</line>
+					<option name="timeStamp" value="400" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+					<line>967</line>
+					<option name="timeStamp" value="401" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java</url>
+					<line>886</line>
+					<option name="timeStamp" value="402" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+					<line>609</line>
+					<option name="timeStamp" value="403" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+					<line>978</line>
+					<option name="timeStamp" value="404" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+					<line>984</line>
+					<option name="timeStamp" value="405" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+					<line>873</line>
+					<option name="timeStamp" value="406" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+					<line>987</line>
+					<option name="timeStamp" value="407" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/DefaultLifecycleProcessor.java</url>
+					<line>125</line>
+					<option name="timeStamp" value="408" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/DefaultLifecycleProcessor.java</url>
+					<line>144</line>
+					<option name="timeStamp" value="409" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+					<line>994</line>
+					<option name="timeStamp" value="410" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+					<line>377</line>
+					<option name="timeStamp" value="411" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
+					<line>401</line>
+					<option name="timeStamp" value="412" />
 				</line-breakpoint>
 			</breakpoints>
 		</breakpoint-manager>
