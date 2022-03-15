@@ -89,7 +89,14 @@ protected void addSingletonFactory(String beanName, ObjectFactory<?> singletonFa
 
 ### Spring后置处理器
 
-todo
+Spring的后置处理器主要有两类：
+
+* BeanFactoryPostProcessor
+* BeanPostProcessor
+
+第一类 `BeanFactoryPostProcessor` 在 `AbstractApplicationContext#invokeBeanFactoryPostProcessors` 中完成注册和调用。
+
+第二类 `BeanPostProcessor` 在 `AbstractApplicationContext#registerBeanPostProcessors` 中完成注册，一般在 `AbstractAutowireCapableBeanFactory#initializeBean` 中完成调用，但是也有例外，如 `InstantiationAwareBeanPostProcessor` 这类 `BeanPostProcessor` 在 `AbstractAutowireCapableBeanFactory#resolveBeforeInstantiation` 中完成调用，以便用于返回代理来代替真正的实例
 
 ### Spring i18n
 
