@@ -100,4 +100,11 @@ Spring的后置处理器主要有两类：
 
 ### Spring i18n
 
-todo
+这里仅介绍消息的国际化。消息的国际化通过 `MessageSource` 实现，先在resources目录下创建资源文件，再配置一下 `MessageSource` 的 `basenames` 参数。需要注意的是，当有操作系统对应locale的资源文件时，如果此时需要获取一个不存在对应资源文件的locale的消息，它不会去使用默认的资源文件。举个例子：
+
+现在有两个资源文件：
+
+* `messages.properties`
+* `messages_zh_CN.properties`
+
+`messages.properties` 是默认的资源文件，如果此时要获取locale为 `Locale.US` 的消息，它不会使用 `messages.properties` ，而是会使用操作系统对应locale的资源文件（即 `messages_zh_CN.properties` ）
