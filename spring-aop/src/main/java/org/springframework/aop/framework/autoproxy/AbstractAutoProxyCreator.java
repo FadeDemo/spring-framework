@@ -431,13 +431,16 @@ public abstract class AbstractAutoProxyCreator extends ProxyProcessorSupport
 		}
 
 		ProxyFactory proxyFactory = new ProxyFactory();
+		// 获取当前类中的相关属性
 		proxyFactory.copyFrom(this);
-
+		// 决定对于给定的bean是否应该使用targetClass而不是它的接口代理
+		// 检查proxyTargetClass属性以及preserveTargetClass属性设置
 		if (proxyFactory.isProxyTargetClass()) {
 			// Explicit handling of JDK proxy targets (for introduction advice scenarios)
 			if (Proxy.isProxyClass(beanClass)) {
 				// Must allow for introductions; can't just set interfaces to the proxy's interfaces only.
 				for (Class<?> ifc : beanClass.getInterfaces()) {
+					// 添加代理接口
 					proxyFactory.addInterface(ifc);
 				}
 			}
@@ -453,10 +456,14 @@ public abstract class AbstractAutoProxyCreator extends ProxyProcessorSupport
 		}
 
 		Advisor[] advisors = buildAdvisors(beanName, specificInterceptors);
+		// 加入增强器
 		proxyFactory.addAdvisors(advisors);
+		// 设置需要代理的类
 		proxyFactory.setTargetSource(targetSource);
+		// 定制代理
 		customizeProxyFactory(proxyFactory);
-
+		// 用来设置代理工厂被配置后，是否还允许修改通知
+		// 默认值为false
 		proxyFactory.setFrozen(this.freezeProxy);
 		if (advisorsPreFiltered()) {
 			proxyFactory.setPreFiltered(true);

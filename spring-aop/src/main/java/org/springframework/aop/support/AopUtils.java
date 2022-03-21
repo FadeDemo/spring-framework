@@ -212,6 +212,7 @@ public abstract class AopUtils {
 		}
 
 		/**
+		 * spring-tx
 		 * 返回自身，即pc
 		 * @see org.springframework.transaction.interceptor.TransactionAttributeSourcePointcut
 		 * */

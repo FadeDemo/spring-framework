@@ -53,31 +53,27 @@
 					<line>53</line>
 					<option name="timeStamp" value="12" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
-					<condition expression="beanName.equals(&quot;userServiceImpl&quot;)" language="JAVA" />
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java</url>
 					<line>112</line>
 					<option name="timeStamp" value="14" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
-					<condition expression="clazz.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" custom="org.fade.demo.springframework.transaction.UserServiceImpl" />
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
-					<line>304</line>
+					<line>305</line>
 					<option name="timeStamp" value="15" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
-					<line>260</line>
+					<line>261</line>
 					<option name="timeStamp" value="16" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
-					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
-					<line>274</line>
+					<line>275</line>
 					<option name="timeStamp" value="17" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
-					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" custom="org.fade.demo.springframework.transaction.UserServiceImpl" />
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
 					<line>208</line>
 					<option name="timeStamp" value="18" />
@@ -261,34 +257,30 @@
 					<line>249</line>
 					<option name="timeStamp" value="62" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
-					<condition expression="beanName.equals(&quot;userServiceImpl&quot;)" language="JAVA" />
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java</url>
-					<line>114</line>
+					<line>115</line>
 					<option name="timeStamp" value="63" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
-					<condition expression="clazz.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
-					<line>323</line>
+					<line>324</line>
 					<option name="timeStamp" value="64" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
-					<condition expression="clazz.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
-					<line>311</line>
+					<line>312</line>
 					<option name="timeStamp" value="65" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
-					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+				<line-breakpoint enabled="true" type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
-					<line>287</line>
+					<line>288</line>
 					<option name="timeStamp" value="66" />
 				</line-breakpoint>
 				<line-breakpoint type="java-line">
 					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class) &amp;&amp; method.getName().equals(&quot;save&quot;)" language="JAVA" />
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
-					<line>242</line>
+					<line>243</line>
 					<option name="timeStamp" value="67" />
 				</line-breakpoint>
 				<line-breakpoint type="java-line">
@@ -1866,6 +1858,121 @@
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/ReflectiveAspectJAdvisorFactory.java</url>
 					<line>125</line>
 					<option name="timeStamp" value="449" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/ReflectiveAspectJAdvisorFactory.java</url>
+					<line>146</line>
+					<option name="timeStamp" value="450" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/ReflectiveAspectJAdvisorFactory.java</url>
+					<line>215</line>
+					<option name="timeStamp" value="451" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/ReflectiveAspectJAdvisorFactory.java</url>
+					<line>217</line>
+					<option name="timeStamp" value="452" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/ReflectiveAspectJAdvisorFactory.java</url>
+					<line>230</line>
+					<option name="timeStamp" value="453" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/ReflectiveAspectJAdvisorFactory.java</url>
+					<line>231</line>
+					<option name="timeStamp" value="454" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/AbstractAspectJAdvisorFactory.java</url>
+					<line>134</line>
+					<option name="timeStamp" value="455" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/AbstractAspectJAdvisorFactory.java</url>
+					<line>135</line>
+					<option name="timeStamp" value="456" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/AbstractAspectJAdvisorFactory.java</url>
+					<line>148</line>
+					<option name="timeStamp" value="457" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/ReflectiveAspectJAdvisorFactory.java</url>
+					<line>223</line>
+					<option name="timeStamp" value="458" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/InstantiationModelAwarePointcutAdvisorImpl.java</url>
+					<line>86</line>
+					<option name="timeStamp" value="459" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/InstantiationModelAwarePointcutAdvisorImpl.java</url>
+					<line>113</line>
+					<option name="timeStamp" value="460" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/InstantiationModelAwarePointcutAdvisorImpl.java</url>
+					<line>149</line>
+					<option name="timeStamp" value="461" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/ReflectiveAspectJAdvisorFactory.java</url>
+					<line>254</line>
+					<option name="timeStamp" value="462" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceInterceptor.java</url>
+					<line>56</line>
+					<option name="timeStamp" value="463" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/AspectJMethodBeforeAdvice.java</url>
+					<line>43</line>
+					<option name="timeStamp" value="464" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/AbstractAspectJAdvice.java</url>
+					<line>615</line>
+					<option name="timeStamp" value="465" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/AbstractAspectJAdvice.java</url>
+					<line>626</line>
+					<option name="timeStamp" value="466" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/ReflectiveAspectJAdvisorFactory.java</url>
+					<line>156</line>
+					<option name="timeStamp" value="467" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/ReflectiveAspectJAdvisorFactory.java</url>
+					<line>336</line>
+					<option name="timeStamp" value="468" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/ReflectiveAspectJAdvisorFactory.java</url>
+					<line>165</line>
+					<option name="timeStamp" value="469" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/ReflectiveAspectJAdvisorFactory.java</url>
+					<line>195</line>
+					<option name="timeStamp" value="470" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java</url>
+					<line>333</line>
+					<option name="timeStamp" value="471" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAutoProxyCreator.java</url>
+					<line>428</line>
+					<option name="timeStamp" value="472" />
 				</line-breakpoint>
 			</breakpoints>
 		</breakpoint-manager>
