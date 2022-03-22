@@ -13,4 +13,13 @@ class Main {
 		testBean.test()
 	}
 
+	@Test
+	void jdkProxyExample() {
+		// fixme unreasonable result
+		UserService userService = new UserServiceImpl();
+		def handler = new MyInvocationHandler(userService)
+		def proxy = handler.getProxy()
+		proxy.add()
+	}
+
 }
