@@ -36,4 +36,15 @@ class Main {
 		println instance
 	}
 
+	@Test
+	void staticAopExample() {
+		// need to configure -javaagent:/absolute/path/to/spring-instrument.jar
+		// the difference between aop dynamic proxy and aop static proxy is aop dynamic
+		// proxy need a procedure which create a proxy object, but aop static proxy achieve
+		// aop through changing the bytecode
+		def context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/aop/staticAopExample.xml")
+		def testBean = context.getBean("testBean", TestBean)
+		testBean.test()
+	}
+
 }
