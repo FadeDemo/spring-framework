@@ -92,11 +92,20 @@ public class LoadTimeWeaverAwareProcessor implements BeanPostProcessor, BeanFact
 
 	@Override
 	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+		/**
+		 * <p>只对 {@link LoadTimeWeaverAware} 类型的bean起作用</p>
+		 * */
 		if (bean instanceof LoadTimeWeaverAware) {
 			LoadTimeWeaver ltw = this.loadTimeWeaver;
 			if (ltw == null) {
 				Assert.state(this.beanFactory != null,
 						"BeanFactory required if no LoadTimeWeaver explicitly specified");
+				/**
+				 * <p> {@link AspectJWeavingEnabler} 实现了
+				 * {@link org.springframework.beans.factory.BeanClassLoaderAware} 接口，
+				 * 这样保证了在初始化bean的时候会在 {@link org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory#invokeAwareMethods(String, Object)}
+				 * 方法中将 {@link ClassLoader} 赋值给当前类</p>
+				 * */
 				ltw = this.beanFactory.getBean(
 						ConfigurableApplicationContext.LOAD_TIME_WEAVER_BEAN_NAME, LoadTimeWeaver.class);
 			}

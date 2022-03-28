@@ -73,8 +73,17 @@ class LoadTimeWeaverBeanDefinitionParser extends AbstractSingleBeanDefinitionPar
 	protected void doParse(Element element, ParserContext parserContext, BeanDefinitionBuilder builder) {
 		builder.setRole(BeanDefinition.ROLE_INFRASTRUCTURE);
 
+		// 是否开启静态AspectJ
+		/**
+		 * <p>如果只是简单的使用了 <pre><context:load-time-weaver/></pre> ，并不
+		 * 一定意味着开启了静态AspectJ功能，它是由 <code>aspectj-weaving</code> 属性
+		 * 决定的（默认为autodetect），自动检测的依据是 META-INF/aop.xml 是否存在</p>
+		 * */
 		if (isAspectJWeavingEnabled(element.getAttribute(ASPECTJ_WEAVING_ATTRIBUTE), parserContext)) {
 			if (!parserContext.getRegistry().containsBeanDefinition(ASPECTJ_WEAVING_ENABLER_BEAN_NAME)) {
+				/**
+				 * <p>将 {@link AspectJWeavingEnabler} 封装在 {@link BeanDefinition} 中注册</p>
+				 * */
 				RootBeanDefinition def = new RootBeanDefinition(ASPECTJ_WEAVING_ENABLER_CLASS_NAME);
 				parserContext.registerBeanComponent(
 						new BeanComponentDefinition(def, ASPECTJ_WEAVING_ENABLER_BEAN_NAME));
@@ -95,6 +104,7 @@ class LoadTimeWeaverBeanDefinitionParser extends AbstractSingleBeanDefinitionPar
 		}
 		else {
 			// Determine default...
+			// 自动检测
 			ClassLoader cl = parserContext.getReaderContext().getBeanClassLoader();
 			return (cl != null && cl.getResource(AspectJWeavingEnabler.ASPECTJ_AOP_XML_RESOURCE) != null);
 		}
