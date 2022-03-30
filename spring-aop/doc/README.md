@@ -24,14 +24,24 @@ XML方式（以测试资源目录下的 `aopExample.xml` 中的 `testBean` 的�
 
 ![aop#3](resources/2022-03-29_21-41.png)
 
-4. 又因为 `AnnotationAwareAspectJAutoProxyCreator` 实现的是 `BeanPostProcessor` 的子接口 `InstantiationAwareBeanPostProcessor` ，所以在获取bean时，它的 `applyBeanPostProcessorsBeforeInstantiation` 方法和 `applyBeanPostProcessorsAfterInitialization` 方法会被 `AbstractAutowireCapableBeanFactory#resolveBeforeInstantiation` 调用
+4. 又因为 `AnnotationAwareAspectJAutoProxyCreator` 实现的是 `BeanPostProcessor` 的子接口 `InstantiationAwareBeanPostProcessor` ，所以在获取bean时，它的 `applyBeanPostProcessorsBeforeInstantiation` 方法和 `applyBeanPostProcessorsAfterInitialization` 方法会被 `AbstractAutowireCapableBeanFactory#resolveBeforeInstantiation` 调用。在 `applyBeanPostProcessorsBeforeInstantiation` 方法里，Spring主要对当前bean作了以下操作：
+    1. 判断当前bean是否需要代理
+    2. 如果存在自定义的 `TargetSource` ，则立即创建代理；否则只是缓存 `Advisor`
 
 ![aop#4](resources/2022-03-29_21-54.png)
 
-5. 
+![aop#5](resources/2022-03-30_21-49.png)
+
+5. 接着在当前bean被实例化后，Spring会在 `AbstractAutowireCapableBeanFactory#initializeBean` 方法对当前bean应用 `AnnotationAwareAspectJAutoProxyCreator` 的 `postProcessBeforeInitialization` 和 `postProcessAfterInitialization` 方法，而就是在 `postProcessAfterInitialization` 方法中，Spring会为当前bean创建代理
+
+![aop#6](resources/2022-03-30_22-02.png)
+
+![aop#7](resources/2022-03-30_22-17.png)
+
+![aop#8](resources/2022-03-30_22-18.png)
 
 ### AOP概念与Spring中实现的对应关系
 
-* 切面 —— `@Aspect` 注解、 `Advisor` 接口及其实现类
-* 通知 —— `Advice` 接口及其实现类、 `@Before` 、 `@After` 、 `@Around` 、 `@AfterThrowing` 、 `@AfterReturing` 注解
-* 
+* 切面 —— `@Aspect` 注解， `Advisor` 接口及其实现类
+* 通知 —— `Advice` 接口及其实现类， `@Before` 、 `@After` 、 `@Around` 、 `@AfterThrowing` 、 `@AfterReturing` 注解
+* 切点 —— `@Point` 、 `@Before` 、 `@After` 、 `@Around` 、 `@AfterThrowing` 、 `@AfterReturing` 注解的 `value` 属性及 `AspectJExpressionPointcut` 类
