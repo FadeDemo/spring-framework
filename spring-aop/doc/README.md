@@ -2,7 +2,9 @@
 
 ### CGLIB代理和JDK代理的使用场景
 
-todo
+![aop#9](resources/2022-04-01_21-31.png)
+
+xml方式下比较关键的一个配置是 `<aop:aspectj-autoproxy />` 标签的 `proxy-target-class` 属性
 
 ### 几种通知类型的执行顺序
 
@@ -45,3 +47,7 @@ XML方式（以测试资源目录下的 `aopExample.xml` 中的 `testBean` 的�
 * 切面 —— `@Aspect` 注解， `Advisor` 接口及其实现类
 * 通知 —— `Advice` 接口及其实现类， `@Before` 、 `@After` 、 `@Around` 、 `@AfterThrowing` 、 `@AfterReturing` 注解
 * 切点 —— `@Point` 、 `@Before` 、 `@After` 、 `@Around` 、 `@AfterThrowing` 、 `@AfterReturing` 注解的 `value` 属性及 `AspectJExpressionPointcut` 类
+
+### AOP中 `Advisor` 、 `Advice` 、 `Interceptor` 、 `MethodInterceptor` 等几个名词之间的关系
+
+todo
