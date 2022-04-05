@@ -8,7 +8,19 @@ xml方式下比较关键的一个配置是 `<aop:aspectj-autoproxy />` 标签的
 
 ### 几种通知类型的执行顺序
 
-todo
+在 `ReflectiveAspectJAdvisorFactory` 类中定义了 `adviceMethodComparator` ，该比较器会根据 `Around` -> `Before` -> `After` -> `AfterReturning` -> `AfterThrowing` 的顺序对通知进行排序
+
+![aop#10](resources/2022-04-05_21-33.png)
+
+对于分布在不同切面的通知，还要考虑是否实现了 `Ordered` 接口或使用了 `@Order` 注解，这点有在 `org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator#sortAdvisors` 方法中体现：
+
+![aop#11](resources/2022-04-05_21-52.png)
+
+当然，通知的执行顺序还和通知方法的调用顺序有关，例如：
+
+![aop#13](resources/2022-04-05_22-08.png)
+
+![aop#12](resources/2022-04-05_22-07.png)
 
 ### AOP的整个流程
 
