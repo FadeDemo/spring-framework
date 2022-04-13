@@ -8,10 +8,16 @@ class Main {
 
 	@Test
 	void aopExample() {
-		// todo @Around @Before @After 执行顺序
 		def context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/aop/aopExample.xml")
 		def testBean = context.getBean("testBean", TestBean)
 		testBean.test()
+	}
+
+	@Test
+	void aopJdkExample() {
+		def context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/aop/aopExample.xml")
+		def userService = context.getBean("userService", UserService)
+		userService.add()
 	}
 
 	@Test
@@ -45,6 +51,13 @@ class Main {
 		def context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/aop/staticAopExample.xml")
 		def testBean = context.getBean("testBean", TestBean)
 		testBean.test()
+	}
+
+	@Test
+	void aopWithNoAspectAnnotation() {
+		def context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/aop/aopWithNoAspectAnnotation.xml")
+		def demoService = context.getBean("demoService", DemoService)
+		demoService.test()
 	}
 
 }

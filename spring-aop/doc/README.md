@@ -54,6 +54,26 @@ XML方式（以测试资源目录下的 `aopExample.xml` 中的 `testBean` 的�
 
 ![aop#8](resources/2022-03-30_22-18.png)
 
+6. cglib 方式下：
+   1. 在创建代理时有创建 `Callback` 放至 `Enhancer` 对象里这么一步，在这一步中创建了 `DynamicAdvisedInterceptor` ，该 `Callback` 会处理我们平时遇到的大部分动态代理情景：
+![aop#18](resources/2022-04-13_14-08-34.png)
+   
+   2. 在 `DynamicAdvisedInterceptor` 的 `intercept` 方法里会执行我们定义的代理逻辑， `intercept` 方法还创建了一个 `CglibMethodInvocation` 用于拦截器链的调用：
+![aop#19](resources/2022-04-13_14-20-44.png)
+   
+   3. `CglibMethodInvocation` 的 `proceed` 方法会调用其父类 `ReflectiveMethodInvocation` 的 `proceed` 方法用于链式调用拦截器：
+![aop#20](resources/2022-04-13_14-26-40.png)   
+   
+   4. 接下来就是各个 `Adivce` 适配而成的 `MethodInterceptor` 的调用过程......
+7. jdk 方式下：
+   1. 在创建代理时有调用 `Proxy.newProxyInstance` 方法并传递一个 `InvocationHandler` 进去的步骤，Spring这里把 `JdkDynamicAopProxy` 对象自身传递了进去：
+![aop#21](resources/2022-04-13_15-17-20.png)  
+   
+   2. `JdkDynamicAopProxy` 的 `invoke` 方法起到的作用和 `DynamicAdvisedInterceptor` 的 `intercept` 方法是类似的，它创建了 `ReflectiveMethodInvocation` 用于拦截器链的调用：
+![aop#22](resources/2022-04-13_15-24-00.png)
+   
+   3. 接下来也同样是各个 `Adivce` 适配而成的 `MethodInterceptor` 的调用过程......
+
 ### AOP概念与Spring中实现的对应关系
 
 * 切面 —— `@Aspect` 注解， `Advisor` 接口及其实现类
@@ -62,4 +82,27 @@ XML方式（以测试资源目录下的 `aopExample.xml` 中的 `testBean` 的�
 
 ### AOP中 `Advisor` 、 `Advice` 、 `Interceptor` 、 `MethodInterceptor` 等几个名词之间的关系
 
-todo
+`Adivce` 、 `Interceptor` 和 `MethodInterceptor` 是 `aopalliance` 中的概念，而 `Advisor` 是 `spring-aop` 中的概念。 `Advice` 是通知， `Interceptor` 和 `MethodInterceptor` 是 `Advice` 的子类，但在AOP的实现中，通知最后是以 `MethodInterceptor` 的形式被调用，即使是不是 `MethodInterceptor` 子类的对象也会被适配为 `MethodInterceptor` ：
+
+![aop#14](resources/2022-04-13_10-13-32.png)
+
+![aop#15](resources/2022-04-13_10-16-00.png)
+
+![aop#16](resources/2022-04-13_10-18-12.png)
+
+![aop#17](resources/2022-04-13_10-19-46.png)
+
+至于 `Advisor` ， `Advisor` 是通知器，其子接口的实现类 `PointcutAdvisor` 中既包含有切点信息，又包含有 `Advice` 的实现类
+
+### 不用 `@AspectJ` 注解实现AOP
+
+查看下面的测试案例：
+
+```java
+@Test
+void aopWithNoAspectAnnotation() {
+    def context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/aop/aopWithNoAspectAnnotation.xml")
+    def demoService = context.getBean("demoService", DemoService)    
+    demoService.test()        
+}
+```

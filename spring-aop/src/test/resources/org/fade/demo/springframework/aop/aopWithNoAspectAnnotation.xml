@@ -5,12 +5,15 @@
 
 	<aop:aspectj-autoproxy />
 
-	<bean id="testBean" class="org.fade.demo.springframework.aop.TestBean" />
+	<bean class="org.springframework.aop.support.DefaultPointcutAdvisor">
+		<property name="advice" ref="interceptor" />
+		<property name="pointcut" ref="pointcut" />
+	</bean>
 
-	<bean id="userService" class="org.fade.demo.springframework.aop.UserServiceImpl" />
+	<bean id="pointcut" class="org.fade.demo.springframework.aop.DemoPointcut" />
 
-	<bean class="org.fade.demo.springframework.aop.TestAspect" />
+	<bean id="interceptor" class="org.fade.demo.springframework.aop.DemoInterceptor" />
 
-	<bean class="org.fade.demo.springframework.aop.UserAspect" />
+	<bean id="demoService" class="org.fade.demo.springframework.aop.DemoService" />
 
 </beans>

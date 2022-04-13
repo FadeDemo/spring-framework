@@ -1885,16 +1885,19 @@
 					<option name="timeStamp" value="454" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="!method.clazz.getName().contains(&quot;groovy&quot;) &amp;&amp; !method.getName().contains(&quot;etaClas&quot;)" language="JAVA" />
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/AbstractAspectJAdvisorFactory.java</url>
 					<line>134</line>
 					<option name="timeStamp" value="455" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="!method.clazz.getName().contains(&quot;groovy&quot;) &amp;&amp; !method.getName().contains(&quot;etaClas&quot;)" language="JAVA" />
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/AbstractAspectJAdvisorFactory.java</url>
 					<line>135</line>
 					<option name="timeStamp" value="456" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="!method.clazz.getName().contains(&quot;groovy&quot;) &amp;&amp; !method.getName().contains(&quot;etaClas&quot;)" language="JAVA" />
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/aspectj/annotation/AbstractAspectJAdvisorFactory.java</url>
 					<line>148</line>
 					<option name="timeStamp" value="457" />
@@ -2080,9 +2083,50 @@
 					<option name="timeStamp" value="496" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="!method.getName().contains(&quot;etaClas&quot;)" language="JAVA" />
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/CglibAopProxy.java</url>
 					<line>675</line>
 					<option name="timeStamp" value="497" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/test/groovy/org/fade/demo/springframework/aop/DemoInterceptor.groovy</url>
+					<line>9</line>
+					<option name="timeStamp" value="498" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceAdapter.java</url>
+					<line>43</line>
+					<option name="timeStamp" value="500" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/MethodBeforeAdviceAdapter.java</url>
+					<line>38</line>
+					<option name="timeStamp" value="501" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/DefaultAdvisorAdapterRegistry.java</url>
+					<line>97</line>
+					<option name="timeStamp" value="502" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/adapter/DefaultAdvisorAdapterRegistry.java</url>
+					<line>98</line>
+					<option name="timeStamp" value="503" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/CglibAopProxy.java</url>
+					<line>711</line>
+					<option name="timeStamp" value="504" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/CglibAopProxy.java</url>
+					<line>689</line>
+					<option name="timeStamp" value="505" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/CglibAopProxy.java</url>
+					<line>766</line>
+					<option name="timeStamp" value="506" />
 				</line-breakpoint>
 			</breakpoints>
 		</breakpoint-manager>
