@@ -1,6 +1,7 @@
 description = "Spring JDBC"
 
 apply plugin: "kotlin"
+apply plugin: "groovy"
 
 dependencies {
 	api(project(":spring-beans"))
@@ -16,4 +17,8 @@ dependencies {
 	optional("org.jetbrains.kotlin:kotlin-stdlib")
 	testImplementation(testFixtures(project(":spring-beans")))
 	testImplementation(testFixtures(project(":spring-core")))
+	optional("org.apache.groovy:groovy")
+	testImplementation 'mysql:mysql-connector-java:8.0.28'
+	testFixturesApi("org.junit.jupiter:junit-jupiter-api")
+	testImplementation 'com.alibaba:druid:1.2.9'
 }
