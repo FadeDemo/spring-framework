@@ -1,5 +1,8 @@
 package org.fade.demo.springframework.jdbc
 
+import groovy.transform.ToString
+
+@ToString
 class User {
 
 	int id

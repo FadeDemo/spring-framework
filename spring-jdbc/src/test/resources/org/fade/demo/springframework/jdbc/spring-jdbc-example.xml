@@ -16,4 +16,8 @@
 		<property name="minIdle" value="1" />
 	</bean>
 
+	<bean id="userService" class="org.fade.demo.springframework.jdbc.UserServiceImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
 </beans>
