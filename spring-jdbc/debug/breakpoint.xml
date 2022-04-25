@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+	<component name="XDebuggerManager">
+		<breakpoint-manager>
+			<breakpoints>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/JdbcTemplate.java</url>
+					<line>1037</line>
+					<option name="timeStamp" value="1" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/JdbcTemplate.java</url>
+					<line>1029</line>
+					<option name="timeStamp" value="2" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/JdbcTemplate.java</url>
+					<line>966</line>
+					<option name="timeStamp" value="3" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/JdbcTemplate.java</url>
+					<line>643</line>
+					<option name="timeStamp" value="4" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/JdbcTemplate.java</url>
+					<line>968</line>
+					<option name="timeStamp" value="5" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/JdbcTemplate.java</url>
+					<line>650</line>
+					<option name="timeStamp" value="6" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceUtils.java</url>
+					<line>63</line>
+					<option name="timeStamp" value="7" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceUtils.java</url>
+					<line>86</line>
+					<option name="timeStamp" value="8" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/JdbcTemplate.java</url>
+					<line>655</line>
+					<option name="timeStamp" value="9" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/JdbcTemplate.java</url>
+					<line>1483</line>
+					<option name="timeStamp" value="10" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/JdbcTemplate.java</url>
+					<line>658</line>
+					<option name="timeStamp" value="12" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/JdbcTemplate.java</url>
+					<line>1525</line>
+					<option name="timeStamp" value="13" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/JdbcTemplate.java</url>
+					<line>673</line>
+					<option name="timeStamp" value="14" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceUtils.java</url>
+					<line>348</line>
+					<option name="timeStamp" value="15" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/datasource/DataSourceUtils.java</url>
+					<line>370</line>
+					<option name="timeStamp" value="16" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/JdbcTemplate.java</url>
+					<line>970</line>
+					<option name="timeStamp" value="18" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/JdbcTemplate.java</url>
+					<line>974</line>
+					<option name="timeStamp" value="19" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/ArgumentTypePreparedStatementSetter.java</url>
+					<line>59</line>
+					<option name="timeStamp" value="20" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/ArgumentTypePreparedStatementSetter.java</url>
+					<line>69</line>
+					<option name="timeStamp" value="21" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/ArgumentTypePreparedStatementSetter.java</url>
+					<line>74</line>
+					<option name="timeStamp" value="22" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/ArgumentTypePreparedStatementSetter.java</url>
+					<line>81</line>
+					<option name="timeStamp" value="23" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/ArgumentTypePreparedStatementSetter.java</url>
+					<line>100</line>
+					<option name="timeStamp" value="24" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/StatementCreatorUtils.java</url>
+					<line>161</line>
+					<option name="timeStamp" value="25" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/StatementCreatorUtils.java</url>
+					<line>199</line>
+					<option name="timeStamp" value="26" />
+				</line-breakpoint>
+			</breakpoints>
+		</breakpoint-manager>
+	</component>
+</project>
