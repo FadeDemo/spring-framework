@@ -59,9 +59,11 @@ public class ArgumentTypePreparedStatementSetter implements PreparedStatementSet
 	public void setValues(PreparedStatement ps) throws SQLException {
 		int parameterPosition = 1;
 		if (this.args != null && this.argTypes != null) {
+			// 遍历每个参数以作类型匹配及转换
 			for (int i = 0; i < this.args.length; i++) {
 				Object arg = this.args[i];
 				if (arg instanceof Collection<?> entries && this.argTypes[i] != Types.ARRAY) {
+					// 如果是集合类型
 					for (Object entry : entries) {
 						if (entry instanceof Object[] valueArray) {
 							for (Object argValue : valueArray) {
@@ -76,6 +78,7 @@ public class ArgumentTypePreparedStatementSetter implements PreparedStatementSet
 					}
 				}
 				else {
+					// 解析当前属性
 					doSetValue(ps, parameterPosition, this.argTypes[i], arg);
 					parameterPosition++;
 				}
