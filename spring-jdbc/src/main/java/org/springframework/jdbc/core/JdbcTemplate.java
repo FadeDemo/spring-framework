@@ -376,6 +376,11 @@ public class JdbcTemplate extends JdbcAccessor implements JdbcOperations {
 		Connection con = DataSourceUtils.getConnection(obtainDataSource());
 		Statement stmt = null;
 		try {
+			/**
+			 * <p>直接使用 {@link Connection} 创建，而带参数的是
+			 * 通过 {@link PreparedStatementCreator} 创建的</p>
+			 * <p>后者是编译过的，是 {@link PreparedStatement} ，运行速度要快</p>
+			 * */
 			stmt = con.createStatement();
 			applyStatementSettings(stmt);
 			T result = action.doInStatement(stmt);
@@ -450,6 +455,7 @@ public class JdbcTemplate extends JdbcAccessor implements JdbcOperations {
 				ResultSet rs = null;
 				try {
 					rs = stmt.executeQuery(sql);
+					// 将结果进行封装并转换至pojo
 					return rse.extractData(rs);
 				}
 				finally {
@@ -729,6 +735,7 @@ public class JdbcTemplate extends JdbcAccessor implements JdbcOperations {
 						pss.setValues(ps);
 					}
 					rs = ps.executeQuery();
+					// 将结果进行封装并转换成pojo
 					return rse.extractData(rs);
 				}
 				finally {
@@ -756,6 +763,10 @@ public class JdbcTemplate extends JdbcAccessor implements JdbcOperations {
 	@Override
 	@Nullable
 	public <T> T query(String sql, Object[] args, int[] argTypes, ResultSetExtractor<T> rse) throws DataAccessException {
+		/**
+		 * <p>与 {@link #update(String, PreparedStatementSetter)} 一样都使用了
+		 *  {@link #newArgTypePreparedStatementSetter(Object[], int[])} </p>
+		 * */
 		return query(sql, newArgTypePreparedStatementSetter(args, argTypes), rse);
 	}
 
