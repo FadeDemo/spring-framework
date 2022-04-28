@@ -14,4 +14,22 @@ class Main {
 		userService.getUsers().forEach(System.out::println)
 	}
 
+	@Test
+	void testSaveThrowException() {
+		def context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/jdbc/spring-jdbc-example.xml")
+		def userService = context.getBean("userService", UserService)
+		def user = new User(name: "张三", age: 20, sex: "男")
+		userService.saveThrowException(user)
+		userService.getUsers().forEach(System.out::println)
+	}
+
+	@Test
+	void testSaveWithoutArrayIndexOutOfBound() {
+		def context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/jdbc/spring-jdbc-example.xml")
+		def userService = context.getBean("userService", UserService)
+		def user = new User(name: "张三", age: 20, sex: "男")
+		userService.saveWithoutArrayIndexOutOfBound(user)
+		userService.getUsers().forEach(System.out::println)
+	}
+
 }

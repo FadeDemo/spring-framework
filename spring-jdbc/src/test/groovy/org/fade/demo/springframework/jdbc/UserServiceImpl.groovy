@@ -23,6 +23,20 @@ class UserServiceImpl implements UserService {
 	}
 
 	@Override
+	void saveThrowException(User user) {
+		jdbcTemplate.update("insert into user(name, age, sex) values(?, ?, ?)",
+				new Object[] {List.of(user.getName(), "test"), user.getAge(), user.getSex()},
+				new int[] {Types.VARCHAR, Types.INTEGER, Types.VARCHAR})
+	}
+
+	@Override
+	void saveWithoutArrayIndexOutOfBound(User user) {
+		jdbcTemplate.update("insert into user(name, sex, age) values(?, ?, ?)",
+				new Object[] {List.of(user.getName(), user.getSex()), user.getAge()},
+				new int[] {Types.VARCHAR, Types.INTEGER})
+	}
+
+	@Override
 	List<User> getUsers() {
 		jdbcTemplate.query("select * from user", new UserRowMapper())
 	}
