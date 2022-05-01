@@ -34,4 +34,30 @@ void saveWithoutArrayIndexOutOfBound(User user) {
 
 ### jdbc简易流程
 
-todo
+spring-jdbc 是对jdbc操作的封装，封装的结果是 `JdbcTemplate` 。
+
+`JdbcTemplate` 中比较重要的方法是 `execute` 方法，通过 `JdbcTemplate` 实现对数据库的增删改差最后都要归结于 `execute` 的几个重载的方法：
+
+![jdbc#3](resources/2022-05-01_21-39.png)
+
+由上图可见，针对不同的 `Statement` ， `JdbcTemplate` 有不同的实现。
+
+以 `org.springframework.jdbc.core.JdbcTemplate.update(java.lang.String, java.lang.Object[], int[])` 为例，我们来看一下spring-jdbc的简易流程：
+
+1. 在 `org.springframework.jdbc.core.JdbcTemplate.update(java.lang.String, java.lang.Object[], int[])` 中，它把参数和参数类型用 `ArgumentTypePreparedStatementSetter` 进行封装，并将其作为一个参数传递给 `org.springframework.jdbc.core.JdbcTemplate.update(java.lang.String, org.springframework.jdbc.core.PreparedStatementSetter)` 
+
+![jdbc#4](resources/2022-05-01_21-46.png)
+
+2. 在 `org.springframework.jdbc.core.JdbcTemplate.update(java.lang.String, org.springframework.jdbc.core.PreparedStatementSetter)` 中，该方法用 `SimplePreparedStatementCreator` 对sql进行封装，并将其和上一步产生的 `ArgumentTypePreparedStatementSetter` 作为参数传递给 `org.springframework.jdbc.core.JdbcTemplate.update(org.springframework.jdbc.core.PreparedStatementCreator, org.springframework.jdbc.core.PreparedStatementSetter)` 
+
+![jdbc#5](resources/2022-05-01_21-53.png)
+
+3. 在 `org.springframework.jdbc.core.JdbcTemplate.update(org.springframework.jdbc.core.PreparedStatementCreator, org.springframework.jdbc.core.PreparedStatementSetter)` 方法中，spring-jdbc主要是调用了 `execute` 方法，并传递了一个 `PreparedStatementCallback` 回调函数给 `execute` 方法，回调函数中主要是给 `PreparedStatement` 中的参数进行赋值
+
+![jdbc#6](resources/2022-05-01_22-00.png)
+
+4. 而该 `execute` 方法最主要的操作就是获取数据库连接并调用前面传入的回调函数
+
+![jdbc#7](resources/2022-05-01_22-03.png)
+
+`JdbcTemplate` 实现对数据库的增删改差的其余流程大体都和上面的类似
