@@ -208,6 +208,16 @@
 					<line>194</line>
 					<option name="timeStamp" value="43" />
 				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/ArgumentTypePreparedStatementSetter.java</url>
+					<line>48</line>
+					<option name="timeStamp" value="44" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-jdbc/src/main/java/org/springframework/jdbc/core/JdbcTemplate.java</url>
+					<line>663</line>
+					<option name="timeStamp" value="45" />
+				</line-breakpoint>
 			</breakpoints>
 		</breakpoint-manager>
 	</component>

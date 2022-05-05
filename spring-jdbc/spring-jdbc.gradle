@@ -21,4 +21,5 @@ dependencies {
 	testImplementation 'mysql:mysql-connector-java:8.0.28'
 	testFixturesApi("org.junit.jupiter:junit-jupiter-api")
 	testImplementation 'com.alibaba:druid:1.2.9'
+	testImplementation 'org.mybatis:mybatis:3.5.9'
 }
