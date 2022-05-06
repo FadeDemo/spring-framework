@@ -54,6 +54,9 @@ import org.springframework.lang.Nullable;
  * synchronization other than for purposes of lazy initialization within the
  * FactoryBean itself (or the like).
  *
+ * <p>实现此接口的bean，在获取bean时其实是在调用其 {@link FactoryBean#getObject()}
+ * 方法</p>
+ *
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @since 08.03.2003

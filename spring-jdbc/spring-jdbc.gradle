@@ -22,4 +22,7 @@ dependencies {
 	testFixturesApi("org.junit.jupiter:junit-jupiter-api")
 	testImplementation 'com.alibaba:druid:1.2.9'
 	testImplementation 'org.mybatis:mybatis:3.5.9'
+	testImplementation ('org.mybatis:mybatis-spring:2.0.7') {
+		exclude group: 'org.mybatis', module: 'mybatis'
+	}
 }

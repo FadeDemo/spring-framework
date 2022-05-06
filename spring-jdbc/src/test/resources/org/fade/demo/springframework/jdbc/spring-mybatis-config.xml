@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/schema/mybatis-3-config.dtd">
 <configuration>
-	<properties resource="org/fade/demo/springframework/jdbc/database.properties" />
 	<settings>
 		<setting name="cacheEnabled" value="false"/>
 		<setting name="useGeneratedKeys" value="true"/>
@@ -10,17 +9,6 @@
 	<typeAliases>
 		<typeAlias type="org.fade.demo.springframework.jdbc.User" alias="User" />
 	</typeAliases>
-	<environments default="develop">
-		<environment id="develop">
-			<transactionManager type="jdbc"></transactionManager>
-			<dataSource type="POOLED">
-				<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-				<property name="url" value="${mysql.url}"/>
-				<property name="username" value="${mysql.username}"/>
-				<property name="password" value="${mysql.password}"/>
-			</dataSource>
-		</environment>
-	</environments>
 	<mappers>
 		<mapper resource="org/fade/demo/springframework/jdbc/UserMapper.xml" />
 	</mappers>
