@@ -218,6 +218,131 @@
 					<line>663</line>
 					<option name="timeStamp" value="45" />
 				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/SqlSessionFactoryBean.java</url>
+					<line>485</line>
+					<option name="timeStamp" value="50" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/SqlSessionFactoryBean.java</url>
+					<line>490</line>
+					<option name="timeStamp" value="51" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/SqlSessionFactoryBean.java</url>
+					<line>508</line>
+					<option name="timeStamp" value="52" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/SqlSessionFactoryBean.java</url>
+					<line>631</line>
+					<option name="timeStamp" value="53" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/SqlSessionFactoryBean.java</url>
+					<line>632</line>
+					<option name="timeStamp" value="54" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/mapper/MapperFactoryBean.java</url>
+					<line>94</line>
+					<option name="timeStamp" value="55" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/dao/support/DaoSupport.java</url>
+					<line>43</line>
+					<option name="timeStamp" value="56" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/mapper/MapperFactoryBean.java</url>
+					<line>72</line>
+					<option name="timeStamp" value="57" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/support/SqlSessionDaoSupport.java</url>
+					<line>121</line>
+					<option name="timeStamp" value="58" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/mapper/MapperScannerConfigurer.java</url>
+					<line>334</line>
+					<option name="timeStamp" value="59" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/mapper/MapperScannerConfigurer.java</url>
+					<line>352</line>
+					<option name="timeStamp" value="61" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/mapper/MapperScannerConfigurer.java</url>
+					<line>353</line>
+					<option name="timeStamp" value="62" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/mapper/MapperScannerConfigurer.java</url>
+					<line>385</line>
+					<option name="timeStamp" value="63" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/mapper/MapperScannerConfigurer.java</url>
+					<line>373</line>
+					<option name="timeStamp" value="64" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/mapper/ClassPathMapperScanner.java</url>
+					<line>167</line>
+					<option name="timeStamp" value="65" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/mapper/MapperScannerConfigurer.java</url>
+					<line>374</line>
+					<option name="timeStamp" value="66" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/ClassPathBeanDefinitionScanner.java</url>
+					<line>251</line>
+					<option name="timeStamp" value="67" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/ClassPathBeanDefinitionScanner.java</url>
+					<line>253</line>
+					<option name="timeStamp" value="69" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/mapper/ClassPathMapperScanner.java</url>
+					<line>204</line>
+					<option name="timeStamp" value="71" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/mapper/ClassPathMapperScanner.java</url>
+					<line>210</line>
+					<option name="timeStamp" value="72" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/ClassPathBeanDefinitionScanner.java</url>
+					<line>272</line>
+					<option name="timeStamp" value="74" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis-spring/2.0.7/e88bbf172f759b8546192cb5f489b83a6bc556ff/mybatis-spring-2.0.7-sources.jar!/org/mybatis/spring/mapper/ClassPathMapperScanner.java</url>
+					<line>218</line>
+					<option name="timeStamp" value="75" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/ClassPathBeanDefinitionScanner.java</url>
+					<line>276</line>
+					<option name="timeStamp" value="76" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/ClassPathScanningCandidateComponentProvider.java</url>
+					<line>416</line>
+					<option name="timeStamp" value="78" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/ClassPathScanningCandidateComponentProvider.java</url>
+					<line>315</line>
+					<option name="timeStamp" value="79" />
+				</line-breakpoint>
 			</breakpoints>
 		</breakpoint-manager>
 	</component>

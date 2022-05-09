@@ -61,3 +61,15 @@ spring-jdbc 是对jdbc操作的封装，封装的结果是 `JdbcTemplate` 。
 ![jdbc#7](resources/2022-05-01_22-03.png)
 
 `JdbcTemplate` 实现对数据库的增删改差的其余流程大体都和上面的类似
+
+### `FactoryBean` 的用法和调用时机
+
+todo
+
+### `InitializingBean` 的用法和调用时机
+
+todo
+
+### spring对于自动扫描的注册流程
+
+todo

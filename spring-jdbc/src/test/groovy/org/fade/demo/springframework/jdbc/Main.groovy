@@ -62,4 +62,14 @@ class Main {
 		}
 	}
 
+	@Test
+	void springMybatisWithMapperScannerConfigurer() {
+		def context = new ClassPathXmlApplicationContext("org/fade/demo/springframework/jdbc/spring-mybatis-withMapperScannerConfigurer.xml")
+		def userMapper = context.getBean("userMapper", UserMapper)
+		def user = userMapper.getUser(32)
+		if (user) {
+			println user
+		}
+	}
+
 }
