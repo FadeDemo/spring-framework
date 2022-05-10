@@ -64,11 +64,27 @@ spring-jdbc 是对jdbc操作的封装，封装的结果是 `JdbcTemplate` 。
 
 ### `FactoryBean` 的用法和调用时机
 
-todo
+`FactoryBean` 字面意思为工厂bean，spring的工厂bean使用了工厂模式和单例模式。如果想要获取的bean的name不包含 `&` ，那么每次通过 `getBean` 方法获取的bean实则是调用实现 `FactoryBean` 接口的类的 `getObject()` 方法的结果。
+
+大致的调用流程为：
+
+1. `org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean`
+2. `org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getObjectForBeanInstance`
+3. `org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance`
+4. `org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean`
+5. `org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean`
 
 ### `InitializingBean` 的用法和调用时机
 
-todo
+spring支持两种初始化bean的方式，一种是指定 `init-method` ，一种则是实现 `InitializingBean` 接口。
+
+实现 `InitializingBean` 接口的bean在创建时填充完依赖的属性后，会去调用其 `afterPropertiesSet` 方法。且在调用完 `afterPropertiesSet` 方法后，若存在 `init-method` ，则会继续调用 `init-method` 。
+
+大致的调用流程为：
+
+1. `org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean`
+2. `org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(java.lang.String, java.lang.Object, org.springframework.beans.factory.support.RootBeanDefinition)`
+3. `org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods`
 
 ### spring对于自动扫描的注册流程
 

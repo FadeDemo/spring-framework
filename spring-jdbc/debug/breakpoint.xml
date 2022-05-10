@@ -343,6 +343,16 @@
 					<line>315</line>
 					<option name="timeStamp" value="79" />
 				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/ClassPathScanningCandidateComponentProvider.java</url>
+					<line>431</line>
+					<option name="timeStamp" value="82" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/annotation/ClassPathScanningCandidateComponentProvider.java</url>
+					<line>496</line>
+					<option name="timeStamp" value="83" />
+				</line-breakpoint>
 			</breakpoints>
 		</breakpoint-manager>
 	</component>
