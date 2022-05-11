@@ -88,4 +88,21 @@ spring支持两种初始化bean的方式，一种是指定 `init-method` ，一�
 
 ### spring对于自动扫描的注册流程
 
-todo
+Mybatis的 `ClassPathMapperScanner` 只是扫描注册的一个示例，更为通用的一个示例是 `ComponentScan` 注解。
+
+我们从下面这个测试用例入手：
+
+```
+@Test
+void scannedExample() {
+    def context = new AnnotationConfigApplicationContext(Config)
+    def bean = context.getBean("scannedBean", ScannedBean)
+    bean.doSomething()
+}
+```
+
+1. 首先在创建 `ApplicationContext` 的时候会注册传进来的配置类和一些bean工厂的后置处理器
+   1. 注册bean工厂后置处理器的路径为： `org.springframework.context.annotation.AnnotationConfigApplicationContext.AnnotationConfigApplicationContext(java.lang.Class<?>...)` -> `org.springframework.context.annotation.AnnotationConfigApplicationContext.AnnotationConfigApplicationContext()` -> `org.springframework.context.annotation.AnnotatedBeanDefinitionReader.AnnotatedBeanDefinitionReader(org.springframework.beans.factory.support.BeanDefinitionRegistry)` -> `org.springframework.context.annotation.AnnotatedBeanDefinitionReader.AnnotatedBeanDefinitionReader(org.springframework.beans.factory.support.BeanDefinitionRegistry, org.springframework.core.env.Environment)` -> `org.springframework.context.annotation.AnnotationConfigUtils.registerAnnotationConfigProcessors(org.springframework.beans.factory.support.BeanDefinitionRegistry)` 
+   ![jdbc#8](resources/2022-05-11_22-09.png)
+   
+   2. 注册传进来的配置类的路径为：

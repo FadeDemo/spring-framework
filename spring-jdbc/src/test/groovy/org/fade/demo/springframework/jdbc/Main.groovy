@@ -3,7 +3,10 @@ package org.fade.demo.springframework.jdbc
 import org.apache.ibatis.io.Resources
 import org.apache.ibatis.session.SqlSessionFactoryBuilder
 import org.fade.demo.springframework.jdbc.mybatis.UserMapper
+import org.fade.demo.springframework.jdbc.scan.Config
+import org.fade.demo.springframework.jdbc.scan.ScannedBean
 import org.junit.jupiter.api.Test
+import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext
 
 class Main {
@@ -70,6 +73,13 @@ class Main {
 		if (user) {
 			println user
 		}
+	}
+
+	@Test
+	void scannedExample() {
+		def context = new AnnotationConfigApplicationContext(Config)
+		def bean = context.getBean("scannedBean", ScannedBean)
+		bean.doSomething()
 	}
 
 }
