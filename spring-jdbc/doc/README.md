@@ -102,7 +102,19 @@ void scannedExample() {
 ```
 
 1. 首先在创建 `ApplicationContext` 的时候会注册传进来的配置类和一些bean工厂的后置处理器
-   1. 注册bean工厂后置处理器的路径为： `org.springframework.context.annotation.AnnotationConfigApplicationContext.AnnotationConfigApplicationContext(java.lang.Class<?>...)` -> `org.springframework.context.annotation.AnnotationConfigApplicationContext.AnnotationConfigApplicationContext()` -> `org.springframework.context.annotation.AnnotatedBeanDefinitionReader.AnnotatedBeanDefinitionReader(org.springframework.beans.factory.support.BeanDefinitionRegistry)` -> `org.springframework.context.annotation.AnnotatedBeanDefinitionReader.AnnotatedBeanDefinitionReader(org.springframework.beans.factory.support.BeanDefinitionRegistry, org.springframework.core.env.Environment)` -> `org.springframework.context.annotation.AnnotationConfigUtils.registerAnnotationConfigProcessors(org.springframework.beans.factory.support.BeanDefinitionRegistry)` 
+   1. 注册bean工厂后置处理器的路径为：
+   ![jdbc#9](resources/2022-05-14_11-24.png)
+   
    ![jdbc#8](resources/2022-05-11_22-09.png)
    
    2. 注册传进来的配置类的路径为：
+   ![jdbc#10](resources/2022-05-14_11-34.png)
+   
+   ![jdbc#11](resources/2022-05-14_11-36.png)
+
+2. 在 `org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors` 方法中激活前面注册的bean工厂后置处理器
+3. 在后置处理器 `org.springframework.context.annotation.ConfigurationClassPostProcessor` 调用parser对配置类进行解析时，会调用 `org.springframework.context.annotation.ClassPathBeanDefinitionScanner` 对类路径下的bean进行扫描注册：
+![jdbc#12](resources/2022-05-14_12-15.png)
+
+![jdbc#13](resources/2022-05-14_12-16.png)
+4. 
