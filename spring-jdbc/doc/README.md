@@ -117,4 +117,7 @@ void scannedExample() {
 ![jdbc#12](resources/2022-05-14_12-15.png)
 
 ![jdbc#13](resources/2022-05-14_12-16.png)
-4. 
+
+4. `org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan` 较为简单，它对传递进来的basePackage目录下的文件进行扫描，并用 `org.springframework.core.type.filter.TypeFilter` 对其进行过滤，如果扫描出来的某个文件所对应的bean未注册过，则对其执行注册操作。
+
+上面的过程我们主要关注第四步，Mybatis的 `ClassPathMapperScanner` 也是继承了 `org.springframework.context.annotation.ClassPathBeanDefinitionScanner` ，所以它们大体上的逻辑是一致的。
