@@ -32,5 +32,5 @@ dependencies {
 	testImplementation 'mysql:mysql-connector-java:8.0.27'
 	testImplementation 'cn.hutool:hutool-all:5.7.17'
 	optional 'org.slf4j:slf4j-api:1.7.32'
-	optional 'org.slf4j:slf4j-simple:1.7.32'
+//	optional 'org.slf4j:slf4j-simple:1.7.32'
 }

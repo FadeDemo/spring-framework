@@ -68,12 +68,6 @@
 					<line>112</line>
 					<option name="timeStamp" value="14" />
 				</line-breakpoint>
-				<line-breakpoint enabled="true" type="java-line">
-					<condition expression="clazz.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" custom="org.fade.demo.springframework.transaction.UserServiceImpl" />
-					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
-					<line>304</line>
-					<option name="timeStamp" value="15" />
-				</line-breakpoint>
 				<line-breakpoint type="java-line">
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
 					<line>260</line>
@@ -278,40 +272,11 @@
 					<line>62</line>
 					<option name="timeStamp" value="61" />
 				</line-breakpoint>
-				<line-breakpoint type="java-line">
-					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/BeanFactoryUtils.java</url>
-					<line>246</line>
-					<option name="timeStamp" value="62" />
-				</line-breakpoint>
-				<line-breakpoint enabled="true" type="java-line">
-					<condition expression="beanName.equals(&quot;userServiceImpl&quot;)" language="JAVA" />
-					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java</url>
-					<line>114</line>
-					<option name="timeStamp" value="63" />
-				</line-breakpoint>
-				<line-breakpoint enabled="true" type="java-line">
-					<condition expression="clazz.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
-					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
-					<line>323</line>
-					<option name="timeStamp" value="64" />
-				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<condition expression="clazz.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
 					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
 					<line>311</line>
 					<option name="timeStamp" value="65" />
-				</line-breakpoint>
-				<line-breakpoint enabled="true" type="java-line">
-					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
-					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
-					<line>287</line>
-					<option name="timeStamp" value="66" />
-				</line-breakpoint>
-				<line-breakpoint enabled="true" type="java-line">
-					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class) &amp;&amp; method.getName().equals(&quot;save&quot;)" language="JAVA" />
-					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
-					<line>242</line>
-					<option name="timeStamp" value="67" />
 				</line-breakpoint>
 				<line-breakpoint enabled="true" type="java-line">
 					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
@@ -531,6 +496,50 @@
 					<line>29</line>
 					<option name="timeStamp" value="162" />
 				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/BeanFactoryUtils.java</url>
+					<line>249</line>
+					<option name="timeStamp" value="164" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="beanName.equals(&quot;userServiceImpl&quot;)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/framework/autoproxy/AbstractAdvisorAutoProxyCreator.java</url>
+					<line>115</line>
+					<option name="timeStamp" value="165" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="clazz.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
+					<line>305</line>
+					<option name="timeStamp" value="166" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="clazz.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
+					<line>324</line>
+					<option name="timeStamp" value="167" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
+					<line>288</line>
+					<option name="timeStamp" value="168" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<condition expression="targetClass.equals(org.fade.demo.springframework.transaction.UserServiceImpl.class) &amp;&amp; method.getName().equals(&quot;save&quot;)" language="JAVA" />
+					<url>file://$PROJECT_DIR$/spring-aop/src/main/java/org/springframework/aop/support/AopUtils.java</url>
+					<line>243</line>
+					<option name="timeStamp" value="169" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-tx/src/main/java/org/springframework/transaction/interceptor/TransactionInterceptor.java</url>
+					<line>102</line>
+					<option name="timeStamp" value="170" />
+				</line-breakpoint>
+				<breakpoint type="java-exception">
+					<properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
+					<option name="timeStamp" value="163" />
+				</breakpoint>
 			</breakpoints>
 		</breakpoint-manager>
 	</component>
