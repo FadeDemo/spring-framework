@@ -1,16 +1,17 @@
 package org.fade.demo.springframework.transaction
 
-import jakarta.persistence.Entity
-import jakarta.persistence.Id
-import jakarta.persistence.Table
+import com.baomidou.mybatisplus.annotation.IdType
+import com.baomidou.mybatisplus.annotation.TableField
+import com.baomidou.mybatisplus.annotation.TableId
+import com.baomidou.mybatisplus.annotation.TableName
 
-@Entity
-@Table(name = "propagation_user")
+@TableName("propagation_user")
 class PropagationUser {
 
-	@Id
+	@TableId(value = "id", type = IdType.AUTO)
 	Integer id
 
+	@TableField("name")
 	String name
 
 }

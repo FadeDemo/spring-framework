@@ -1,6 +1,7 @@
 package org.fade.demo.springframework.transaction
 
 import jakarta.annotation.Resource
+import org.fade.demo.springframework.transaction.dao.PropagationUserMapper
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Propagation
 import org.springframework.transaction.annotation.Transactional
@@ -9,11 +10,11 @@ import org.springframework.transaction.annotation.Transactional
 class PropagationUserService1 {
 
 	@Resource
-	private PropagationUserRepository propagationUserRepository
+	private PropagationUserMapper propagationUserMapper
 
 	@Transactional(propagation = Propagation.REQUIRED)
 	void addRequired(PropagationUser user) {
-		propagationUserRepository.save(user)
+		propagationUserMapper.insert(user)
 	}
 
 }

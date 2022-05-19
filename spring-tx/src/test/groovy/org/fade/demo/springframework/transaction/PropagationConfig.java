@@ -2,9 +2,8 @@ package org.fade.demo.springframework.transaction;
 
 import cn.hutool.setting.dialect.Props;
 import com.alibaba.druid.pool.DruidDataSource;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties;
-import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
+import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
+import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -23,7 +22,6 @@ import javax.sql.DataSource;
 @ComponentScan(basePackages = {"org.fade.demo.springframework.transaction"})
 @Configuration
 @EnableTransactionManagement
-@EnableAutoConfiguration
 public class PropagationConfig {
 
 	@Bean
@@ -51,17 +49,17 @@ public class PropagationConfig {
 	}
 
 	@Bean
-	public HibernateProperties hibernateProperties() {
-		HibernateProperties hibernateProperties = new HibernateProperties();
-		hibernateProperties.setDdlAuto("update");
-		return hibernateProperties;
+	public MapperScannerConfigurer mapperScannerConfigurer() {
+		MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
+		mapperScannerConfigurer.setBasePackage("org.fade.demo.springframework.transaction.dao");
+		return mapperScannerConfigurer;
 	}
 
 	@Bean
-	public JpaProperties jpaProperties() {
-		JpaProperties jpaProperties = new JpaProperties();
-		jpaProperties.setShowSql(true);
-		return jpaProperties;
+	public MybatisSqlSessionFactoryBean mybatisSqlSessionFactoryBean(DataSource dataSource) {
+		MybatisSqlSessionFactoryBean mybatisSqlSessionFactoryBean = new MybatisSqlSessionFactoryBean();
+		mybatisSqlSessionFactoryBean.setDataSource(dataSource);
+		return mybatisSqlSessionFactoryBean;
 	}
 
 }

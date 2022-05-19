@@ -35,7 +35,5 @@ dependencies {
 	optional 'org.slf4j:slf4j-api:1.7.32'
 //	optional 'org.slf4j:slf4j-simple:1.7.32'
 	optional("org.apache.groovy:groovy")
-	testImplementation('org.springframework.boot:spring-boot-starter-data-jpa:2.6.4') {
-		force true
-	}
+	testImplementation 'com.baomidou:mybatis-plus:3.5.1'
 }

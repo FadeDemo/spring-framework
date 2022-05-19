@@ -1,0 +1,1 @@
+delete * from `propagation_user`

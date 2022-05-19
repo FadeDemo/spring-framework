@@ -58,3 +58,23 @@ class PropagationUserService2 {
 }
 ```
 
+1. 场景一——外围方法未开启事务
+
+验证方法一：
+
+```
+void noTransactionExceptionRequiredRequired(){
+    def user1 = new PropagationUser(name: "张三")
+    propagationUserService1.addRequired(user1)
+    def user2 = new PropagationUser(name: "李四")
+    propagationUserService2.addRequired(user2)
+    throw new RuntimeException()
+}
+```
+
+验证结果：
+
+张三、李四均插入成功
+
+验证方法二：
+
