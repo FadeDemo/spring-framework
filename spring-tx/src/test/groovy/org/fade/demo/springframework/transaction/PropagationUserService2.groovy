@@ -23,4 +23,15 @@ class PropagationUserService2 {
 		throw new RuntimeException()
 	}
 
+	@Transactional(propagation = Propagation.REQUIRES_NEW)
+	void addRequiredNew(PropagationUser user) {
+		propagationUserMapper.insert(user)
+	}
+
+	@Transactional(propagation = Propagation.REQUIRES_NEW)
+	void addRequiredNewException(PropagationUser user) {
+		propagationUserMapper.insert(user)
+		throw new RuntimeException()
+	}
+
 }

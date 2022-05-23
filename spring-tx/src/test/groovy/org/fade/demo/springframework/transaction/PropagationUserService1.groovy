@@ -17,4 +17,9 @@ class PropagationUserService1 {
 		propagationUserMapper.insert(user)
 	}
 
+	@Transactional(propagation = Propagation.REQUIRES_NEW)
+	void addRequiredNew(PropagationUser user) {
+		propagationUserMapper.insert(user)
+	}
+
 }

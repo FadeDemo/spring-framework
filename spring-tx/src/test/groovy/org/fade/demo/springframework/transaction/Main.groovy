@@ -12,4 +12,32 @@ class Main {
 		service.noTransactionExceptionRequiredRequired()
 	}
 
+	@Test
+	void requiredTest2() {
+		def context = new AnnotationConfigApplicationContext(PropagationConfig)
+		def service = context.getBean(PropagationUserService)
+		service.noTransactionRequiredRequiredException()
+	}
+
+	@Test
+	void requiredTest3() {
+		def context = new AnnotationConfigApplicationContext(PropagationConfig)
+		def service = context.getBean(PropagationUserService)
+		service.transactionExceptionRequiredRequired()
+	}
+
+	@Test
+	void requiredTest4() {
+		def context = new AnnotationConfigApplicationContext(PropagationConfig)
+		def service = context.getBean(PropagationUserService)
+		service.transactionRequiredRequiredException()
+	}
+
+	@Test
+	void requiredTest5() {
+		def context = new AnnotationConfigApplicationContext(PropagationConfig)
+		def service = context.getBean(PropagationUserService)
+		service.transactionTryRequiredRequiredException()
+	}
+
 }
