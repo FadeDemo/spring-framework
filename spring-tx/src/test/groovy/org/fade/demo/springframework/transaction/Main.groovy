@@ -40,4 +40,53 @@ class Main {
 		service.transactionTryRequiredRequiredException()
 	}
 
+	@Test
+	void requiresNewTest1() {
+		def context = new AnnotationConfigApplicationContext(PropagationConfig)
+		def service = context.getBean(PropagationUserService)
+		service.noTransactionExceptionRequiresNewRequiresNew()
+	}
+
+	@Test
+	void requiresNewTest2() {
+		def context = new AnnotationConfigApplicationContext(PropagationConfig)
+		def service = context.getBean(PropagationUserService)
+		service.noTransactionRequiresNewRequiresNewException()
+	}
+
+	@Test
+	void requiresNewTest3() {
+		def context = new AnnotationConfigApplicationContext(PropagationConfig)
+		def service = context.getBean(PropagationUserService)
+		service.transactionExceptionRequiresNewRequiresNew()
+	}
+
+	@Test
+	void requiresNewTest4() {
+		def context = new AnnotationConfigApplicationContext(PropagationConfig)
+		def service = context.getBean(PropagationUserService)
+		service.transactionRequiresNewRequiresNewException()
+	}
+
+	@Test
+	void requiresNewTest5() {
+		def context = new AnnotationConfigApplicationContext(PropagationConfig)
+		def service = context.getBean(PropagationUserService)
+		service.transactionTryRequiresNewRequiresNewException()
+	}
+
+	@Test
+	void nestedTest1() {
+		def context = new AnnotationConfigApplicationContext(PropagationConfig)
+		def service = context.getBean(PropagationUserService)
+		service.noTransactionExceptionNestedNested()
+	}
+
+	@Test
+	void nestedTest2() {
+		def context = new AnnotationConfigApplicationContext(PropagationConfig)
+		def service = context.getBean(PropagationUserService)
+		service.noTransactionNestedNestedException()
+	}
+
 }

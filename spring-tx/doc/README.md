@@ -198,3 +198,176 @@ class PropagationUserService2 {
 
 1. 场景一——外围方法未开启事务
 
+验证方法一：
+
+```
+void noTransactionExceptionRequiresNewRequiresNew() {
+    def user1 = new PropagationUser(name: "张八")
+    propagationUserService1.addRequiredNew(user1)
+    def user2 = new PropagationUser(name: "李九")
+    propagationUserService2.addRequiredNew(user2)
+    throw new RuntimeException()
+}
+```
+
+验证结果：
+
+张八、李九均插入成功
+
+验证方法二：
+
+```
+void noTransactionRequiresNewRequiresNewException() {
+    def user1 = new PropagationUser(name: "张九")
+    propagationUserService1.addRequiredNew(user1)
+    def user2 = new PropagationUser(name: "李十")
+    propagationUserService2.addRequiredNewException(user2)
+}
+```
+
+验证结果：
+
+张九插入成功，李十插入失败
+
+2. 场景二——外围方法开启事务
+
+验证方法一：
+
+```
+@Transactional(rollbackFor = Throwable)
+void transactionExceptionRequiresNewRequiresNew() {
+    def user1 = new PropagationUser(name: "张十")
+    propagationUserService1.addRequiredNew(user1)
+    def user2 = new PropagationUser(name: "李十一")
+    propagationUserService2.addRequiredNew(user2)
+    def user3 = new PropagationUser(name: "王五")
+    propagationUserService1.addRequired(user3)
+    throw new RuntimeException()
+}
+```
+
+验证结果：
+
+张十、李十一均插入成功，王五插入失败
+
+验证方法二：
+
+```
+@Transactional(rollbackFor = Throwable)
+void transactionRequiresNewRequiresNewException() {
+    def user1 = new PropagationUser(name: "张十一")
+    propagationUserService1.addRequiredNew(user1)
+    def user2 = new PropagationUser(name: "李十二")
+    propagationUserService2.addRequiredNewException(user2)
+    def user3 = new PropagationUser(name: "王六")
+    propagationUserService1.addRequired(user3)
+}
+```
+
+验证结果：
+
+张十一插入成功，李十二、王六插入失败
+
+验证方法三：
+
+```
+@Transactional(rollbackFor = Throwable)
+void transactionTryRequiresNewRequiresNewException() {
+    def user1 = new PropagationUser(name: "张十二")
+    propagationUserService1.addRequiredNew(user1)
+    def user2 = new PropagationUser(name: "李十三")
+    try {
+        propagationUserService2.addRequiredNewException(user2)
+    } catch(Exception e) {
+        e.printStackTrace()
+    }
+    def user3 = new PropagationUser(name: "王七")
+    propagationUserService1.addRequired(user3)
+}
+```
+
+验证结果：
+
+张十二、王七插入成功，李十三插入失败
+
+3. 总结
+
+* 外围方法未开启事务的情况下Propagation.REQUIRES_NEW修饰的内部方法会新开启自己的事务，且开启的事务相互独立，互不干扰。
+* 外围方法开启事务的情况下Propagation.REQUIRES_NEW修饰的内部方法依然会单独开启独立事务，**且与外部方法事务也独立**，内部方法之间、内部方法和外部方法事务均相互独立，互不干扰。
+
+##### `Propagation.NESTED`
+
+示例代码：
+
+```groovy
+@Service
+class PropagationUserService1 {
+
+	@Resource
+	private PropagationUserMapper propagationUserMapper
+
+	@Transactional(propagation = Propagation.NESTED)
+	void addNested(PropagationUser user) {
+		propagationUserMapper.insert(user)
+	}
+
+}
+```
+
+```groovy
+@Service
+class PropagationUserService2 {
+
+	@Resource
+	private PropagationUserMapper propagationUserMapper
+
+	@Transactional(propagation = Propagation.NESTED)
+	void addNested(PropagationUser user) {
+		propagationUserMapper.insert(user)
+	}
+
+	@Transactional(propagation = Propagation.NESTED)
+	void addNestedException(PropagationUser user) {
+		propagationUserMapper.insert(user)
+		throw new RuntimeException()
+	}
+
+}
+```
+
+1. 场景一——外围方法未开启事务
+
+验证方法一：
+
+```
+void noTransactionExceptionNestedNested() {
+    def user1 = new PropagationUser(name: "张十三")
+    propagationUserService1.addNested(user1)
+    def user2 = new PropagationUser(name: "李十四")
+    propagationUserService2.addNested(user2)
+    throw new RuntimeException()
+}
+```
+
+验证结果：
+
+张十三、李十四均插入成功
+
+验证方法二：
+
+```
+void noTransactionNestedNestedException() {
+    def user1 = new PropagationUser(name: "张十四")
+    propagationUserService1.addNested(user1)
+    def user2 = new PropagationUser(name: "李十五")
+    propagationUserService2.addNestedException(user2)
+}
+```
+
+验证结果：
+
+张十四插入成功，李十五插入失败
+
+2. 场景二——外围方法开启事务
+
+

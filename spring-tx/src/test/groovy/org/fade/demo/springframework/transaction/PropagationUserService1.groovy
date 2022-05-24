@@ -22,4 +22,9 @@ class PropagationUserService1 {
 		propagationUserMapper.insert(user)
 	}
 
+	@Transactional(propagation = Propagation.NESTED)
+	void addNested(PropagationUser user) {
+		propagationUserMapper.insert(user)
+	}
+
 }

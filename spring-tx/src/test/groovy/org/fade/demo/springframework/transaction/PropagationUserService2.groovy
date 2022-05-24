@@ -34,4 +34,15 @@ class PropagationUserService2 {
 		throw new RuntimeException()
 	}
 
+	@Transactional(propagation = Propagation.NESTED)
+	void addNested(PropagationUser user) {
+		propagationUserMapper.insert(user)
+	}
+
+	@Transactional(propagation = Propagation.NESTED)
+	void addNestedException(PropagationUser user) {
+		propagationUserMapper.insert(user)
+		throw new RuntimeException()
+	}
+
 }

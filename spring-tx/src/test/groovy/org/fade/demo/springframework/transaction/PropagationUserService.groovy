@@ -57,4 +57,71 @@ class PropagationUserService {
 		}
 	}
 
+	void noTransactionExceptionRequiresNewRequiresNew() {
+		def user1 = new PropagationUser(name: "张八")
+		propagationUserService1.addRequiredNew(user1)
+		def user2 = new PropagationUser(name: "李九")
+		propagationUserService2.addRequiredNew(user2)
+		throw new RuntimeException()
+	}
+
+	void noTransactionRequiresNewRequiresNewException() {
+		def user1 = new PropagationUser(name: "张九")
+		propagationUserService1.addRequiredNew(user1)
+		def user2 = new PropagationUser(name: "李十")
+		propagationUserService2.addRequiredNewException(user2)
+	}
+
+	@Transactional(rollbackFor = Throwable)
+	void transactionExceptionRequiresNewRequiresNew() {
+		def user1 = new PropagationUser(name: "张十")
+		propagationUserService1.addRequiredNew(user1)
+		def user2 = new PropagationUser(name: "李十一")
+		propagationUserService2.addRequiredNew(user2)
+		def user3 = new PropagationUser(name: "王五")
+		propagationUserService1.addRequired(user3)
+		throw new RuntimeException()
+	}
+
+	@Transactional(rollbackFor = Throwable)
+	void transactionRequiresNewRequiresNewException() {
+		def user1 = new PropagationUser(name: "张十一")
+		propagationUserService1.addRequiredNew(user1)
+		def user2 = new PropagationUser(name: "李十二")
+		propagationUserService2.addRequiredNewException(user2)
+		def user3 = new PropagationUser(name: "王六")
+		propagationUserService1.addRequired(user3)
+	}
+
+	@Transactional(rollbackFor = Throwable)
+	void transactionTryRequiresNewRequiresNewException() {
+		def user1 = new PropagationUser(name: "张十二")
+		propagationUserService1.addRequiredNew(user1)
+		def user2 = new PropagationUser(name: "李十三")
+		try {
+			propagationUserService2.addRequiredNewException(user2)
+		} catch(Exception e) {
+			e.printStackTrace()
+		}
+		def user3 = new PropagationUser(name: "王七")
+		propagationUserService1.addRequired(user3)
+	}
+
+	void noTransactionExceptionNestedNested() {
+		def user1 = new PropagationUser(name: "张十三")
+		propagationUserService1.addNested(user1)
+		def user2 = new PropagationUser(name: "李十四")
+		propagationUserService2.addNested(user2)
+		throw new RuntimeException()
+	}
+
+	void noTransactionNestedNestedException() {
+		def user1 = new PropagationUser(name: "张十四")
+		propagationUserService1.addNested(user1)
+		def user2 = new PropagationUser(name: "李十五")
+		propagationUserService2.addNestedException(user2)
+	}
+
+	void transactionExceptionNestedNested
+
 }
