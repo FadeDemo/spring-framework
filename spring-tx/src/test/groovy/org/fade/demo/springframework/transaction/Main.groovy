@@ -89,4 +89,25 @@ class Main {
 		service.noTransactionNestedNestedException()
 	}
 
+	@Test
+	void nestedTest3() {
+		def context = new AnnotationConfigApplicationContext(PropagationConfig)
+		def service = context.getBean(PropagationUserService)
+		service.transactionExceptionNestedNested()
+	}
+
+	@Test
+	void nestedTest4() {
+		def context = new AnnotationConfigApplicationContext(PropagationConfig)
+		def service = context.getBean(PropagationUserService)
+		service.transactionNestedNestedException()
+	}
+
+	@Test
+	void nestedTest5() {
+		def context = new AnnotationConfigApplicationContext(PropagationConfig)
+		def service = context.getBean(PropagationUserService)
+		service.transactionTryNestedNestedException()
+	}
+
 }

@@ -122,6 +122,33 @@ class PropagationUserService {
 		propagationUserService2.addNestedException(user2)
 	}
 
-	void transactionExceptionNestedNested
+	@Transactional(rollbackFor = Throwable)
+	void transactionExceptionNestedNested() {
+		def user1 = new PropagationUser(name: "张十五")
+		propagationUserService1.addNested(user1)
+		def user2 = new PropagationUser(name: "李十六")
+		propagationUserService2.addNested(user2)
+		throw new RuntimeException()
+	}
+
+	@Transactional(rollbackFor = Throwable)
+	void transactionNestedNestedException() {
+		def user1 = new PropagationUser(name: "张十六")
+		propagationUserService1.addNested(user1)
+		def user2 = new PropagationUser(name: "李十七")
+		propagationUserService2.addNestedException(user2)
+	}
+
+	@Transactional(rollbackFor = Throwable)
+	void transactionTryNestedNestedException() {
+		def user1 = new PropagationUser(name: "张十七")
+		propagationUserService1.addNested(user1)
+		def user2 = new PropagationUser(name: "李十八")
+		try {
+			propagationUserService2.addNestedException(user2)
+		} catch(Exception e) {
+			e.printStackTrace()
+		}
+	}
 
 }

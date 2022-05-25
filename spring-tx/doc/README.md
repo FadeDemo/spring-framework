@@ -370,4 +370,62 @@ void noTransactionNestedNestedException() {
 
 2. 场景二——外围方法开启事务
 
+验证方法一：
 
+```
+@Transactional(rollbackFor = Throwable)
+void transactionExceptionNestedNested() {
+    def user1 = new PropagationUser(name: "张十五")
+    propagationUserService1.addNested(user1)
+    def user2 = new PropagationUser(name: "李十六")
+    propagationUserService2.addNested(user2)
+    throw new RuntimeException()
+}
+```
+
+验证结果：
+
+张十五、李十六均未插入
+
+验证方法二：
+
+```
+@Transactional(rollbackFor = Throwable)
+void transactionNestedNestedException() {
+    def user1 = new PropagationUser(name: "张十六")
+    propagationUserService1.addNested(user1)
+    def user2 = new PropagationUser(name: "李十七")
+    propagationUserService2.addNestedException(user2)
+}
+```
+
+验证结果：
+
+张十六、李十七均未插入
+
+验证方法三：
+
+```
+@Transactional(rollbackFor = Throwable)
+void transactionTryNestedNestedException() {
+    def user1 = new PropagationUser(name: "张十七")
+    propagationUserService1.addNested(user1)
+    def user2 = new PropagationUser(name: "李十八")
+    try {
+        propagationUserService2.addNestedException(user2)
+    } catch(Exception e) {
+        e.printStackTrace()
+    }
+}
+```
+
+验证结果：
+
+张十七插入成功，李十八未插入成功
+
+3. 总结
+
+* 外围方法未开启事务的情况下Propagation.NESTED和Propagation.REQUIRED作用相同，修饰的内部方法都会新开启自己的事务，且开启的事务相互独立，互不干扰。
+* 外围方法开启事务的情况下Propagation.NESTED修饰的内部方法属于外部事务的子事务，外围主事务回滚，子事务一定回滚，而内部子事务可以单独回滚而不影响外围主事务和其他子事务
+
+##### 其余事务传播行为略
