@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<web-app>
+
+	<display-name>spring-mvc-demo</display-name>
+
+	<description>a spring mvc demo</description>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:org/fade/springframework/mvc/applicationContext.xml</param-value>
+	</context-param>
+
+	<servlet>
+
+	</servlet>
+
+</web-app>

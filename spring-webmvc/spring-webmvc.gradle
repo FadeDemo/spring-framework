@@ -1,6 +1,7 @@
 description = "Spring Web MVC"
 
 apply plugin: "kotlin"
+apply plugin: "groovy"
 
 dependencies {
 	api(project(":spring-aop"))
@@ -62,4 +63,5 @@ dependencies {
 	testRuntimeOnly("com.sun.xml.bind:jaxb-core")
 	testRuntimeOnly("com.sun.xml.bind:jaxb-impl")
 	testRuntimeOnly("com.sun.activation:jakarta.activation")
+	optional("org.apache.groovy:groovy")
 }
