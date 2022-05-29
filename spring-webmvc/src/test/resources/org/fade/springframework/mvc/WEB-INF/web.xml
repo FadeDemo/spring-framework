@@ -7,13 +7,25 @@
 
 	<description>a spring mvc demo</description>
 
+	<!--使用ContextLoaderListener时配置文件的位置-->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:org/fade/springframework/mvc/applicationContext.xml</param-value>
 	</context-param>
 
 	<servlet>
-
+		<servlet-name>springMvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
 	</servlet>
+	<sevlet-mapping>
+		<servlet-name>springMvc</servlet-name>
+		<url-pattern>*.html</url-pattern>
+	</sevlet-mapping>
+
+	<!--上下文载入器-->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
 
 </web-app>
