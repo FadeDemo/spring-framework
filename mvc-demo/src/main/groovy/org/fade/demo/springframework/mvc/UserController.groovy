@@ -15,6 +15,8 @@ class UserController extends AbstractController {
 		def b = new User(username: "李四", age: 29)
 		userList.add(a)
 		userList.add(b)
+		def data = request.servletContext.getAttribute("data")
+		logger.info("data from customize ServletContextListener: " + data)
 		return new ModelAndView("userList", "users", userList)
 	}
 

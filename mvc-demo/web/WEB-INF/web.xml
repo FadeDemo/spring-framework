@@ -31,6 +31,7 @@
 	<!--上下文载入器-->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+		<listener-class>org.fade.demo.springframework.mvc.MyServletContextListener</listener-class>
 	</listener>
 
 </web-app>
