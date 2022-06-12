@@ -27,6 +27,16 @@
 		<servlet-name>springMvc</servlet-name>
 		<url-pattern>*.html</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>myHttpServlet</servlet-name>
+		<servlet-class>org.fade.demo.springframework.mvc.MyHttpServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>myHttpServlet</servlet-name>
+		<url-pattern>*.xml</url-pattern>
+	</servlet-mapping>
 
 	<!--上下文载入器-->
 	<listener>
