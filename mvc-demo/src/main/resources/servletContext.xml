@@ -7,10 +7,15 @@
 		<property name="mappings">
 			<props>
 				<prop key="/userList.html">userController</prop>
+				<prop key="/testHandlerExceptionResolver.html">testHandlerExceptionResolverController</prop>
 			</props>
 		</property>
 	</bean>
 
 	<bean id="userController" class="org.fade.demo.springframework.mvc.UserController" />
+
+	<bean id="testHandlerExceptionResolverController" class="org.fade.demo.springframework.mvc.HandlerExceptionResolverController" />
+
+	<bean id="handlerExceptionResolver" class="org.fade.demo.springframework.mvc.MyHandlerExceptionResolver" />
 
 </beans>
