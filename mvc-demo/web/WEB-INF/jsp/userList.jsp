@@ -4,3 +4,5 @@
     <c:out value="${user.username}" /><br />
     <c:out value="${user.age}" /><br />
 </c:forEach>
+<br />
+handle cost: <%out.println(request.getAttribute("handleTime"));%>
