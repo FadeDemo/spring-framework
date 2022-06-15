@@ -313,6 +313,191 @@
 					<line>603</line>
 					<option name="timeStamp" value="237" />
 				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1276</line>
+					<option name="timeStamp" value="238" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1294</line>
+					<option name="timeStamp" value="239" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1296</line>
+					<option name="timeStamp" value="240" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/mvc/SimpleControllerHandlerAdapter.java</url>
+					<line>42</line>
+					<option name="timeStamp" value="241" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1066</line>
+					<option name="timeStamp" value="243" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/mvc/SimpleControllerHandlerAdapter.java</url>
+					<line>50</line>
+					<option name="timeStamp" value="244" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/mvc/AbstractController.java</url>
+					<line>156</line>
+					<option name="timeStamp" value="245" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/mvc/AbstractController.java</url>
+					<line>171</line>
+					<option name="timeStamp" value="246" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/mvc-demo/src/main/groovy/org/fade/demo/springframework/mvc/UserController.groovy</url>
+					<line>12</line>
+					<option name="timeStamp" value="247" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/mvc/AbstractController.java</url>
+					<line>176</line>
+					<option name="timeStamp" value="248" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1061</line>
+					<option name="timeStamp" value="249" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1073</line>
+					<option name="timeStamp" value="250" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1137</line>
+					<option name="timeStamp" value="251" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1320</line>
+					<option name="timeStamp" value="252" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1326</line>
+					<option name="timeStamp" value="253" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/mvc-demo/src/main/groovy/org/fade/demo/springframework/mvc/MyHandlerExceptionResolver.groovy</url>
+					<line>13</line>
+					<option name="timeStamp" value="254" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1373</line>
+					<option name="timeStamp" value="257" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1376</line>
+					<option name="timeStamp" value="258" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1439</line>
+					<option name="timeStamp" value="259" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1441</line>
+					<option name="timeStamp" value="260" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/view/AbstractCachingViewResolver.java</url>
+					<line>172</line>
+					<option name="timeStamp" value="261" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/view/AbstractCachingViewResolver.java</url>
+					<line>173</line>
+					<option name="timeStamp" value="262" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/view/UrlBasedViewResolver.java</url>
+					<line>466</line>
+					<option name="timeStamp" value="265" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/view/UrlBasedViewResolver.java</url>
+					<line>490</line>
+					<option name="timeStamp" value="266" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/view/AbstractCachingViewResolver.java</url>
+					<line>274</line>
+					<option name="timeStamp" value="267" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/view/UrlBasedViewResolver.java</url>
+					<line>548</line>
+					<option name="timeStamp" value="268" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/view/UrlBasedViewResolver.java</url>
+					<line>568</line>
+					<option name="timeStamp" value="269" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/view/AbstractCachingViewResolver.java</url>
+					<line>183</line>
+					<option name="timeStamp" value="270" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1400</line>
+					<option name="timeStamp" value="271" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/view/AbstractView.java</url>
+					<line>307</line>
+					<option name="timeStamp" value="272" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/view/AbstractView.java</url>
+					<line>313</line>
+					<option name="timeStamp" value="273" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/view/AbstractView.java</url>
+					<line>315</line>
+					<option name="timeStamp" value="274" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/view/AbstractView.java</url>
+					<line>326</line>
+					<option name="timeStamp" value="275" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/view/InternalResourceView.java</url>
+					<line>141</line>
+					<option name="timeStamp" value="276" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1086</line>
+					<option name="timeStamp" value="277" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1089</line>
+					<option name="timeStamp" value="278" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1260</line>
+					<option name="timeStamp" value="279" />
+				</line-breakpoint>
 			</breakpoints>
 		</breakpoint-manager>
 	</component>
