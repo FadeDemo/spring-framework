@@ -35,4 +35,12 @@
 
 ![mvc#8](resources/2022-06-15_22-14.png)
 
-10. 最后就是处理
+10. 最后就是处理并调用配置的 `org.springframework.web.servlet.ViewResolver` 渲染请求的结果，如果在 `doDispatch` 方法之前的步骤中有异常产生，这里也会进行处理，我们自定义的 `org.springframework.web.servlet.HandlerExceptionResolver` 就是在这里被调用的
+
+![mvc#9](resources/2022-06-16_17-12-19.png)
+
+11. 我们在 `org.springframework.web.servlet.DispatcherServlet.initStrategies` 方法中初始化的属性大部分都是在 `doDispatch` 方法中被调用，我们自定义的 `HandlerInterceptor` —— 在 `HandlerExecutionChain` 中的 `HandlerInterceptor` 被调用也是在这时候
+
+![mvc#10](resources/2022-06-16_17-24-29.png)
+
+![mvc#11](resources/2022-06-16_17-26-25.png)
