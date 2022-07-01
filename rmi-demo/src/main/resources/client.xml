@@ -3,17 +3,9 @@
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="rmiService" class="org.fade.demo.springframework.rmi.RmiServiceImpl" />
-
-	<bean class="org.springframework.remoting.rmi.RmiServiceExporter">
-		<!--服务类-->
-		<property name="service" ref="rmiService" />
-		<!--服务名-->
-		<property name="serviceName" value="rmiService" />
-		<!--服务接口-->
+	<bean id="client" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+		<property name="serviceUrl" value="rmi://127.0.0.1:9999/rmiService" />
 		<property name="serviceInterface" value="org.fade.demo.springframework.rmi.RmiService" />
-		<!--服务端口-->
-		<property name="registryPort" value="9999" />
 	</bean>
 
 </beans>
