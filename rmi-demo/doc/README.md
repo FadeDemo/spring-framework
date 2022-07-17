@@ -156,9 +156,147 @@ class JdkRmiClient {
 
 2. 创建注册中心（Registry）
 
+![rmi#17](resources/2022-07-17_12-01.png)
+
+![rmi#18](resources/2022-07-17_12-02.png)
+
+![rmi#19](resources/2022-07-17_12-03.png)
+
+![rmi#4](resources/2022-07-17_11-17.png)
+
+上面最后一张图（复用，并未实时截图）是不是很熟悉，没错也是 `sun.rmi.server.UnicastServerRef.exportObject(java.rmi.Remote, java.lang.Object, boolean)` 方法
+
+区别不同的是标号1我们最后执行的逻辑是：
+
+![rmi#6](resources/2022-07-17_11-29.png)
+
+![rmi#20](resources/2022-07-17_12-08.png)
+
+就是用反射创建了以当前类名为前缀， `_Stub` 为后缀的类的实例
+
+回到前面，这里因为当前创建的stub是 `RemoteStub` 类型的：
+
+![rmi#21](resources/2022-07-17_12-11.png)
+
+所以它会去执行标号2的逻辑：
+
+![rmi#22](resources/2022-07-17_12-13.png)
+
+![rmi#23](resources/2022-07-17_12-14.png)
+
+![rmi#24](resources/2022-07-17_12-17.png)
+
+同样也是反射创建了以 `_Skel` 为后缀的类的实例
+
+其余步骤就和创建服务对象没什么很大的区别了
+
+3. 绑定服务
+
+绑定服务只是往注册中心的 `Hashtable` 注册一下：
+
+![rmi#25](resources/2022-07-17_17-34.png)
+
+4. 客户端获取注册中心
+
+![rmi#26](resources/2022-07-17_17-38.png)
+
+注册中心的获取我们看下标注1：
+
+![rmi#27](resources/2022-07-17_17-40.png)
+
+![rmi#28](resources/2022-07-17_17-41.png)
+
+![rmi#29](resources/2022-07-17_17-42.png)
+
+![rmi#5](resources/2022-07-17_11-26.png)
+
+没错，又跑到了上面最后一张图（复用，并未实时截图）。因为它存在以 `_Stub` 为后缀的类，所以该方法的返回值是 `RegistryImpl_Stub` 类型的实例
+
+5. 客户端获取远程对象
+
+![rmi#26](resources/2022-07-17_17-38.png)
+
+获取远程对象看一下标号2：
+
+![rmi#27](resources/2022-07-17_18-18.png)
+
+`this.ref.newCall` 与注册中心建立连接，此时服务端（todo）阻塞的线程获取到了客户端的socket，会去提交一个处理连接的任务给线程池：
+
+![rmi#28](resources/2022-07-17_19-41.png)
+
+于是我们来看一下 `ConnectionHandler` 的run方法：
+
+![rmi#29](resources/2022-07-17_19-45.png)
+
+![rmi#30](resources/2022-07-17_19-46.png)
+
+![rmi#31](resources/2022-07-17_19-49.png)
+
+![rmi#32](resources/2022-07-17_19-55.png)
+
+![rmi#33](resources/2022-07-17_19-58.png)
+
+`ObjectTable.getTarget(new ObjectEndpoint(id, transport))` 是从 `ObjectTable` 中取出前面创建注册中心时注册的对象
+
+`disp.dispatch(impl, call)` 会进入到前面创建注册中心时创建的骨架（skeleton）的dispatch方法中 ：
+
+![rmi#34](resources/2022-07-17_21-11.png)
+
+![rmi#35](resources/2022-07-17_21-12.png)
+
+![rmi#36](resources/2022-07-17_21-14.png)
+
+上图 `SharedSecrets.getJavaObjectInputStreamReadString().readString(in)` 在方法名尚未被客户端传输过来之前会阻塞在那里
+
+回到前面客户端的步骤， `out.writeObject($param_String_1)` 把需要调用的方法写到输出流上
+
+`this.ref.invoke(call)` 与注册中心交互，把要调用的方法名发送过去。然后服务端读取到方法名：
+
+![rmi#36](resources/2022-07-17_21-14.png)
+
+上图 `server.lookup($param_String_1)` 从注册中心的 `Hashtable` 里取出服务对象：
+
+![rmi#37](resources/2022-07-17_21-18.png)
+
+而 `out.writeObject($result)` 则是把服务对象写入输出流，但是在写的过程中，这里动了些手脚：
+
+![rmi#38](resources/2022-07-17_21-38.png)
+
+![rmi#39](resources/2022-07-17_21-40.png)
+
+![rmi#40](resources/2022-07-17_21-41.png)
+
+这里实际上是把我们创建服务对象时生成动态代理对象返回给了客户端
+
+回到前面客户端的步骤，`$result = (Remote)in.readObject()` 反序列化远程对象
+
+6. 客户端调用远程方法
+
+因为客户端获取到的远程对象实际是服务端创建服务对象时产生的动态代理对象，所以我们看下 `RemoteObjectInvocationHandler` 的 `invoke` 方法：
+
+![rmi#41](resources/2022-07-17_21-51.png)
+
+![rmi#42](resources/2022-07-17_21-51_1.png)
+
+![rmi#43](resources/2022-07-17_21-53.png)
+
+上图首先序列化调用的参数写入输出流，此时服务端负责网络通信的线程监听到请求，会依次执行到这里：
+
+![rmi#44](resources/2022-07-17_22-04.png)
+
+先是取出要执行的 `Method` 对象，然后反序列化参数
+
+![rmi#45](resources/2022-07-17_22-08.png)
+
+反射调用相应的方法，序列化返回值
+
+回到客户端 `sun.rmi.server.UnicastRef.invoke(java.rmi.Remote, java.lang.reflect.Method, java.lang.Object[], long)` 方法，客户端最后会在这反序列化远程方法返回值：
+
+![rmi#46](resources/2022-07-17_22-09.png)
+
+###### 总结
 
 
-3. 
 
 ### spring rmi 简易流程
 
