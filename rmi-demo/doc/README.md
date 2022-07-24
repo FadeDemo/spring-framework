@@ -106,7 +106,7 @@ class JdkRmiClient {
 
 标号3启动其它线程进行网络通信并注册到 `ObjectTable` 中
 
-标号4 `todo`
+标号4 维持了一个map便于获取要调用的方法
 
 我们先来看看标号1：
 
@@ -151,8 +151,6 @@ class JdkRmiClient {
 ![rmi#13](resources/2022-07-17_11-46.png)
 
 ![rmi#14](resources/2022-07-17_11-47.png)
-
-标号4 `todo`
 
 2. 创建注册中心（Registry）
 
@@ -220,7 +218,7 @@ class JdkRmiClient {
 
 ![rmi#27](resources/2022-07-17_18-18.png)
 
-`this.ref.newCall` 与注册中心建立连接，此时服务端（todo）阻塞的线程获取到了客户端的socket，会去提交一个处理连接的任务给线程池：
+`this.ref.newCall` 与注册中心建立连接，此时服务端阻塞的线程获取到了客户端的socket，会去提交一个处理连接的任务给线程池：
 
 ![rmi#28](resources/2022-07-17_19-41.png)
 
@@ -292,13 +290,91 @@ class JdkRmiClient {
 
 回到客户端 `sun.rmi.server.UnicastRef.invoke(java.rmi.Remote, java.lang.reflect.Method, java.lang.Object[], long)` 方法，客户端最后会在这反序列化远程方法返回值：
 
-![rmi#46](resources/2022-07-17_22-09.png)
+![rmi#46](resources/2022-07-24_11-06.png)
 
 ###### 总结
 
+总的来说，rmi的整个工作流程可以用下面这几张图表示：
 
+![rmi#47](resources/2022-07-24_21-10.png)
+
+![rmi#48](resources/2022-07-24_21-12.png)
 
 ### spring rmi 简易流程
+
+###### 例子
+
+参考 `Server.groovy` 和 `Client.groovy`
+
+###### 流程
+
+1. 服务端
+
+首先服务端定义了 `RmiServiceExporter` ，它实现了 `InitializingBean` 接口，所以我们来看下它的 `afterPropertiesSet` 方法：
+
+![rmi#49](resources/2022-07-24_21-18.png)
+
+![rmi#50](resources/2022-07-24_21-20.png)
+
+因为在创建 `RmiServiceExporter` 时我们没有指定注册中心，所以这里先会去创建注册中心：
+
+![rmi#51](resources/2022-07-24_21-23.png)
+
+![rmi#52](resources/2022-07-24_21-23_1.png)
+
+![rmi#53](resources/2022-07-24_21-24.png)
+
+![rmi#54](resources/2022-07-24_21-32.png)
+
+后面就是一些耳熟能详的事了
+
+回到 `org.springframework.remoting.rmi.RmiServiceExporter.prepare` ：
+
+![rmi#55](resources/2022-07-24_21-36.png)
+
+因为这里我们服务类并没有实现 `Remote` 接口，所以它会执行到这：
+
+![rmi#56](resources/2022-07-24_21-39.png)
+
+这里首先来看一下 `getProxyForService` 方法：
+
+![rmi#57](resources/2022-07-24_21-42.png)
+
+挺熟悉的了，创建spring的aop代理
+
+回到 `getObjectToExport` 方法，所以这里只是把服务对象的代理对象和其它一些信息封装到了 `RmiInvocationWrapper` 中
+
+继续往上回到 `org.springframework.remoting.rmi.RmiServiceExporter.prepare` ：
+
+![rmi#58](resources/2022-07-24_21-48.png)
+
+它对前面封装的 `RmiInvocationWrapper` 创建了一个jdk代理并注册到了 `ObjectTable` 中，相当于继承了 `UnicastRemoteObject` 的作用
+
+2. 客户端
+
+客户端使用的是 `RmiProxyFactoryBean` ，因为它也间接实现了 `InitializingBean` 接口，所以这里也是先看下它的 `afterPropertiesSet` 方法：
+
+![rmi#59](resources/2022-07-24_21-55.png)
+
+它会先调用父类的 `afterPropertiesSet` 方法：
+
+![rmi#60](resources/2022-07-24_21-56.png)
+
+![rmi#61](resources/2022-07-24_21-57.png)
+
+![rmi#62](resources/2022-07-24_21-59.png)
+
+这里到了我们在jdk rmi 客户端流程中看过的地方，回到客户端最开始的 `afterPropertiesSet` 方法：
+
+![rmi#63](resources/2022-07-24_22-18.png)
+
+它有个创建代理对象的过程，它把自身作为通知传给了代理工厂，而它自身又继承了 `RmiClientInterceptor` 类：
+
+![rmi#64](resources/2022-07-24_22-20.png)
+
+在客户端从容器中获取到bean后准备调用远程方法时，首先先执行了 `RmiClientInterceptor` 的 `invoke` 方法：
+
+![rmi#65](resources/2022-07-24_22-22.png)
 
 ### 替代方案
 
