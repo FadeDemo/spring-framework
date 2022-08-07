@@ -376,5 +376,36 @@ class JdkRmiClient {
 
 ![rmi#65](resources/2022-07-24_22-22.png)
 
+![rmi#66](resources/2022-08-07_18-56.png)
+
+因为前面服务端创建时对 `RmiInvocationWrapper` 创建了jdk代理，所以这里获取到的存根类型是 `RmiInvocationHandler` 类型的，程序会去执行上图红框位置方法：
+
+![rmi#67](resources/2022-08-07_19-13.png)
+
+此时因为存根又是 `RemoteObjectInvocationHandler` 类型的代理，所以程序又会去执行 `RemoteObjectInvocationHandler` 的 `invoke` 方法，这里就又回到了jdk rmi的流程中。
+
+之后程序执行到了：
+
+![rmi#68](resources/2022-08-07_20-48.png)
+
+![rmi#69](resources/2022-08-07_20-49.png)
+
+![rmi#70](resources/2022-08-07_20-49_1.png)
+
+![rmi#71](resources/2022-08-07_20-50.png)
+
+![rmi#72](resources/2022-08-07_20-52.png)
+
+最后就是将方法执行的结果序列化返回
+
+###### 总结
+
+总体上流程和jdk rmi是一致的，区别在于spring封装了rmi服务端和客户端的创建，并且远程对象也是经过spring处理的
+
 ### 替代方案
 
+高版本的spring中，rmi已经被标记为了deprecated，所以它的替代方案为：
+
+* Jax-WS
+* Spring Web Services
+* AMQP
