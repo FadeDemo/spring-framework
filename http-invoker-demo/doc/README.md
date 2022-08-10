@@ -62,3 +62,28 @@ rmi使用java标准的对象序列化，但是很难穿透防火墙；hessian能
 
 ![http-invoker#11](resources/2022-08-09_22-04.png)
 
+![http-invoker#12](resources/2022-08-10_21-29.png)
+
+![http-invoker#13](resources/2022-08-10_21-30.png)
+
+![http-invoker#14](resources/2022-08-10_21-30_1.png)
+
+因为前面我们创建的 `HttpInvokerRequestExecutor` 是 `SimpleHttpInvokerRequestExecutor` 类型的，所以方法执行到了这：
+
+![http-invoker#15](resources/2022-08-10_21-34.png)
+
+上图很明显先打开了一个连接，然后设置了一些连接的参数，把要调用的方法信息写到了连接中
+
+### 服务端处理客户端请求
+
+服务端会进入到 `DispatcherServlet` ，首先获取handler：
+
+![http-invoker#16](resources/2022-08-10_21-55.png)
+
+然后就如同正常处理controller方法一样，获取适配器，调用handler：
+
+![http-invoker#17](resources/2022-08-10_22-00.png)
+
+![http-invoker#18](resources/2022-08-10_22-00_1.png)
+
+![http-invoker#19](resources/2022-08-10_22-01.png)
