@@ -6,7 +6,9 @@ rmi使用java标准的对象序列化，但是很难穿透防火墙；hessian能
 
 ### 与rest有什么区别
 
-与rmi一样，它也要通过序列化协议传递一个远程对象，而rest不需要
+[rest是文本序列化，http invoker是二进制序列化](https://dubbo.apache.org/zh/docs/v2.7/user/rest/#%E6%A6%82%E8%BF%B0)
+
+至于http invoker会传输对象，这个本人感觉并不是它与rest的区别，因为http invoker只是把调用的参数和调用结果都封装了一下，比如调用结果封装成 `RemoteInvocationResult` ，感觉本质上和rest没什么区别
 
 ### 源码分析
 
@@ -87,3 +89,29 @@ rmi使用java标准的对象序列化，但是很难穿透防火墙；hessian能
 ![http-invoker#18](resources/2022-08-10_22-00_1.png)
 
 ![http-invoker#19](resources/2022-08-10_22-01.png)
+
+上图第一行首先把客户端的调用信息从连接中读取出来：
+
+![http-invoker#20](resources/2022-08-11_21-28.png)
+
+接着第二行是反射调用方法并封装成一个 `RemoteInvocationResult` ：
+
+![http-invoker#21](resources/2022-08-11_21-34.png)
+
+![http-invoker#22](resources/2022-08-11_21-35.png)
+
+![http-invoker#23](resources/2022-08-11_21-37.png)
+
+![http-invoker#24](resources/2022-08-11_21-37_1.png)
+
+第三行是把前面生成的 `RemoteInvocationResult` 写入响应中
+
+### 客户端处理服务端响应
+
+客户端拿到 `RemoteInvocationResult` 后取出调用结果：
+
+![http-invoker#25](resources/2022-08-11_21-44.png)
+
+![http-invoker#26](resources/2022-08-11_21-44_1.png)
+
+![http-invoker#27](resources/2022-08-11_21-45.png)
