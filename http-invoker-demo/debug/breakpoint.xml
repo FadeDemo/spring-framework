@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+	<component name="XDebuggerManager">
+		<breakpoint-manager>
+			<breakpoints>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-context/5.3.20/spring-context-5.3.20-sources.jar!/org/springframework/remoting/rmi/RemoteInvocationSerializingExporter.java</url>
+					<line>107</line>
+					<option name="timeStamp" value="1" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-context/5.3.20/spring-context-5.3.20-sources.jar!/org/springframework/remoting/rmi/RemoteInvocationSerializingExporter.java</url>
+					<line>100</line>
+					<option name="timeStamp" value="2" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-context/5.3.20/spring-context-5.3.20-sources.jar!/org/springframework/remoting/support/RemoteExporter.java</url>
+					<line>150</line>
+					<option name="timeStamp" value="3" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-web/5.3.20/spring-web-5.3.20-sources.jar!/org/springframework/remoting/httpinvoker/HttpInvokerProxyFactoryBean.java</url>
+					<line>66</line>
+					<option name="timeStamp" value="4" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-web/5.3.20/spring-web-5.3.20-sources.jar!/org/springframework/remoting/httpinvoker/HttpInvokerClientInterceptor.java</url>
+					<line>141</line>
+					<option name="timeStamp" value="6" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-web/5.3.20/spring-web-5.3.20-sources.jar!/org/springframework/remoting/httpinvoker/HttpInvokerClientInterceptor.java</url>
+					<line>128</line>
+					<option name="timeStamp" value="7" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-web/5.3.20/spring-web-5.3.20-sources.jar!/org/springframework/remoting/httpinvoker/HttpInvokerProxyFactoryBean.java</url>
+					<line>69</line>
+					<option name="timeStamp" value="8" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-web/5.3.20/spring-web-5.3.20-sources.jar!/org/springframework/remoting/httpinvoker/HttpInvokerClientInterceptor.java</url>
+					<line>148</line>
+					<option name="timeStamp" value="9" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-web/5.3.20/spring-web-5.3.20-sources.jar!/org/springframework/remoting/httpinvoker/HttpInvokerClientInterceptor.java</url>
+					<line>156</line>
+					<option name="timeStamp" value="10" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-web/5.3.20/spring-web-5.3.20-sources.jar!/org/springframework/remoting/httpinvoker/HttpInvokerClientInterceptor.java</url>
+					<line>190</line>
+					<option name="timeStamp" value="11" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-web/5.3.20/spring-web-5.3.20-sources.jar!/org/springframework/remoting/httpinvoker/HttpInvokerClientInterceptor.java</url>
+					<line>208</line>
+					<option name="timeStamp" value="12" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-web/5.3.20/spring-web-5.3.20-sources.jar!/org/springframework/remoting/httpinvoker/AbstractHttpInvokerRequestExecutor.java</url>
+					<line>140</line>
+					<option name="timeStamp" value="13" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-web/5.3.20/spring-web-5.3.20-sources.jar!/org/springframework/remoting/httpinvoker/SimpleHttpInvokerRequestExecutor.java</url>
+					<line>89</line>
+					<option name="timeStamp" value="14" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1027</line>
+					<option name="timeStamp" value="16" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1042</line>
+					<option name="timeStamp" value="17" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1049</line>
+					<option name="timeStamp" value="18" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-webmvc/5.3.20/spring-webmvc-5.3.20-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+					<line>1066</line>
+					<option name="timeStamp" value="19" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-web/5.3.20/spring-web-5.3.20-sources.jar!/org/springframework/remoting/httpinvoker/HttpInvokerServiceExporter.java</url>
+					<line>76</line>
+					<option name="timeStamp" value="20" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-web/5.3.20/spring-web-5.3.20-sources.jar!/org/springframework/remoting/httpinvoker/HttpInvokerServiceExporter.java</url>
+					<line>77</line>
+					<option name="timeStamp" value="22" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-context/5.3.20/spring-context-5.3.20-sources.jar!/org/springframework/remoting/support/RemoteInvocationBasedExporter.java</url>
+					<line>113</line>
+					<option name="timeStamp" value="23" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-context/5.3.20/spring-context-5.3.20-sources.jar!/org/springframework/remoting/support/RemoteInvocationBasedExporter.java</url>
+					<line>77</line>
+					<option name="timeStamp" value="24" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-context/5.3.20/spring-context-5.3.20-sources.jar!/org/springframework/remoting/support/DefaultRemoteInvocationExecutor.java</url>
+					<line>38</line>
+					<option name="timeStamp" value="25" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-context/5.3.20/spring-context-5.3.20-sources.jar!/org/springframework/remoting/support/RemoteInvocation.java</url>
+					<line>214</line>
+					<option name="timeStamp" value="26" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-web/5.3.20/spring-web-5.3.20-sources.jar!/org/springframework/remoting/httpinvoker/SimpleHttpInvokerRequestExecutor.java</url>
+					<line>95</line>
+					<option name="timeStamp" value="27" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-web/5.3.20/spring-web-5.3.20-sources.jar!/org/springframework/remoting/httpinvoker/HttpInvokerClientInterceptor.java</url>
+					<line>164</line>
+					<option name="timeStamp" value="28" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-context/5.3.20/spring-context-5.3.20-sources.jar!/org/springframework/remoting/support/RemoteInvocationBasedAccessor.java</url>
+					<line>87</line>
+					<option name="timeStamp" value="29" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>jar:///opt/apache-maven/maven-repository/org/springframework/spring-context/5.3.20/spring-context-5.3.20-sources.jar!/org/springframework/remoting/support/RemoteInvocationResult.java</url>
+					<line>159</line>
+					<option name="timeStamp" value="30" />
+				</line-breakpoint>
+			</breakpoints>
+		</breakpoint-manager>
+	</component>
+</project>
