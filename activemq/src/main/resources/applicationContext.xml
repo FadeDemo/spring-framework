@@ -13,4 +13,12 @@
 		<constructor-arg index="0" value="spring-test" />
 	</bean>
 
+	<bean id="myMessageListener" class="org.fade.demo.springframework.activemq.MyMessageListener" />
+
+	<bean id="defaultMessageListenerContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="destination" ref="queue" />
+		<property name="messageListener" ref="myMessageListener" />
+	</bean>
+
 </beans>
