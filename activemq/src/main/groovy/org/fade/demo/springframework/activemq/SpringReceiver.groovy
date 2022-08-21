@@ -3,9 +3,6 @@ package org.fade.demo.springframework.activemq
 import org.apache.activemq.command.ActiveMQQueue
 import org.springframework.context.support.ClassPathXmlApplicationContext
 import org.springframework.jms.core.JmsTemplate
-
-import javax.jms.Message
-
 /**
 *   spring接收者
 *
