@@ -2,7 +2,9 @@ package org.fade.demo.springframework.beans
 
 import org.junit.jupiter.api.Test
 import org.springframework.context.ApplicationContext
+import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext
+import org.springframework.core.annotation.AnnotationAwareOrderComparator
 
 import java.text.MessageFormat
 
@@ -73,6 +75,17 @@ class GroovyMainTest {
 		def conversionService = context.getBean("conversionService")
 		def date = conversionService.convert("1949-10-01", Date)
 		println date
+	}
+
+	@Test
+	void testListSort() {
+		// 单纯的 xml context 无法处理Ordered接口或@Order注解
+//		context.getBeanFactory().setDependencyComparator(AnnotationAwareOrderComparator.INSTANCE)
+		def context = new MyClassPathXmlApplicationContext("org/fade/demo/springframework/beans/listSort.xml")
+		// 注解上下文暂时需配合 --add-opens java.base/java.lang=ALL-UNNAMED 使用
+//		def context = new AnnotationConfigApplicationContext(ColSortConfig)
+		def container = context.getBean("colBeanContainer", ColBeanContainer)
+		container.list.forEach { it.test() }
 	}
 
 }

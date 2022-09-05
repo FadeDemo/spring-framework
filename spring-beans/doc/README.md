@@ -108,3 +108,15 @@ Spring的后置处理器主要有两类：
 * `messages_zh_CN.properties`
 
 `messages.properties` 是默认的资源文件，如果此时要获取locale为 `Locale.US` 的消息，它不会使用 `messages.properties` ，而是会使用操作系统对应locale的资源文件（即 `messages_zh_CN.properties` ）
+
+### 非spi形式注入集合类型时的排序
+
+单纯的 `ClassPathXmlApplicationContext` 是无法处理 `Ordered` 接口或者 `Order` 注解的，要么定制化，要么使用 `AnnotationConfigApplicationContext`
+
+这种排序（官方的实现）与待排序的bean是否实现 `Comparable` 接口无关
+
+处理的位置在：
+
+**org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans**
+
+![beans#1](resources/2022-09-05_09-57-14.png)

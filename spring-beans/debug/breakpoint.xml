@@ -1604,7 +1604,7 @@
 					<line>242</line>
 					<option name="timeStamp" value="382" />
 				</line-breakpoint>
-				<line-breakpoint enabled="true" type="java-line">
+				<line-breakpoint type="java-line">
 					<url>file://$PROJECT_DIR$/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java</url>
 					<line>581</line>
 					<option name="timeStamp" value="383" />
@@ -1784,15 +1784,35 @@
 					<line>1983</line>
 					<option name="timeStamp" value="425" />
 				</line-breakpoint>
-				<line-breakpoint enabled="true" type="java-line">
+				<line-breakpoint type="java-line">
 					<url>jar://$USER_HOME$/.jdks/openjdk-17.0.2/lib/src.zip!/java.base/java/util/ResourceBundle.java</url>
 					<line>1771</line>
 					<option name="timeStamp" value="426" />
 				</line-breakpoint>
-				<line-breakpoint enabled="true" type="java-line">
+				<line-breakpoint type="java-line">
 					<url>jar://$USER_HOME$/.jdks/openjdk-17.0.2/lib/src.zip!/java.base/java/util/ResourceBundle.java</url>
 					<line>1769</line>
 					<option name="timeStamp" value="427" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java</url>
+					<line>1340</line>
+					<option name="timeStamp" value="428" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java</url>
+					<line>1405</line>
+					<option name="timeStamp" value="429" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java</url>
+					<line>1468</line>
+					<option name="timeStamp" value="433" />
+				</line-breakpoint>
+				<line-breakpoint enabled="true" type="java-line">
+					<url>file://$PROJECT_DIR$/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java</url>
+					<line>1471</line>
+					<option name="timeStamp" value="434" />
 				</line-breakpoint>
 			</breakpoints>
 		</breakpoint-manager>
